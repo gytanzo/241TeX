@@ -11,6 +11,7 @@
 \usepackage{soul}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{circuitikz}
+\usepackage{csquotes}
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{positioning,fit,calc,arrows,arrows.meta}
 \usetikzlibrary{circuits.logic,circuits.logic.US,
@@ -1254,7 +1255,11 @@ X & Y & X NOR Y\\
     \node[right=of or2, below] (state2) {~~~~~~~~~~~~~~~~~\textcolor{blue}{$(X\cdot Y)+(X'\cdot Y'\cdot Z')$}};
 \end{tikzpicture}
 \item Besides voltage and current, logic circuits are also useful in representing time. A timing function graphically hows how a circuit may respond to a time-varying pattern of various input signals. Time is graphed horizontally and logic values are graphed vertically. 
-\item Now read 3.2.
+\item By obtaining a formal definition of a combinational circuit's logic function, we can analyze it. This description allows us to perform a variety of operations, such as determining the logic circuit's behavior, manipulating an algebraic or equivalent graphical description to suggest different circuit elements for the logic function, and more. 
+\item Given a logic diagram for a combinational circuit, there are several ways to obtain a formal description of the circuit's function, the most basic of which is the truth table.
+\item Using only the basic axioms of switching algebra, we can easily obtain the truth table of an $n$-input circuit by working our way through all $2^n$ input combinations. For each input combination, we determine each of the gate outputs produced by the input and propagate information from the circuit inputs to outputs. 
+\item The number of input combinations for a logic circuit grows exponentially in relation to the number of inputs, so an exhaustive approach such as the one described above can become tiring. Because of this, for many analysis problems it is better to use an algebraic approach whose complexity is more linearly proportional to the size of the circuit.
+\item This new method is simple: we build up a parenthesized logic expression corresponding to the logic operators and the structure of the circuit. We start at the inputs and propagate expressions as we move toward the output. You can either simplify these expressions using the axioms of switching algebra as you go or all at once at the end. 
 \end{itemize}\pagebreak
 \section{2/14/2020}
 \subsection{Lecture Slides}
@@ -1347,12 +1352,65 @@ Using a truth table, find the values of 0, 5, and 6. 0 is 000, 5 is 101, and 6 i
 \item Logic diagrams are drawings that help with design and preparation for implementation. For now, we will only use computational logic.\\
 \item Multi level and two level are forms of canonical representation systems. Two level is SOP or POS form. NOTs don't count. Unless explicitly told otherwise, always simplify and create a SOP style.
 \item Problem 9.1.11: Draw the logic diagram for $F=AB'+B'C$.\\
-\includegraphics[scale=.78]{IMG3}
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+	\node[and gate] (and1) {};
+    \draw (and1.input 1)--++(180:3cm) node[left] (A) {A};
+    \node[below= of A] (B) {B};
+    \node[not gate, right=1.5cm of B,scale=.85] (not1) {};
+    \node[below= of B] (C) {C};
+    \draw (not1.input)--++(180:5mm) coordinate (aux) |- (B);
+    \node[and gate, right=3cm of C] (and2) {};
+    \draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+    \draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (not1.output);
+    \draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+    \node[or gate, right=3cm of not1] (or1) {};
+    \draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+    \draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and2.output);
+    \node[right=.75cm of or1] (F) {F};
+    \draw (or1.output) |- (F);
+\end{tikzpicture}
 \item Problem 9.1.12: Draw the logic diagram for $T=MX+B'X'$.\\
-\includegraphics[scale=.78]{IMG4}
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[and gate] (and1) {};
+    \draw (and1.input 1)--++(180:3cm) node[left] (M) {M};
+    \node[below= of A] (B) {B};
+    \node[not gate, right=1.5cm of B,scale=.85] (not1) {};
+    \draw (not1.input)--++(180:5mm) coordinate (aux) |- (B);
+    \node[below= of B] (X) {X};
+    \node[not gate, right=1.5cm of X,scale=.85] (not2) {};
+    \draw (not2.input)--++(180:5mm) coordinate (aux) |- (X);
+    \node[and gate, below=1.1cm of and1] (and2) {};
+    \draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+    \draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
+    \node[or gate, right=4.5cm of B, yshift=.55cm] (or1) {};
+    \draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+    \draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and2.output);
+    \node[right=.75cm of or1] (T) {T};
+    \draw (or1.output) |- (T);
+\end{tikzpicture}
 \end{itemize}
 \subsection{Assigned Reading}
 \begin{itemize}
-\item Read 3.3.1. Or don't. I don't care.
-\end{itemize}
+\item A logic circuit description is occasionally just a list of input combinations for when a signal would be on or off. For example, the description of a 4-bit prime-number detector might be ``Given a 4-bit input combination $N=N_3N_2N_1N_0$, produce a 1 output for $N=1,2,3,5,7,11,13$.''\pagebreak
+\item A logic function described in this way can be designed directly from a given canonical sum or produce expression. For the above prime-number detector, we would have...\\
+$F=\sum_{N_3,N_2,N_1,N_0}(1,2,3,5,7,11,13)$\\
+$\textcolor{white}{F}=N_3'\cdot N_2'\cdot N_1'\cdot N_0+N_3'\cdot N_2'\cdot N_1\cdot N_0'+N_3'\cdot N_2'\cdot N_1\cdot N_0+N_3'\cdot N_2\cdot N_1'\cdot N_0+N_3'\cdot N_2\cdot N_1\cdot N_0+N_3\cdot N_2'\cdot N_1\cdot N_0+N_3\cdot N_2\cdot N_1'\cdot N_0$
+\item More often than this, however, we describe a logic function using the natural-language connections ``and'', ``or'', and ``not.'' For example, we might describe an alarm circuit by saying 
+\begin{displayquote}
+``The ALARM output is 1 if the PANIC input is 1, or if the ENABLE input is 1, the EXITING input is 0, and the house is not secure; the house is secure if the WINDOW, DOOR, and GARAGE inputs are all 1.''
+\end{displayquote}
+Such a description can be directly translated into algebraic expressions.
+\begin{displayquote}
+$\text{ALARM}=\text{PANIC}+\text{ENABLE}\cdot\text{EXITING}'\cdot\text{SECURE}'$\\
+$\text{SECURE}=\text{WINDOW}\cdot\text{DOOR}\cdot\text{GARAGE}$\\
+$\text{ALARM}=\text{PANIC}+\text{ENABLE}\cdot \text{EXITING}'\cdot(\text{WINDOW}\cdot\text{DOOR}\cdot\text{GARAGE})$
+\end{displayquote}
+\item A circuit realizes an expression if its output function equals that expression. If a circuit realizes an expression, it is called a realization of the function. In place of realization, the term ``implementation'' is sometimes used. Recognize both - they are both used in practice.
+\item Once we have any expression, we can do more than just build a circuit from the expression. We can, for example, manipulate the expression to get different circuits. The aforementioned ALARM expression can be multiplied out to get a sum-of-products circuit, as an example. Alternatively, if the number of variables isn't very large, we can create a truth table for the expression.
+\item In general, when we are designing a logic function for an application, it is easier to describe the logic function in words using logical connectives than it is to write a complete truth table (especially if the number of variables is large). 
+\item Sometimes however we start with imprecise word descriptions of logic functions, such as the sentence ``The ERROR output should be 1 if the GEARUP, GEARDOWN, and GEARCHECK inputs are inconsistent.'' In these cases, a truth-table approach is more optimal because it allows us to determine the output required for every input. Using a logic expression in this case might make it difficult to notice ``corner cases'' and handle them appropriately. 
+\end{itemize}\pagebreak
+\section{2/16/2020}
+\subsection{Lecture Slides}
+\subsection{Assigned Reading}
 \end{document}
