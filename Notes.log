@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.15)  19 FEB 2020 10:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.15)  20 FEB 2020 15:23
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -1406,7 +1406,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
  []
 
 [28]
-<IMG2.png, id=288, 7.90453pt x 7.52812pt>
+<IMG2.png, id=298, 7.90453pt x 7.52812pt>
 File: IMG2.png Graphic file (type png)
 <use IMG2.png>
 Package pdftex.def Info: IMG2.png  used on input line 1190.
@@ -1426,7 +1426,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1277--1278
 
  []
 
-<IMG1.png, id=299, 135.12984pt x 32.74734pt>
+<IMG1.png, id=309, 135.12984pt x 32.74734pt>
 File: IMG1.png Graphic file (type png)
 <use IMG1.png>
 Package pdftex.def Info: IMG1.png  used on input line 1291.
@@ -1457,21 +1457,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 1352--1353
  []
 
 [33] [34] [35] [36] [37]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1523.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1523.
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1649
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1624--1649
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1663
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1663
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1649--1663
+
+ []
+
+[38] [39]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1673.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1673.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1523.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1523.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1673.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1673.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: F274CAB306FA6A58044CD660E9245D21;1784.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1523.
+(rerunfilecheck)             Checksum: E4A6DD72875EC05C47EE852D98104434;1896.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1673.
  ) 
 Here is how much of TeX's memory you used:
- 42813 strings out of 492895
- 988780 string characters out of 3123735
- 1141608 words of memory out of 3000000
- 46156 multiletter control sequences out of 15000+200000
+ 42863 strings out of 492895
+ 989515 string characters out of 3123735
+ 1152673 words of memory out of 3000000
+ 46202 multiletter control sequences out of 15000+200000
  537623 words of font info for 45 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,8n,85p,949b,901s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1488,9 +1513,9 @@ amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gytan/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Notes.pdf (37 pages, 263435 bytes).
+Output written on Notes.pdf (39 pages, 273189 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
- 70 named destinations out of 1000 (max. 500000)
- 271 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 407 PDF objects out of 1000 (max. 8388607)
+ 74 named destinations out of 1000 (max. 500000)
+ 287 words of extra memory for PDF output out of 10000 (max. 10000000)
 
