@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.15)  20 FEB 2020 15:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  21 FEB 2020 16:23
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -88,18 +88,6 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \mathdisplay@stack=\toks20
 LaTeX Info: Redefining \[ on input line 2855.
 LaTeX Info: Redefining \] on input line 2856.
-)
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
-sty"
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.s
-ty"
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
 sty"
@@ -1028,6 +1016,52 @@ Package csquotes Info: ... configuration file loaded successfully.
 cfg"
 File: csquotes.cfg 
 ))
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cancel\cancel.sty"
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/karnaughmap\karnau
+ghmap.sty"
+Package: karnaughmap 2015/04/20 v2.0 draw karnaugh maps using tikz
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.st
+y"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.
+tex"
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils
+.tex"
+\XKV@toks=\toks41
+\XKV@tempa@toks=\toks42
+)
+\XKV@depth=\count321
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xstring\xstring.st
+y"
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xstring\xstring.
+tex"
+\integerpart=\count322
+\decimalpart=\count323
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+\c@karnaughmapIdxCounter=\count324
+\c@karnaughmapStrCounter=\count325
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries\tikzlibrarypositioning.code.tex"
+File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries/circuits\tikzlibrarycircuits.logic.US.code.tex"
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries/circuits\tikzlibrarycircuits.logic.code.tex"
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
+r/tikz/libraries/circuits\tikzlibrarycircuits.code.tex"
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz/libraries\tikzlibrarydecorations.markings.code.tex"
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
@@ -1039,7 +1073,7 @@ oduledecorations.code.tex"
 \pgfdecoratedinputsegmentcompleteddistance=\dimen310
 \pgfdecoratedinputsegmentremainingdistance=\dimen311
 \pgf@decorate@distancetomove=\dimen312
-\pgf@decorate@repeatstate=\count321
+\pgf@decorate@repeatstate=\count326
 \pgfdecorationsegmentamplitude=\dimen313
 \pgfdecorationsegmentlength=\dimen314
 )
@@ -1047,71 +1081,48 @@ oduledecorations.code.tex"
 )
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/de
 corations\pgflibrarydecorations.markings.code.tex"))
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries\tikzlibrarypositioning.code.tex"
-File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries\tikzlibraryfit.code.tex"
-File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-)
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries\tikzlibraryarrows.code.tex"
-File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries\pg
-flibraryarrows.code.tex"
-File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
-\arrowsize=\dimen315
+\tikz@lib@circ@count=\count327
+\tikzcircuitssizeunit=\dimen315
 ))
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries/circuits\tikzlibrarycircuits.logic.code.tex"
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries/circuits\tikzlibrarycircuits.code.tex"
-\tikz@lib@circ@count=\count322
-\tikzcircuitssizeunit=\dimen316
-))
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
-r/tikz/libraries/circuits\tikzlibrarycircuits.logic.US.code.tex"
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
 apes/circuits\pgflibraryshapes.gates.logic.US.code.tex"
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
 apes/circuits\pgflibraryshapes.gates.logic.code.tex")))
-Package hyperref Info: Option `colorlinks' set `true' on input line 26.
+Package hyperref Info: Option `colorlinks' set `true' on input line 22.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (Notes.aux)
 \openout1 = `Notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count323
-\scratchdimen=\dimen317
+\scratchcounter=\count328
+\scratchdimen=\dimen316
 \scratchbox=\box69
-\nofMPsegments=\count324
-\nofMParguments=\count325
-\everyMPshowfont=\toks41
-\MPscratchCnt=\count326
-\MPscratchDim=\dimen318
-\MPnumerator=\count327
-\makeMPintoPDFobject=\count328
-\everyMPtoPDFconversion=\toks42
+\nofMPsegments=\count329
+\nofMParguments=\count330
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count331
+\MPscratchDim=\dimen317
+\MPnumerator=\count332
+\makeMPintoPDFobject=\count333
+\everyMPtoPDFconversion=\toks44
 )
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
 base.sty"
@@ -1129,7 +1140,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 33.
+Package hyperref Info: Link coloring ON on input line 29.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1143,11 +1154,11 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count329
+\c@section@level=\count334
 )
-LaTeX Info: Redefining \ref on input line 33.
-LaTeX Info: Redefining \pageref on input line 33.
-LaTeX Info: Redefining \nameref on input line 33.
+LaTeX Info: Redefining \ref on input line 29.
+LaTeX Info: Redefining \pageref on input line 29.
+LaTeX Info: Redefining \nameref on input line 29.
  (Notes.out) (Notes.out)
 \@outlinefile=\write4
 \openout4 = `Notes.out'.
@@ -1235,173 +1246,166 @@ Dictionary: translator-basic-dictionary, Language: English
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/siunitx\siunitx-ab
 breviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
-) ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
-
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (Notes.toc)
+) ABD: EveryShipout initializing macros (Notes.toc)
 \tf@toc=\write5
 \openout5 = `Notes.toc'.
 
  [1
 
 {C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 39.
- ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
- [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
+
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--124
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 136--165
+Underfull \hbox (badness 10000) in paragraph at lines 132--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--165
+Underfull \hbox (badness 10000) in paragraph at lines 132--161
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--194
+Underfull \hbox (badness 10000) in paragraph at lines 161--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--194
+Underfull \hbox (badness 10000) in paragraph at lines 161--190
 
  []
 
 [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 287--312
+Underfull \hbox (badness 10000) in paragraph at lines 283--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--312
+Underfull \hbox (badness 10000) in paragraph at lines 283--308
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--370
+Underfull \hbox (badness 10000) in paragraph at lines 310--366
 
  []
 
 [9] [10] [11] [12]
-Overfull \hbox (3.75066pt too wide) in paragraph at lines 537--538
+Overfull \hbox (3.75066pt too wide) in paragraph at lines 533--534
 []$\OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 8$ in two's com-ple-ment, af-ter be-ing pa
 dded ap-pro-pri-ately and flipped,
  []
 
 
-Overfull \hbox (9.91719pt too wide) in paragraph at lines 546--547
+Overfull \hbox (9.91719pt too wide) in paragraph at lines 542--543
 []\OT1/cmr/m/n/10 We throw away the ex-cess bit, or the red ``1'', leav-ing us 
 with b11101100. 
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 636--661
+Underfull \hbox (badness 10000) in paragraph at lines 632--657
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 661--686
+Underfull \hbox (badness 10000) in paragraph at lines 657--682
 
  []
 
 [16]
-Overfull \hbox (24.90556pt too wide) in paragraph at lines 735--762
+Overfull \hbox (24.90556pt too wide) in paragraph at lines 731--758
 [] 
  []
 
 [17] [18]
-Overfull \hbox (0.80618pt too wide) in paragraph at lines 830--831
+Overfull \hbox (0.80618pt too wide) in paragraph at lines 826--827
 \OT1/cmr/m/n/10 with some-thing that isn't a whole num-ber (which hap-pens very
  fre-quently),
  []
 
 [19] [20]
-Overfull \hbox (109.5951pt too wide) in paragraph at lines 891--903
+Overfull \hbox (109.5951pt too wide) in paragraph at lines 887--899
 | [] 
  []
 
 [21]
-Overfull \hbox (96.4691pt too wide) in paragraph at lines 905--916
+Overfull \hbox (96.4691pt too wide) in paragraph at lines 901--912
 []| [] 
  []
 
 [22] [23] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1047--1048
+Underfull \hbox (badness 10000) in paragraph at lines 1043--1044
 
  []
 
 [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1107
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
+Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
 
  []
 
@@ -1409,97 +1413,138 @@ Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
 <IMG2.png, id=298, 7.90453pt x 7.52812pt>
 File: IMG2.png Graphic file (type png)
 <use IMG2.png>
-Package pdftex.def Info: IMG2.png  used on input line 1190.
+Package pdftex.def Info: IMG2.png  used on input line 1186.
 (pdftex.def)             Requested size: 39.52248pt x 37.64046pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1235
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1231
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1192--1235
+Underfull \hbox (badness 10000) in paragraph at lines 1188--1231
 
  []
 
 [29 <./IMG2.png>] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1278
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
 
  []
 
 <IMG1.png, id=309, 135.12984pt x 32.74734pt>
 File: IMG1.png Graphic file (type png)
 <use IMG1.png>
-Package pdftex.def Info: IMG1.png  used on input line 1291.
+Package pdftex.def Info: IMG1.png  used on input line 1287.
 (pdftex.def)             Requested size: 135.1295pt x 32.74724pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1292--1293
+Underfull \hbox (badness 10000) in paragraph at lines 1288--1289
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1293--1294
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
 
  []
 
 [31 <./IMG1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1314--1315
+Underfull \hbox (badness 10000) in paragraph at lines 1310--1311
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1351--1352
+Underfull \hbox (badness 10000) in paragraph at lines 1347--1348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1352--1353
+Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
 
  []
 
 [33] [34] [35] [36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1624--1649
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1645
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1624--1649
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1645
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1663
+Underfull \hbox (badness 10000) in paragraph at lines 1645--1659
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1663
+Underfull \hbox (badness 10000) in paragraph at lines 1645--1659
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1649--1663
+Underfull \hbox (badness 10000) in paragraph at lines 1645--1659
 
  []
 
-[38] [39]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1673.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1673.
+[38]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [39]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [40]
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+
+ []
+
+[41]
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1757--1766
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1757--1766
+
+ []
+
+[42]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1771.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1771.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1673.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1673.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1771.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1771.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
 (rerunfilecheck)             Checksum: E4A6DD72875EC05C47EE852D98104434;1896.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1673.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1771.
  ) 
 Here is how much of TeX's memory you used:
- 42863 strings out of 492895
- 989515 string characters out of 3123735
- 1152673 words of memory out of 3000000
- 46202 multiletter control sequences out of 15000+200000
- 537623 words of font info for 45 fonts, out of 3000000 for 9000
+ 42783 strings out of 492895
+ 983926 string characters out of 3123735
+ 1173447 words of memory out of 3000000
+ 46121 multiletter control sequences out of 15000+200000
+ 536378 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,8n,85p,949b,901s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,98p,931b,942s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/f
@@ -1512,10 +1557,11 @@ C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gytan/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on Notes.pdf (39 pages, 273189 bytes).
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/gytan/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on Notes.pdf (42 pages, 290580 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
+ 423 PDF objects out of 1000 (max. 8388607)
+ 77 named destinations out of 1000 (max. 500000)
  287 words of extra memory for PDF output out of 10000 (max. 10000000)
 

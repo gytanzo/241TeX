@@ -1,9 +1,6 @@
 \documentclass[10pt,a4paper]{article}
-
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{siunitx}
@@ -12,10 +9,9 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage{circuitikz}
 \usepackage{csquotes}
-\usetikzlibrary{decorations.markings}
-\usetikzlibrary{positioning,fit,calc,arrows,arrows.meta}
-\usetikzlibrary{circuits.logic,circuits.logic.US,
-}
+\usepackage{cancel}
+\usepackage{karnaughmap}
+\usetikzlibrary{positioning, circuits.logic.US}
 
 \hypersetup{
     colorlinks,
@@ -1664,7 +1660,109 @@ $N=\ol{H}\cdot\ol{C}+H\ol{C}=\ol{C}$\\
 \section{2/21/2020}
 \subsection{Lecture Slides}
 \begin{itemize}
-\item
+\item When solving logic systems, we usually want to take the lazier approach, so we look for methods that are simpler with less spots for error and a lower price to implement. 
+\item Minimization aims to reduce the ``cost'', which is done by reducing the number and size of gates.
+\item There are three key ways to reduce cost.
+\begin{enumerate}
+\item [1.] Minimize the number of first-level gates.
+\item [2.] Minimize the number of inputs on each first level gate.
+\item [3.] Minimize the number of inputs on each second level gate. 
+\end{enumerate}
+\item How are you handle how many inputs to use for a gate? Do as you're told, do as you're equipped to handle, and do as you want (in that order). 
+\item Problem 12.1.1: Find the simplified POS $F=\prod_{x,y,z}(1,2,5,6)$.\\
+$F=(x+y+\ol{z})(x+\ol{y}+z)(\ol{x}+y+\ol{z})(\ol{x}+\ol{y}+z)$\\
+$F=(\cancel{xx}^x+x\ol{y}+xz+yx+\cancel{y\ol{y}}^0+yz+\ol{z}x+\ol{z}x+\cancel{\ol{z}z)}^0$\\
+$\textcolor{white}{F=}(\cancel{\ol{xx}}^x+\ol{xy}+y\ol{x}+\cancel{y\ol{y}}^0+yz+\ol{zx}+\ol{zy}+\cancel{\ol{z}z}^0)$\\
+$F=x\ol{x}+x\ol{xy}+x\ol{x}z+xy\ol{z}+xyz+x\ol{zx}+x\ol{zy}$\\
+This takes too long! For POS functions, simplifying them algebraically is far too complicated. We need an alternative. 
+\item Instead of solving algebraically, we use Karnaugh maps. Some Karnaugh maps are shown below.\\
+\begin{tikzpicture}
+\karnaughmap[variables={XY}, function={}]{4};
+\end{tikzpicture}\\
+\begin{tikzpicture}
+\karnaughmap[variables={XYZ}, function={}]{8};
+\end{tikzpicture}\\
+\begin{tikzpicture}
+\karnaughmap[variables={WXYZ}, function={}]{16};
+\end{tikzpicture}
+\item There are a few things to note about K-Maps. First, working with more than four variables generally isn't worth it, at which computer aided design begins to be used. Second, the order of the numbers is in gray code. 
+\item Why gray code? Take the two terms $A'BC+ABC$. If we apply the distributive property we get $BC(A'+A)$. Then, we can apply the complement theorem to get $(A'+A)=1$, which reduces to just $BC$. This can be interpreted from the K-Map through gray code, forcing terms that can cancel to be adjacent. 
+\item Problem 12.1.2: How does the below truth table map to a K-Map?\\
+\begin{tabular}{cc|c}
+x & y & F\\
+\hline
+0 & 0 & A\\
+0 & 1 & B\\
+1 & 0 & C\\
+1 & 1 & D\\
+\end{tabular}\\
+\begin{tikzpicture}
+\karnaughmap[variables={xy}, function={F}]{4};
+\end{tikzpicture}
+\item Problem 12.1.3: How does the below truth table map to a K-Map?\\
+\begin{tabular}{ccc|c}
+x & y & z & F\\
+\hline
+0 & 0 & 0 & A\\
+0 & 0 & 1 & B\\
+0 & 1 & 0 & C\\
+0 & 1 & 1 & D\\
+1 & 0 & 0 & E\\
+1 & 0 & 1 & F\\
+1 & 1 & 0 & G\\
+1 & 1 & 1 & H\\
+\end{tabular}\\
+\begin{tikzpicture}
+\karnaughmap[variables={xyz}, function={F}, binaryidx]{8};
+\end{tikzpicture}
+\item To use the K-Map for reduction, some vocabulary terms need to get defined.
+\begin{itemize}
+\item Implicants (or a covers) are power of 2 circles/rectangles that go around neighboring 1's in SOP and 0's in POS. The prime implicant, or PI, is the largest cover possible. 
+\item Distinguished 1's are an easy way of checking if there are PIs. A distinguished 1 is a 1 on the map covered by only one implicant. If that implicant isn't used, the function produced is not the intended output. 
+\item The essential prime implicant, or EPI, is an implicant that must be used in order to obtain the correct output of a function. 
+\end{itemize}
+\item For now, we will focus on SOP. This is a ``recipe'' for making an SOP K-map.
+\begin{enumerate}
+\item [1.] Place all of the minterms on the K-Map.
+\item [2.] Draw all of the PIs, starting with the largest size possible and then working your way down. All PIs must be powers of 2. 
+\item [3.] Determine the distinguished 1's. Using these distinguished 1's, find the essential prime implicants. 
+\item [4.] Begin creating the function using these essential prime implicants.
+\item [5.] Look at the map and check if there are any 1's not covered by prime implicants. 
+\end{enumerate}
+\item The rules for ``NOTing'' are identical to those of a truth table. When dealing with product terms, NOT only if the input for a variable is 0. When dealing with sum terms, NOT only if the input for a variable is 1. 
+\item Two rules must be followed when reducing/combining terms. First, the terms must be edge adjacent. Second, you must group by powers of 2, starting with the largest powers first.
+\item Problem 12.1.4: Find the simplified SOP for $F=\sum_{x,y,z}(0,4,5,6,7)$ algebraically.\\
+$F=\ol{xyz}+x\ol{yz}+x\ol{y}z+xy\ol{z}+xyz$\\
+$F=\ol{yz}(\cancel{\ol{x}+x}^1)+x\ol{y}z+xy(\cancel{\ol{z}+z}^1)$\\
+$F=\ol{yz}+x\ol{y}z+xy$\\
+\answer{$F=\ol{yz}+x\ol{y}z+xy$}
+\item Problem 12.1.4: Find the simplified SOP for $F=\sum_{x,y,z}(0,4,5,6,7)$ using a K-Map.\\
+Distinguished 1's: 0, 6, 7, 5\\
+Essential prime implicant: $\ol{yz}$, $x$\\~\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{04}{blue!50}
+\karnaughmapcolorfield[fill]{3}{6754}{red!50}
+\karnaughmap[variables={xyz}, function={F}]{1000 1111};
+\end{tikzpicture}\\~\\
+$\ol{xyz}+x\ol{yz}$\\
+$\ol{yz}(\cancel{\ol{x}+x}^1)$\\
+$\ol{yz}$\\~\\
+\begin{tabular}{cc}
+110 & xy$\ol{z}$\\
+100 & x$\ol{yz}$\\
+111 & xyz\\
+101 & x$\ol{y}$z\\
+\end{tabular} If it's the same, it stays, but if it changes it goes.\\~\\
+\answer{$F=\ol{yz}+x$}
+\item Problem 12.1.5: Find the simplified SOP for $F=\sum_{x,y,z}(0,1,4,5,7)$ using a K-Map.\\
+Distinguished 1's: 0, 1, 4, 7\\
+Essential prime implicant: $\ol{y}$, $xz$\\~\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{0145}{blue!50}
+\karnaughmapcolorfield[fill]{3}{57}{red!50}
+\karnaughmap[variables={xyz}, function={F}]{1100 1101};
+\end{tikzpicture}\\~\\
+\answer{$F=\ol{y}+xz$}
 \end{itemize}
 \subsection{Assigned Reading}
 \begin{itemize}
