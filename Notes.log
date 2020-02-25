@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  24 FEB 2020 14:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  25 FEB 2020 16:14
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -1460,7 +1460,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
 
  []
 
-[33] [34] [35] [36] [37]
+[33] [34] [35] [36]
+Missing character: There is no ; in font nullfont!
+ [37]
 Underfull \hbox (badness 10000) in paragraph at lines 1620--1645
 
  []
@@ -1526,25 +1528,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 1757--1766
 
  []
 
-[42] [43]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1781.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1781.
+[42]
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1775--1785
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1775--1785
+
+ []
+
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1785--1795
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1785--1795
+
+ []
+
+[43]
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1795--1851
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1795--1851
+
+ []
+
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1909
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1851--1909
+
+ []
+
+[44]
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (54.80644pt too wide) in paragraph at lines 1909--1918
+[]\OT1/cmr/m/n/10 Problem 13.1.5: Find the sim-pli-fied SOP from $\OML/cmm/m/it
+/10 F \OT1/cmr/m/n/10 = [][](0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it
+/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \
+OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr
+/m/n/10 8\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr/m/n/1
+0 11\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 14)$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1909--1918
+
+ []
+
+[45] [46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1923.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1923.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1781.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1781.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1923.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1923.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
 (rerunfilecheck)             Checksum: 07D275A1790A28278F911FC0C06FB0DB;2076.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1781.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1923.
  ) 
 Here is how much of TeX's memory you used:
- 42790 strings out of 492895
- 984019 string characters out of 3123735
- 1173450 words of memory out of 3000000
- 46124 multiletter control sequences out of 15000+200000
+ 42799 strings out of 492895
+ 984131 string characters out of 3123735
+ 1174450 words of memory out of 3000000
+ 46130 multiletter control sequences out of 15000+200000
  536378 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,98p,931b,942s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,98p,931b,968s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/f
@@ -1559,9 +1624,9 @@ pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gytan/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/gytan/AppD
 ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on Notes.pdf (43 pages, 293126 bytes).
+Output written on Notes.pdf (46 pages, 307430 bytes).
 PDF statistics:
- 444 PDF objects out of 1000 (max. 8388607)
- 81 named destinations out of 1000 (max. 500000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 84 named destinations out of 1000 (max. 500000)
  311 words of extra memory for PDF output out of 10000 (max. 10000000)
 
