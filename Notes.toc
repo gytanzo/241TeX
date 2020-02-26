@@ -31,6 +31,5 @@
 \contentsline {section}{\numberline {12}2/21/2020}{39}{section.12}% 
 \contentsline {subsection}{\numberline {12.1}Lecture Slides}{39}{subsection.12.1}% 
 \contentsline {subsection}{\numberline {12.2}Assigned Reading}{42}{subsection.12.2}% 
-\contentsline {section}{\numberline {13}2/24/2020}{43}{section.13}% 
-\contentsline {subsection}{\numberline {13.1}Lecture Slides}{43}{subsection.13.1}% 
-\contentsline {subsection}{\numberline {13.2}Assigned Reading}{46}{subsection.13.2}% 
+\contentsline {section}{\numberline {13}2/24/2020}{45}{section.13}% 
+\contentsline {subsection}{\numberline {13.1}Lecture Slides}{45}{subsection.13.1}% 

@@ -1766,7 +1766,137 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \end{itemize}
 \subsection{Assigned Reading}
 \begin{itemize}
-\item Read 3.3.
+\item We have previously described AND, OR, and NOT gates. We also want to use NAND and NOR gates, as these are faster than AND and OR gates in most technologies. 
+\item NAND and NOR connectives aren't very logically intuitive, however. For example, you wouldn't say ``I won't date you if you're not clean or not wealthy and also you're not smart or not friendly.'' You would instead say ``I'll date you if you're clean and wealth or if you're smart and friendly.'' To produce a ``natural'' logic expression we need ways to translate this into other forms for a more efficient implementation. 
+\item We can translate any logic expression into an equivalent sum-of-product expression simply by multiplying it out. 
+\item We can insert a pair of inverters between each AND-gate output and the corresponding OR-gate input in a two-level AND-OR circuit. These inverters, per T4 (see page 21) have no effect on the output function of a circuit. 
+\item However, if these inverters are absorbed into the AND and OR gates, we wind up with an AND-NOT gate on the first level and a NOT-OR gate on the second. These are two symbols for the same type of gate: The NAND gate. A two level AND-OR gate can be converted to a two level NAND-NAND gate simply by substituting gates. Below is a realization of a sum-of-products circuit.
+\begin{enumerate}
+\item [a.] AND-OR\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (W) {W};
+\node[below=of W] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[below=of Y] (Z) {Z};
+\node[not gate, right=of W, scale=.85] (not1) {};
+\node[and gate, right=of X, yshift=-.7cm] (and1) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (W);
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[or gate, right=of and1, logic gate inputs = nnn] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (or1.input 3)--++(180:5mm) coordinate (aux) |- (Z);
+\node[right=.75cm of or1] (F) {F};
+\draw (or1.output) |- (F);
+\end{tikzpicture}
+\item [b.] AND-OR with extra inverter pairs\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (W) {W};
+\node[below=of W] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[below=of Y] (Z) {Z};
+\node[not gate, right=of W, scale=.85] (not1) {};
+\node[and gate, right=of X, yshift=-.7cm] (and1) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (W);
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[buffer, right=of not1, scale=.5] (buf1) {};
+\node at (buf1.in) [ocirc, left] (node1) {} ;
+\draw (node1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\node[not gate, right=of and1, scale=.85] (not2) {};
+\node[not gate, below=of not2, scale=.85, yshift=-.78cm] (not3) {};
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (not3.input)--++(180:5mm) coordinate (aux) |- (Z);
+\node[buffer, right=of buf1, scale=.5] (buf2) {};
+\node at (buf2.in) [ocirc, left] (node2) {} ;
+\draw (node2)--++(180:5mm) coordinate (aux) |- (buf1.out);
+\node[buffer, right=of not2, scale=.5] (buf3) {};
+\node at (buf3.in) [ocirc, left] (node3) {} ;
+\draw (node3)--++(180:5mm) coordinate (aux) |- (not2.output);
+\node[buffer, right=of not3, scale=.5] (buf4) {};
+\node at (buf4.in) [ocirc, left] (node4) {} ;
+\draw (node4)--++(180:5mm) coordinate (aux) |- (not3.output);
+\node[or gate, right=of buf3, logic gate inputs = nnn] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (buf2.out);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (buf3.out);
+\draw (or1.input 3)--++(180:5mm) coordinate (aux) |- (buf4.out);
+\node[right=.75cm of or1] (F) {F};
+\draw (or1.output) |- (F);
+\end{tikzpicture}
+\item [c.] NAND-NAND\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (W) {W};
+\node[below=of W] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[below=of Y] (Z) {Z};
+\node[not gate, right=of Z, scale=.85] (not1) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (Z);
+\node[nand gate, right=of X, yshift=-.7cm] (nand1) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[or gate, right=of nand1, logic gate inputs=iii] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (W);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\draw (or1.input 3)--++(180:5mm) coordinate (aux) |- (not1.output);
+\node[right=.75cm of or1] (F) {F};
+\draw (or1.output) |- (F);
+\end{tikzpicture}
+\end{enumerate}
+\item The dual of this idea also holds true, in that any product-of-sums expression can be realized as an OR-AND circuit or as a NOR-NOR circuit. Below is a realization of a product-of-sums circuit.
+\begin{enumerate}
+\item [a.] OR-AND\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[or gate] (or1) {};
+\node[or gate, below=of or1] (or2) {};
+\node[or gate, below=of or2] (or3) {};
+\node[and gate, right=of or2, logic gate inputs = nnn] (and1) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (or1.output);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (or2.output);
+\draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (or3.output);
+\node[right=.75cm of and1] (F) {F};
+\draw (and1.output) |- (F);
+\end{tikzpicture}
+\item [b.] OR-AND gate with extra inverter pairs\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[or gate] (or1) {};
+\node[or gate, below=of or1] (or2) {};
+\node[or gate, below=of or2] (or3) {};
+\node[not gate, right=of or1, scale=.85] (not1) {};
+\node[not gate, right=of or2, scale=.85] (not2) {};
+\node[not gate, right=of or3, scale=.85] (not3) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (or1.output);
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (or2.output);
+\draw (not3.input)--++(180:5mm) coordinate (aux) |- (or3.output);
+\node[buffer, right=of not1, scale=.5] (buf1) {};
+\node at (buf1.in) [ocirc, left] (node1) {} ;
+\draw (node1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\node[buffer, right=of not2, scale=.5] (buf2) {};
+\node at (buf2.in) [ocirc, left] (node2) {} ;
+\draw (node2)--++(180:5mm) coordinate (aux) |- (not2.output);
+\node[buffer, right=of not3, scale=.5] (buf3) {};
+\node at (buf3.in) [ocirc, left] (node3) {} ;
+\draw (node3)--++(180:5mm) coordinate (aux) |- (not3.output);
+\node[and gate, right=of buf2, logic gate inputs = nnn] (and1) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (buf1.out);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (buf2.out);
+\draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (buf3.out);
+\node[right=.75cm of and1] (F) {F};
+\draw (and1.output) |- (F);
+\end{tikzpicture}
+\item [c.] NOR-NOR\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[nor gate] (nor1) {};
+\node[nor gate, below=of nor1] (nor2) {};
+\node[nor gate, below=of nor2] (nor3) {};
+\node[and gate, right=of nor2, logic gate inputs = iii] (and1) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (nor3.output);
+\node[right=.75cm of and1] (F) {F};
+\draw (and1.output) |- (F);
+\end{tikzpicture}
+\end{enumerate}
 \end{itemize}
 \pagebreak
 \section{2/24/2020}
@@ -1915,9 +2045,5 @@ Essential prime implicant: $AB\ol{C}, A\ol{C}D, BD$\\
 \karnaughmapcolorfield[fill]{4}{57DF}{yellow!50}
 \karnaughmap[variables={ABCD}, function={F}]{0000 0101 0100 1101};
 \end{tikzpicture}
-\end{itemize}
-\subsection{Assigned Reading}
-\begin{itemize}
-\item 
-\end{itemize}
+\end{itemize}\pagebreak
 \end{document}
