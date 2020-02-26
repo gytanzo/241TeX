@@ -1739,9 +1739,7 @@ $F=\ol{xyz}+x\ol{yz}+x\ol{y}z+xy\ol{z}+xyz$\\
 $F=\ol{yz}(\cancel{\ol{x}+x}^1)+x\ol{y}z+xy(\cancel{\ol{z}+z}^1)$\\
 $F=\ol{yz}+x\ol{y}z+xy$\\
 \answer{$F=\ol{yz}+x\ol{y}z+xy$}
-\item Problem 12.1.4: Find the simplified SOP for $F=\sum_{x,y,z}(0,4,5,6,7)$ using a K-Map.\\
-Distinguished 1's: 0, 6, 7, 5\\
-Essential prime implicant: $\ol{yz}$, $x$\\~\\
+\item Problem 12.1.5: Find the simplified SOP for $F=\sum_{x,y,z}(0,4,5,6,7)$ using a K-Map.\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{3}{04}{blue}
 \karnaughmapcolorfield[fill]{3}{6754}{red}
@@ -1756,20 +1754,23 @@ $\ol{yz}$\\~\\
 111 & xyz\\
 101 & x$\ol{y}$z\\
 \end{tabular} If it's the same, it stays, but if it changes it goes.\\~\\
+Distinguished 1's: 0, 6, 7, 5\\
+Essential prime implicant: $\ol{yz}$, $x$\\
 \answer{$F=\ol{yz}+x$}
-\item Problem 12.1.5: Find the simplified SOP for $F=\sum_{x,y,z}(0,1,4,5,7)$ using a K-Map.\\
+\item Problem 12.1.6: Find the simplified SOP for $F=\sum_{x,y,z}(0,1,4,5,7)$ using a K-Map.\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{3}{0145}{blue}
 \karnaughmapcolorfield[fill]{3}{57}{red}
 \karnaughmap[dontcare=X, variables={xyz}, function={F}]{1100 1101};
 \end{tikzpicture}\\~\\
 Distinguished 1's: 0, 1, 4, 7\\
-Essential prime implicant: $\ol{y}$, $xz$\\~\\
+Essential prime implicant: $\ol{y}$, $xz$\\
 \answer{$F=\ol{y}+xz$}
 \end{itemize}
 \subsection{Assigned Reading}
 \begin{itemize}
 \item We have previously described AND, OR, and NOT gates. We also want to use NAND and NOR gates, as these are faster than AND and OR gates in most technologies. 
+\pagebreak
 \item NAND and NOR connectives aren't very logically intuitive, however. For example, you wouldn't say ``I won't date you if you're not clean or not wealthy and also you're not smart or not friendly.'' You would instead say ``I'll date you if you're clean and wealth or if you're smart and friendly.'' To produce a ``natural'' logic expression we need ways to translate this into other forms for a more efficient implementation. 
 \item We can translate any logic expression into an equivalent sum-of-product expression simply by multiplying it out. 
 \item We can insert a pair of inverters between each AND-gate output and the corresponding OR-gate input in a two-level AND-OR circuit. These inverters, per T4 (see page 21) have no effect on the output function of a circuit. 
@@ -1966,7 +1967,7 @@ Take note of how adjacent 1 cells were grouped to correspond to their prime impl
 \karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1000 0010 0101 0010};
 \end{tikzpicture}\\~\\
 Distinguished 1's: 0,6,9,11,14\\
-Essential prime implicant: $\ol{ABCD}$, $A\ol{B}D, BC\ol{D}$\\~\\
+Essential prime implicant: $\ol{ABCD}$, $A\ol{B}D, BC\ol{D}$\\
 \answer{$F=\ol{ABCD}+A\ol{B}D+BC\ol{D}$}
 \item Problem 13.1.2: Simplify $F=\sum_{A,B,C,D}(0,2,8,10,15)$.\\
 \begin{tikzpicture}
@@ -1975,7 +1976,7 @@ Essential prime implicant: $\ol{ABCD}$, $A\ol{B}D, BC\ol{D}$\\~\\
 \karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1010 0000 1010 0001};
 \end{tikzpicture}\\~\\
 Distinguished 1's: 0,2,8,10,15\\
-Essential prime implicant: $ABCD, \ol{BD}$\\~\\
+Essential prime implicant: $ABCD, \ol{BD}$\\
 \answer{$F=ABCD+\ol{BD}$}
 \pagebreak
 \item Problem 13.1.3: Find the shorthand POS and simplified SOP and draw the two level logic diagram for $F=\prod_{A,B,C}(1,2,5)$.\\~\\
@@ -2090,7 +2091,7 @@ A & B & C & F\\
 \draw (or1.output) |- (F);
 \end{tikzpicture}\\
 Distinguished 1's: 1, 2, 7\\
-Essential prime implicant: $\ol{B}C, \ol{A}B\ol{C}, AC$\\~\\
+Essential prime implicant: $\ol{B}C, \ol{A}B\ol{C}, AC$\\
 $F=\ol{B}C+\ol{A}B\ol{C}+AC$
 \item Problem 13.1.5: Find the simplified SOP from $F=\prod_{A,B,C,D}(0,1,2,3,4,6,8,10,11,14)$ and draw the 2 level logic diagram.\\~\\
 \begin{tikzpicture}
@@ -2098,7 +2099,7 @@ $F=\ol{B}C+\ol{A}B\ol{C}+AC$
 \karnaughmapcolorfield[fill]{4}{CD}{red}
 \karnaughmapcolorfield[fill]{4}{57DF}{yellow}
 \karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0000 0101 0100 1101};
-\end{tikzpicture}
+\end{tikzpicture}\\
 Distinguished 1's: 5, 7, 12, 15, 9\\
 Essential prime implicant: $AB\ol{C}, A\ol{C}D, BD$\\
 \end{itemize}
