@@ -1680,13 +1680,13 @@ $F=x\ol{x}+x\ol{xy}+x\ol{x}z+xy\ol{z}+xyz+x\ol{zx}+x\ol{zy}$\\
 This takes too long! For POS functions, simplifying them algebraically is far too complicated. We need an alternative. 
 \item Instead of solving algebraically, we use Karnaugh maps. Some Karnaugh maps are shown below.\\
 \begin{tikzpicture}
-\karnaughmap[variables={XY}, function={}]{4};
+\karnaughmap[dontcare=X, variables={XY}, function={}]{4};
 \end{tikzpicture}\\
 \begin{tikzpicture}
-\karnaughmap[variables={XYZ}, function={}]{8};
+\karnaughmap[dontcare=X, variables={XYZ}, function={}]{8};
 \end{tikzpicture}\\
 \begin{tikzpicture}
-\karnaughmap[variables={WXYZ}, function={}]{16};
+\karnaughmap[dontcare=X, variables={WXYZ}, function={}]{16};
 \end{tikzpicture}
 \item There are a few things to note about K-Maps. First, working with more than four variables generally isn't worth it, at which computer aided design begins to be used. Second, the order of the numbers is in gray code. 
 \item Why gray code? Take the two terms $A'BC+ABC$. If we apply the distributive property we get $BC(A'+A)$. Then, we can apply the complement theorem to get $(A'+A)=1$, which reduces to just $BC$. This can be interpreted from the K-Map through gray code, forcing terms that can cancel to be adjacent. 
@@ -1700,7 +1700,7 @@ x & y & F\\
 1 & 1 & D\\
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmap[variables={xy}, function={F}]{4};
+\karnaughmap[dontcare=X, variables={xy}, function={F}]{4};
 \end{tikzpicture}
 \item Problem 12.1.3: How does the below truth table map to a K-Map?\\
 \begin{tabular}{ccc|c}
@@ -1716,7 +1716,7 @@ x & y & z & F\\
 1 & 1 & 1 & H\\
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmap[variables={xyz}, function={F}, binaryidx]{8};
+\karnaughmap[dontcare=X, variables={xyz}, function={F}, binaryidx]{8};
 \end{tikzpicture}
 \item To use the K-Map for reduction, some vocabulary terms need to get defined.
 \begin{itemize}
@@ -1743,9 +1743,9 @@ $F=\ol{yz}+x\ol{y}z+xy$\\
 Distinguished 1's: 0, 6, 7, 5\\
 Essential prime implicant: $\ol{yz}$, $x$\\~\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{3}{04}{blue!50}
-\karnaughmapcolorfield[fill]{3}{6754}{red!50}
-\karnaughmap[variables={xyz}, function={F}]{1000 1111};
+\karnaughmapcolorfield[fill]{3}{04}{blue}
+\karnaughmapcolorfield[fill]{3}{6754}{red}
+\karnaughmap[dontcare=X, variables={xyz}, function={F}]{1000 1111};
 \end{tikzpicture}\\~\\
 $\ol{xyz}+x\ol{yz}$\\
 $\ol{yz}(\cancel{\ol{x}+x}^1)$\\
@@ -1761,9 +1761,9 @@ $\ol{yz}$\\~\\
 Distinguished 1's: 0, 1, 4, 7\\
 Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{3}{0145}{blue!50}
-\karnaughmapcolorfield[fill]{3}{57}{red!50}
-\karnaughmap[variables={xyz}, function={F}]{1100 1101};
+\karnaughmapcolorfield[fill]{3}{0145}{blue}
+\karnaughmapcolorfield[fill]{3}{57}{red}
+\karnaughmap[dontcare=X, variables={xyz}, function={F}]{1100 1101};
 \end{tikzpicture}\\~\\
 \answer{$F=\ol{y}+xz$}
 \end{itemize}
@@ -1919,6 +1919,40 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \draw (and1.output) |- (F);
 \end{tikzpicture}
 \end{enumerate}
+\pagebreak
+\item Often, it is uneconomical or inefficient to realize a logic circuit directly from the first logic expression you think of. Canonical sum and product expressions are particularly expensive because the number of possible minterms and maxterms grows exponentially with the number of variables. We need to minimize a combinational circuit by reducing the number and size of gates that are needed to build it. 
+\item There are three minimization methods used to reduce the cost of a two-level AND-OR, OR-OR, NAND-NAND, or NOR-NOR circuit.
+\begin{enumerate}
+\item Minimize the number of first-level gates.
+\item Minimize the number of inputs on each first level gate.
+\item Minimize the number of inputs on the second level gate, which is actually just a side effect of the first reduction. 
+\end{enumerate}
+\item A two-gate realization that has the minimum possible number of first level gates and gate inputs is called a minimal sum or minimal product. Some functions have multiple minimal sums or products. 
+\item Most minimization methods are generalizations of T10 and T10D (see page 22). That is, if two product or sum terms differ only in the complementing or not of one variable, we can combine them into a single term with one less variable. 
+\item Karnaugh maps were originally used to create graphical representations of logic functions, allowing minimization opportunities to be identified by a simple recognizable visual pattern. The key feature of a Karnaugh map (hereafter referred to as a K-Map) is its cell layout, in which ``adjacent pairs of cells corresponding to a pair of minterms that differ in only one variable which is uncomplemented in one cell and complemented in another''. Below are of various K-Maps. 
+\begin{enumerate}
+\item [(a)] 2-variable\\
+\begin{tikzpicture}
+\karnaughmap[dontcare=X, variables={XY}, function={}]{4};
+\end{tikzpicture}
+\item [(b)] 3-variable\\
+\begin{tikzpicture}
+\karnaughmap[dontcare=X, variables={XYZ}, function={}]{8};
+\end{tikzpicture}
+\item [(c)] 4-variable\\
+\begin{tikzpicture}
+\karnaughmap[dontcare=X, variables={WXYZ}, function={}]{16};
+\end{tikzpicture}
+\end{enumerate}
+\item Observe the below K-Map.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{1357}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{3B}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{5D}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{23}{blue!50!green}
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0111 0101 0001 0100};
+\end{tikzpicture}\\
+Take note of how adjacent 1 cells were grouped to correspond to their prime implicant, or ``product terms that cover only input combinations for which the function has a 1 output, and that would cover at least one input combination with a 0 output if any variable were removed.''
 \end{itemize}
 \pagebreak
 \section{2/24/2020}
@@ -1928,19 +1962,19 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 Distinguished 1's: 0,6,9,11,14\\
 Essential prime implicant: $\ol{ABCD}$, $A\ol{B}D, BC\ol{D}$\\~\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{0}{blue!50}
-\karnaughmapcolorfield[fill]{4}{6E}{red!50}
-\karnaughmapcolorfield[fill]{4}{9B}{yellow!50}
-\karnaughmap[variables={ABCD}, function={F}]{1000 0010 0101 0010};
+\karnaughmapcolorfield[fill]{4}{0}{blue}
+\karnaughmapcolorfield[fill]{4}{6E}{red}
+\karnaughmapcolorfield[fill]{4}{9B}{yellow}
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1000 0010 0101 0010};
 \end{tikzpicture}\\~\\
 \answer{$F=\ol{ABCD}+A\ol{B}D+BC\ol{D}$}
 \item Problem 13.1.2: Simplify $F=\sum_{A,B,C,D}(0,2,8,10,15)$.\\
 Distinguished 1's: 0,2,8,10,15\\
 Essential prime implicant: $ABCD, \ol{BD}$\\~\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{028A}{blue!50}
-\karnaughmapcolorfield[fill]{4}{F}{red!50}
-\karnaughmap[variables={ABCD}, function={F}]{1010 0000 1010 0001};
+\karnaughmapcolorfield[fill]{4}{028A}{blue}
+\karnaughmapcolorfield[fill]{4}{F}{red}
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1010 0000 1010 0001};
 \end{tikzpicture}\\~\\
 \answer{$F=ABCD+\ol{BD}$}
 \pagebreak
@@ -1969,11 +2003,11 @@ A & B & C & F\\
 \hline
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{3}{04}{blue!50}
-\karnaughmapcolorfield[fill]{3}{46}{red!50}
-\karnaughmapcolorfield[fill]{3}{67}{orange!50}
-\karnaughmapcolorfield[fill]{3}{37}{green!50}
-\karnaughmap[variables={AB}, function={F}]{1001 1011};
+\karnaughmapcolorfield[fill]{3}{04}{red!50!orange}
+\karnaughmapcolorfield[fill]{3}{46}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{3}{67}{yellow!50!green}
+\karnaughmapcolorfield[fill]{3}{37}{blue!50!green}
+\karnaughmap[dontcare=X, variables={ABC}, function={F}]{1001 1011};
 \end{tikzpicture}\\
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
 \node[] (A) {A};
@@ -2025,10 +2059,10 @@ A & B & C & F\\
 \hline
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{3}{2}{blue!50}
-\karnaughmapcolorfield[fill]{3}{15}{red!50}
-\karnaughmapcolorfield[fill]{3}{57}{yellow!50}
-\karnaughmap[variables={ABC}, function={F}]{0110 0101};
+\karnaughmapcolorfield[fill]{3}{2}{blue}
+\karnaughmapcolorfield[fill]{3}{15}{red}
+\karnaughmapcolorfield[fill]{3}{57}{yellow}
+\karnaughmap[dontcare=X, variables={ABC}, function={F}]{0110 0101};
 \end{tikzpicture}\\
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
 \node[] (A) {A};
@@ -2062,10 +2096,10 @@ $F=\ol{B}C+\ol{A}B\ol{C}+AC$
 Distinguished 1's: 5, 7, 12, 15, 9\\
 Essential prime implicant: $AB\ol{C}, A\ol{C}D, BD$\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{9D}{blue!50}
-\karnaughmapcolorfield[fill]{4}{CD}{red!50}
-\karnaughmapcolorfield[fill]{4}{57DF}{yellow!50}
-\karnaughmap[variables={ABCD}, function={F}]{0000 0101 0100 1101};
+\karnaughmapcolorfield[fill]{4}{9D}{blue}
+\karnaughmapcolorfield[fill]{4}{CD}{red}
+\karnaughmapcolorfield[fill]{4}{57DF}{yellow}
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0000 0101 0100 1101};
 \end{tikzpicture}
 \end{itemize}
 \pagebreak
@@ -2083,7 +2117,7 @@ Essential prime implicant: $\ol{ACD}, ABD$\\
 \karnaughmapcolorfield[fill]{4}{37}{blue!50!green}
 \karnaughmapcolorfield[fill]{4}{7F}{blue!50!violet}
 \karnaughmapcolorfield[fill]{4}{DF}{red!50!violet}
-\karnaughmap[variables={ABCD}, function={F}]{1101 1001 0000 0101};
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1101 1001 0000 0101};
 \end{tikzpicture}\\
 \answer{$F=\ol{ACD}+ABD+\ol{AB}D+BCD\therefore$ Cost is 4}
 \item Problem 14.1.2: Draw the K-Map for $F=\sum_{A,B,C,D}(1,2,7,9,10,11,15)$ and state the cost.\\
@@ -2096,7 +2130,7 @@ Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \karnaughmapcolorfield[fill]{4}{BF}{blue!50!green}
 \karnaughmapcolorfield[fill]{4}{9B}{blue!50!violet}
 \karnaughmapcolorfield[fill]{4}{AB}{red!50!violet}
-\karnaughmap[variables={ABCD}, function={F}]{0110 0001 0111 0001};
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0110 0001 0111 0001};
 \end{tikzpicture}\\
 \answer{$F=\ol{BC}D+\ol{B}C\ol{D}+BCD+A\ol{B}D+A\ol{B}C\therefore$ Cost is 5}
 \pagebreak
@@ -2105,18 +2139,85 @@ Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \captionsetup[subfigure]{font=footnotesize}
 \subcaptionbox{$E=0$}[.5\textwidth]{
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{2367}{blue!50}
-\karnaughmapcolorfield[fill]{4}{9D}{red!50}
-\karnaughmap[variables={ABCD}, function={}]{0011 0011 0100 0100};
+\karnaughmapcolorfield[fill]{4}{2367}{blue}
+\karnaughmapcolorfield[fill]{4}{9D}{red}
+\karnaughmap[dontcare=X, variables={ABCD}, function={}]{0011 0011 0100 0100};
 \end{tikzpicture}}
 \subcaptionbox{$E=1$}[.5\textwidth]
 {\begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{2367}{blue!50}
-\karnaughmapcolorfield[fill]{4}{9D}{red!50}
-\karnaughmapcolorfield[fill]{4}{89}{yellow!50}
-\karnaughmap[variables={ABCD}, function={}]{0011 0011 1100 0100};
+\karnaughmapcolorfield[fill]{4}{2367}{blue}
+\karnaughmapcolorfield[fill]{4}{9D}{red}
+\karnaughmapcolorfield[fill]{4}{89}{yellow}
+\karnaughmap[dontcare=X, variables={ABCD}, function={}]{0011 0011 1100 0100};
 \end{tikzpicture}}
 \center{$F=AC+A\ol{C}D+A\ol{BC}E$}
 \end{figure}
+\item Problem 14.1.3: Solve the 5-variable K-Map $F(A,B,C,D,E)=\sum(1,2,7,12,16,18,22,23,26,29,31)$.
+\begin{figure}[h]
+\captionsetup[subfigure]{}
+\subcaptionbox{$A=0$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{1}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{2}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{7}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{C}{blue!50!green}
+\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{0110 0001 0000 1000};
+\end{tikzpicture}}
+\subcaptionbox{$A=1$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{02A}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{26}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{67}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{7F}{blue!50!green}
+\karnaughmapcolorfield[fill]{4}{FD}{blue!50!violet}
+\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{1010 0011 0010 0101};
+\end{tikzpicture}}
+\center{
+Distinguished 1's: 1, 12, 2, 7, 16, 26, 29\\
+Essential prime implicants: $\ol{ABCD}E, \ol{A}BC\ol{DE}, \ol{BC}D\ol{E}, \ol{B}CDE, A\ol{BCE}, ABCE, A\ol{C}D\ol{E}$\\
+$F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}$
+}
+\end{figure}
+\pagebreak
+\item Incompletely specified functions contain a don't care condition which is denoted by an `X'. A don't care is an input condition that either can't occur or even if it occurs it doesn't matter. A circuit with one or more don't cares is called an incompletely specified circuit. 
+\item When forming prime implicant's, treat don't cares as a 1, but ignore them when actually selecting prime implicants. Never select a prime implicant only to cover a don't care. 
+\item Problem 14.1.4: Draw the 5-variable K-Map $F(A,B,C,D,E)=\sum(1,9,10,17,21,27)+d(3,5,11,25,26)$.
+\begin{figure}[h]
+\captionsetup[subfigure]{}
+\subcaptionbox{$A=0$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{13}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{15}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{9B}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{AB}{blue!50!green}
+\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{010X 0X00 011X 0000};
+\end{tikzpicture}}
+\subcaptionbox{$A=1$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{15}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{9B}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{AB}{yellow!50!green}
+\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{0100 0100 0XX1 0000};
+\end{tikzpicture}}
+\center{
+Distinguished 1's: 1, 9, 10, 17, 21\\
+Essential prime implicants: $\ol{BD}E, B\ol{C}E, B\ol{C}D$\\
+$F=\ol{BD}E+B\ol{C}E+B\ol{C}D$
+}
+\end{figure}
+\item Problem 14.1.5: Draw the K-Map for $F(A,B,C,D)=\sum(1,6,7)+d(3,5,13,15)$.\\
+Distinguished 1's: 1, 6\\
+Essential prime implicant: $\ol{A}D, \ol{A}BC$\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{1357}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{57DF}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{67}{yellow!50!green}
+\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{010X 0X11 0000 0X0X};
+\end{tikzpicture}\\
+$F=\ol{A}D+\ol{A}BC$
 \end{itemize}
+\pagebreak
+\section{2/28/2020}
+\subsection{Lecture Slides}
+\subsection{Assigned Reading}
 \end{document}

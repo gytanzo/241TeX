@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  26 FEB 2020 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  26 FEB 2020 17:17
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -1296,20 +1296,22 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (Notes.toc)
+) (Notes.toc [1
+
+{C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `Notes.toc'.
 
- [1
-
-{C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+ [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
- ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
- [2] [3]
+
+[3] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
@@ -1319,7 +1321,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
-[4]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 135--164
 
  []
@@ -1339,7 +1341,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--193
 
  []
 
-[5] [6] [7]
+[6] [7] [8]
 Underfull \hbox (badness 10000) in paragraph at lines 286--311
 
  []
@@ -1349,7 +1351,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--311
 
  []
 
-[8]
+[9]
 Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
@@ -1384,7 +1386,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
-[9] [10] [11] [12]
+[10] [11] [12] [13]
 Overfull \hbox (3.75066pt too wide) in paragraph at lines 536--537
 []$\OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 8$ in two's com-ple-ment, af-ter be-ing pa
 dded ap-pro-pri-ately and flipped,
@@ -1396,43 +1398,43 @@ Overfull \hbox (9.91719pt too wide) in paragraph at lines 545--546
 with b11101100. 
  []
 
-[13] [14]
+[14] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 635--660
 
  []
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 660--685
 
  []
 
-[16]
+[17]
 Overfull \hbox (24.90556pt too wide) in paragraph at lines 734--761
 [] 
  []
 
-[17] [18]
+[18] [19]
 Overfull \hbox (0.80618pt too wide) in paragraph at lines 829--830
 \OT1/cmr/m/n/10 with some-thing that isn't a whole num-ber (which hap-pens very
  fre-quently),
  []
 
-[19] [20]
+[20] [21]
 Overfull \hbox (109.5951pt too wide) in paragraph at lines 890--902
 | [] 
  []
 
-[21]
+[22]
 Overfull \hbox (96.4691pt too wide) in paragraph at lines 904--915
 []| [] 
  []
 
-[22] [23] [24] [25]
+[23] [24] [25] [26]
 Underfull \hbox (badness 10000) in paragraph at lines 1046--1047
 
  []
 
-[26] [27]
+[27] [28]
 Underfull \hbox (badness 10000) in paragraph at lines 1105--1106
 
  []
@@ -1457,8 +1459,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 1124--1183
 
  []
 
-[28]
-<IMG2.png, id=318, 7.90453pt x 7.52812pt>
+[29]
+<IMG2.png, id=337, 7.90453pt x 7.52812pt>
 File: IMG2.png Graphic file (type png)
 <use IMG2.png>
 Package pdftex.def Info: IMG2.png  used on input line 1189.
@@ -1473,12 +1475,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1191--1234
 
  []
 
-[29 <./IMG2.png>] [30]
+[30 <./IMG2.png>] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
 
  []
 
-<IMG1.png, id=329, 135.12984pt x 32.74734pt>
+<IMG1.png, id=349, 135.12984pt x 32.74734pt>
 File: IMG1.png Graphic file (type png)
 <use IMG1.png>
 Package pdftex.def Info: IMG1.png  used on input line 1290.
@@ -1493,12 +1495,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 1292--1293
 
  []
 
-[31 <./IMG1.png>]
+[32 <./IMG1.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 1313--1314
 
  []
 
-[32]
+[33]
 Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
 
  []
@@ -1508,9 +1510,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 1351--1352
 
  []
 
-[33] [34] [35] [36]
+[34] [35] [36] [37]
 Missing character: There is no ; in font nullfont!
- [37]
+ [38]
 Underfull \hbox (badness 10000) in paragraph at lines 1623--1648
 
  []
@@ -1535,15 +1537,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 1648--1662
 
  []
 
-[38]
+[39]
 Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
-Missing character: There is no ; in font nullfont!
- [39]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
  [40]
 Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [41]
+Missing character: There is no ; in font nullfont!
 
 Underfull \hbox (badness 10000) in paragraph at lines 1742--1760
 
@@ -1564,7 +1566,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1742--1760
 
  []
 
-[41]
+[42]
 Missing character: There is no ; in font nullfont!
 
 Underfull \hbox (badness 10000) in paragraph at lines 1760--1769
@@ -1576,56 +1578,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 1760--1769
 
  []
 
-[42] [43] [44]
+[43] [44] [45]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [46]
+Missing character: There is no ; in font nullfont!
+ [47]
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1927--1937
+Underfull \hbox (badness 10000) in paragraph at lines 1961--1971
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1927--1937
-
- []
-
-Missing character: There is no ; in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1947
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1937--1947
-
- []
-
-[45]
-Missing character: There is no ; in font nullfont!
-
-Underfull \hbox (badness 10000) in paragraph at lines 1947--2003
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1947--2003
+Underfull \hbox (badness 10000) in paragraph at lines 1961--1971
 
  []
 
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 2003--2061
+Underfull \hbox (badness 10000) in paragraph at lines 1971--1981
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2003--2061
+Underfull \hbox (badness 10000) in paragraph at lines 1971--1981
 
  []
 
-[46]
+[48]
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (54.80644pt too wide) in paragraph at lines 2061--2070
+Underfull \hbox (badness 10000) in paragraph at lines 1981--2037
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1981--2037
+
+ []
+
+Missing character: There is no ; in font nullfont!
+
+Underfull \hbox (badness 10000) in paragraph at lines 2037--2095
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2037--2095
+
+ []
+
+[49]
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (54.80644pt too wide) in paragraph at lines 2095--2104
 []\OT1/cmr/m/n/10 Problem 13.1.5: Find the sim-pli-fied SOP from $\OML/cmm/m/it
 /10 F \OT1/cmr/m/n/10 = [][](0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it
 /10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \
@@ -1635,59 +1643,106 @@ OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2061--2070
+Underfull \hbox (badness 10000) in paragraph at lines 2095--2104
 
  []
 
-[47]
+[50]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
- [48]
+ [51]
 Missing character: There is no ; in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2111--2119
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2145--2153
 [][] [] 
  []
 
-[49]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2122.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2122.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2165--2175
+[][] [] 
+ []
+
+
+Overfull \hbox (116.86758pt too wide) in paragraph at lines 2155--2182
+[]\OT1/cmr/m/n/10 Problem 14.1.3: Solve the 5-variable K-Map $\OML/cmm/m/it/10 
+F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cm
+m/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 12\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 16\OML/cmm/m/it/10 ; 
+\OT1/cmr/m/n/10 18\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 22\OML/cmm/m/it/10 ; \OT1/
+cmr/m/n/10 23\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 26\OML/cmm/m/it/10 ; \OT1/cmr/m
+/n/10 29\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 31)$.
+ []
+
+[52]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2194--2202
+[][] [] 
+ []
+
+
+Overfull \hbox (55.3676pt too wide) in paragraph at lines 2184--2208
+[]\OT1/cmr/m/n/10 Problem 14.1.4: Draw the 5-variable K-Map $\OML/cmm/m/it/10 F
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cmm
+/m/it/10 ; \OT1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/
+10 ; \OT1/cmr/m/n/10 17\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 21\OML/cmm/m/it/10 ; 
+\OT1/cmr/m/n/10 27) +
+ []
+
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (23.1697pt too wide) in paragraph at lines 2208--2218
+[]\OT1/cmr/m/n/10 Problem 14.1.5: Draw the K-Map for $\OML/cmm/m/it/10 F\OT1/cm
+r/m/n/10 (\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 ) = [](1\OML/cmm/m/it/10 ;
+ \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7) + \OML/cmm/m/it/10 d\OT
+1/cmr/m/n/10 (3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/
+m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15)$. 
+ []
+
+[53] [54]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2223.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2223.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: 57C5A81E1F10CB68F5E7206B1E9EC90E;2120.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2122.
+(rerunfilecheck)             Checksum: 4F41D427D8828EBECDD86EC717DF331A;2300.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2223.
  ) 
 Here is how much of TeX's memory you used:
- 44386 strings out of 492895
- 1011040 string characters out of 3123735
- 1193056 words of memory out of 3000000
- 47684 multiletter control sequences out of 15000+200000
- 537922 words of font info for 46 fonts, out of 3000000 for 9000
+ 44419 strings out of 492895
+ 1011342 string characters out of 3123735
+ 1214353 words of memory out of 3000000
+ 47695 multiletter control sequences out of 15000+200000
+ 541965 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,98p,931b,1269s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,98p,931b,1298s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/f
 onts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gytan/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gytan/AppData/L
 ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/gyt
-an/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+an/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><
 C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr5.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gytan/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/gytan/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><
-C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
-mbols/msam10.pfb>
-Output written on Notes.pdf (49 pages, 333079 bytes).
+/cmr10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr5.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/gytan/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/
+gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
+fb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
+s/latxfont/line10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/symbols/msam10.pfb>
+Output written on Notes.pdf (54 pages, 369276 bytes).
 PDF statistics:
- 480 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 319 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 530 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 343 words of extra memory for PDF output out of 10000 (max. 10000000)
 
