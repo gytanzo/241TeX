@@ -1,6 +1,7 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{siunitx}
@@ -11,6 +12,8 @@
 \usepackage{csquotes}
 \usepackage{cancel}
 \usepackage{karnaughmap}
+\usepackage{caption}
+\usepackage{subcaption}
 \usetikzlibrary{positioning, circuits.logic.US}
 
 \hypersetup{
@@ -1787,7 +1790,7 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
 \draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and1.output);
 \draw (or1.input 3)--++(180:5mm) coordinate (aux) |- (Z);
-\node[right=.75cm of or1] (F) {F};
+\node[right=.75cm of or1] (F) {};
 \draw (or1.output) |- (F);
 \end{tikzpicture}
 \item [b.] AND-OR with extra inverter pairs\\
@@ -1821,9 +1824,10 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (buf2.out);
 \draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (buf3.out);
 \draw (or1.input 3)--++(180:5mm) coordinate (aux) |- (buf4.out);
-\node[right=.75cm of or1] (F) {F};
+\node[right=.75cm of or1] (F) {};
 \draw (or1.output) |- (F);
 \end{tikzpicture}
+\pagebreak
 \item [c.] NAND-NAND\\
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
 \node[] (W) {W};
@@ -1839,7 +1843,7 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (W);
 \draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (nand1.output);
 \draw (or1.input 3)--++(180:5mm) coordinate (aux) |- (not1.output);
-\node[right=.75cm of or1] (F) {F};
+\node[right=.75cm of or1] (F) {};
 \draw (or1.output) |- (F);
 \end{tikzpicture}
 \end{enumerate}
@@ -1850,11 +1854,17 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \node[or gate] (or1) {};
 \node[or gate, below=of or1] (or2) {};
 \node[or gate, below=of or2] (or3) {};
+\node[left=.75cm of or1] (X) {};
+\draw (or1.input 1) |- (X);
+\node[left=.75cm of or2] (Y) {};
+\draw (or2.input 1) |- (Y);
+\node[left=.75cm of or3] (Z) {};
+\draw (or3.input 1) |- (Z);
 \node[and gate, right=of or2, logic gate inputs = nnn] (and1) {};
 \draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (or1.output);
 \draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (or2.output);
 \draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (or3.output);
-\node[right=.75cm of and1] (F) {F};
+\node[right=.75cm of and1] (F) {};
 \draw (and1.output) |- (F);
 \end{tikzpicture}
 \item [b.] OR-AND gate with extra inverter pairs\\
@@ -1862,6 +1872,12 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \node[or gate] (or1) {};
 \node[or gate, below=of or1] (or2) {};
 \node[or gate, below=of or2] (or3) {};
+\node[left=.75cm of or1] (X) {};
+\draw (or1.input 1) |- (X);
+\node[left=.75cm of or2] (Y) {};
+\draw (or2.input 1) |- (Y);
+\node[left=.75cm of or3] (Z) {};
+\draw (or3.input 1) |- (Z);
 \node[not gate, right=of or1, scale=.85] (not1) {};
 \node[not gate, right=of or2, scale=.85] (not2) {};
 \node[not gate, right=of or3, scale=.85] (not3) {};
@@ -1881,7 +1897,7 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (buf1.out);
 \draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (buf2.out);
 \draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (buf3.out);
-\node[right=.75cm of and1] (F) {F};
+\node[right=.75cm of and1] (F) {};
 \draw (and1.output) |- (F);
 \end{tikzpicture}
 \item [c.] NOR-NOR\\
@@ -1889,11 +1905,17 @@ Essential prime implicant: $\ol{y}$, $xz$\\~\\
 \node[nor gate] (nor1) {};
 \node[nor gate, below=of nor1] (nor2) {};
 \node[nor gate, below=of nor2] (nor3) {};
+\node[left=.75cm of nor1] (X) {};
+\draw (nor1.input 1) |- (X);
+\node[left=.75cm of nor2] (Y) {};
+\draw (nor2.input 1) |- (Y);
+\node[left=.75cm of nor3] (Z) {};
+\draw (nor3.input 1) |- (Z);
 \node[and gate, right=of nor2, logic gate inputs = iii] (and1) {};
 \draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (nor1.output);
 \draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (nor2.output);
 \draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (nor3.output);
-\node[right=.75cm of and1] (F) {F};
+\node[right=.75cm of and1] (F) {};
 \draw (and1.output) |- (F);
 \end{tikzpicture}
 \end{enumerate}
@@ -1918,7 +1940,7 @@ Essential prime implicant: $ABCD, \ol{BD}$\\~\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{4}{028A}{blue!50}
 \karnaughmapcolorfield[fill]{4}{F}{red!50}
-\karnaughmap[variables={ABCD}, function={F}]{1010 0000 0001 1010};
+\karnaughmap[variables={ABCD}, function={F}]{1010 0000 1010 0001};
 \end{tikzpicture}\\~\\
 \answer{$F=ABCD+\ol{BD}$}
 \pagebreak
@@ -2003,9 +2025,9 @@ A & B & C & F\\
 \hline
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{3}{04}{blue!50}
-\karnaughmapcolorfield[fill]{3}{46}{red!50}
-\karnaughmapcolorfield[fill]{3}{67}{yellow!50}
+\karnaughmapcolorfield[fill]{3}{2}{blue!50}
+\karnaughmapcolorfield[fill]{3}{15}{red!50}
+\karnaughmapcolorfield[fill]{3}{57}{yellow!50}
 \karnaughmap[variables={ABC}, function={F}]{0110 0101};
 \end{tikzpicture}\\
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
@@ -2045,5 +2067,56 @@ Essential prime implicant: $AB\ol{C}, A\ol{C}D, BD$\\
 \karnaughmapcolorfield[fill]{4}{57DF}{yellow!50}
 \karnaughmap[variables={ABCD}, function={F}]{0000 0101 0100 1101};
 \end{tikzpicture}
-\end{itemize}\pagebreak
+\end{itemize}
+\pagebreak
+\section{2/26/2020}
+\subsection{Lecture Slides}
+\begin{itemize}
+\item Equipment costs money, so we need to have a method to describe the cost of a function. This is done by counting the number of gates. Due to standard practice, initial NOT gates are not counted. 
+\item Problem 14.1.1: Draw the K-Map for $F=\sum_{A,B,C,D}(0,1,3,4,7,13,15)$ and state the cost.\\
+Distinguished 1's: 4, 13\\
+Essential prime implicant: $\ol{ACD}, ABD$\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{04}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{01}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{13}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{37}{blue!50!green}
+\karnaughmapcolorfield[fill]{4}{7F}{blue!50!violet}
+\karnaughmapcolorfield[fill]{4}{DF}{red!50!violet}
+\karnaughmap[variables={ABCD}, function={F}]{1101 1001 0000 0101};
+\end{tikzpicture}\\
+\answer{$F=\ol{ACD}+ABD+\ol{AB}D+BCD\therefore$ Cost is 4}
+\item Problem 14.1.2: Draw the K-Map for $F=\sum_{A,B,C,D}(1,2,7,9,10,11,15)$ and state the cost.\\
+Distinguished 1's: 1, 2, 7\\
+Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{19}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{2A}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{7F}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{BF}{blue!50!green}
+\karnaughmapcolorfield[fill]{4}{9B}{blue!50!violet}
+\karnaughmapcolorfield[fill]{4}{AB}{red!50!violet}
+\karnaughmap[variables={ABCD}, function={F}]{0110 0001 0111 0001};
+\end{tikzpicture}\\
+\answer{$F=\ol{BC}D+\ol{B}C\ol{D}+BCD+A\ol{B}D+A\ol{B}C\therefore$ Cost is 5}
+\pagebreak
+\item 5-variable K-Maps take the form of $f(A,B,C,D,E)$. To solve these, we use two 4-variable K-Maps, one with $A=0$ (for 0-15) and one with $A=1$ (for 16-31). We combine adjacent 1's in three directions: vertically, horizontally, and out of the page. Below is an example of a 5-variable K-Map.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{$E=0$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{2367}{blue!50}
+\karnaughmapcolorfield[fill]{4}{9D}{red!50}
+\karnaughmap[variables={ABCD}, function={}]{0011 0011 0100 0100};
+\end{tikzpicture}}
+\subcaptionbox{$E=1$}[.5\textwidth]
+{\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{2367}{blue!50}
+\karnaughmapcolorfield[fill]{4}{9D}{red!50}
+\karnaughmapcolorfield[fill]{4}{89}{yellow!50}
+\karnaughmap[variables={ABCD}, function={}]{0011 0011 1100 0100};
+\end{tikzpicture}}
+\center{$F=AC+A\ol{C}D+A\ol{BC}E$}
+\end{figure}
+\end{itemize}
 \end{document}

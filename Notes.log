@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  25 FEB 2020 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  26 FEB 2020 15:05
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -89,6 +89,18 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 LaTeX Info: Redefining \[ on input line 2855.
 LaTeX Info: Redefining \] on input line 2856.
 )
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.s
+ty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
 sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
@@ -1052,6 +1064,33 @@ Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 \c@karnaughmapIdxCounter=\count324
 \c@karnaughmapStrCounter=\count325
 )
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen308
+\captionmargin@=\dimen309
+\captionwidth=\dimen310
+\caption@tempdima=\dimen311
+\caption@indent=\dimen312
+\caption@parindent=\dimen313
+\caption@hangindent=\dimen314
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count326
+\c@continuedfloat=\count327
+Package caption Info: hyperref package is loaded.
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption
+.sty"
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count328
+\c@subtable=\count329
+)
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz/libraries\tikzlibrarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -1068,60 +1107,60 @@ r/tikz/libraries\tikzlibrarydecorations.markings.code.tex"
 r/tikz/libraries\tikzlibrarydecorations.code.tex"
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modules\pgfm
 oduledecorations.code.tex"
-\pgfdecoratedcompleteddistance=\dimen308
-\pgfdecoratedremainingdistance=\dimen309
-\pgfdecoratedinputsegmentcompleteddistance=\dimen310
-\pgfdecoratedinputsegmentremainingdistance=\dimen311
-\pgf@decorate@distancetomove=\dimen312
-\pgf@decorate@repeatstate=\count326
-\pgfdecorationsegmentamplitude=\dimen313
-\pgfdecorationsegmentlength=\dimen314
+\pgfdecoratedcompleteddistance=\dimen315
+\pgfdecoratedremainingdistance=\dimen316
+\pgfdecoratedinputsegmentcompleteddistance=\dimen317
+\pgfdecoratedinputsegmentremainingdistance=\dimen318
+\pgf@decorate@distancetomove=\dimen319
+\pgf@decorate@repeatstate=\count330
+\pgfdecorationsegmentamplitude=\dimen320
+\pgfdecorationsegmentlength=\dimen321
 )
 \tikz@lib@dec@box=\box68
 )
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/de
 corations\pgflibrarydecorations.markings.code.tex"))
-\tikz@lib@circ@count=\count327
-\tikzcircuitssizeunit=\dimen315
+\tikz@lib@circ@count=\count331
+\tikzcircuitssizeunit=\dimen322
 ))
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
 apes/circuits\pgflibraryshapes.gates.logic.US.code.tex"
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libraries/sh
 apes/circuits\pgflibraryshapes.gates.logic.code.tex")))
-Package hyperref Info: Option `colorlinks' set `true' on input line 22.
+Package hyperref Info: Option `colorlinks' set `true' on input line 25.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
  (Notes.aux)
 \openout1 = `Notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen316
+\scratchcounter=\count332
+\scratchdimen=\dimen323
 \scratchbox=\box69
-\nofMPsegments=\count329
-\nofMParguments=\count330
+\nofMPsegments=\count333
+\nofMParguments=\count334
 \everyMPshowfont=\toks43
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen317
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
+\MPscratchCnt=\count335
+\MPscratchDim=\dimen324
+\MPnumerator=\count336
+\makeMPintoPDFobject=\count337
 \everyMPtoPDFconversion=\toks44
 )
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
@@ -1140,7 +1179,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring ON on input line 29.
+Package hyperref Info: Link coloring ON on input line 32.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1154,11 +1193,11 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 estring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count334
+\c@section@level=\count338
 )
-LaTeX Info: Redefining \ref on input line 29.
-LaTeX Info: Redefining \pageref on input line 29.
-LaTeX Info: Redefining \nameref on input line 29.
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
  (Notes.out) (Notes.out)
 \@outlinefile=\write4
 \openout4 = `Notes.out'.
@@ -1246,244 +1285,253 @@ Dictionary: translator-basic-dictionary, Language: English
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/siunitx\siunitx-ab
 breviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
-) ABD: EveryShipout initializing macros (Notes.toc)
+) ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (Notes.toc)
 \tf@toc=\write5
 \openout5 = `Notes.toc'.
 
  [1
 
 {C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
-
-("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 38.
+ ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
-
-[2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 38.
+ [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 132--161
+Underfull \hbox (badness 10000) in paragraph at lines 135--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--161
+Underfull \hbox (badness 10000) in paragraph at lines 135--164
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--190
+Underfull \hbox (badness 10000) in paragraph at lines 164--193
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--190
+Underfull \hbox (badness 10000) in paragraph at lines 164--193
 
  []
 
 [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 283--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--308
+Underfull \hbox (badness 10000) in paragraph at lines 286--311
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 310--366
+Underfull \hbox (badness 10000) in paragraph at lines 313--369
 
  []
 
 [9] [10] [11] [12]
-Overfull \hbox (3.75066pt too wide) in paragraph at lines 533--534
+Overfull \hbox (3.75066pt too wide) in paragraph at lines 536--537
 []$\OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 8$ in two's com-ple-ment, af-ter be-ing pa
 dded ap-pro-pri-ately and flipped,
  []
 
 
-Overfull \hbox (9.91719pt too wide) in paragraph at lines 542--543
+Overfull \hbox (9.91719pt too wide) in paragraph at lines 545--546
 []\OT1/cmr/m/n/10 We throw away the ex-cess bit, or the red ``1'', leav-ing us 
 with b11101100. 
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 632--657
+Underfull \hbox (badness 10000) in paragraph at lines 635--660
 
  []
 
 [15]
-Underfull \hbox (badness 10000) in paragraph at lines 657--682
+Underfull \hbox (badness 10000) in paragraph at lines 660--685
 
  []
 
 [16]
-Overfull \hbox (24.90556pt too wide) in paragraph at lines 731--758
+Overfull \hbox (24.90556pt too wide) in paragraph at lines 734--761
 [] 
  []
 
 [17] [18]
-Overfull \hbox (0.80618pt too wide) in paragraph at lines 826--827
+Overfull \hbox (0.80618pt too wide) in paragraph at lines 829--830
 \OT1/cmr/m/n/10 with some-thing that isn't a whole num-ber (which hap-pens very
  fre-quently),
  []
 
 [19] [20]
-Overfull \hbox (109.5951pt too wide) in paragraph at lines 887--899
+Overfull \hbox (109.5951pt too wide) in paragraph at lines 890--902
 | [] 
  []
 
 [21]
-Overfull \hbox (96.4691pt too wide) in paragraph at lines 901--912
+Overfull \hbox (96.4691pt too wide) in paragraph at lines 904--915
 []| [] 
  []
 
 [22] [23] [24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1043--1044
+Underfull \hbox (badness 10000) in paragraph at lines 1046--1047
 
  []
 
 [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
+Underfull \hbox (badness 10000) in paragraph at lines 1105--1106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1183
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1121--1180
+Underfull \hbox (badness 10000) in paragraph at lines 1124--1183
 
  []
 
 [28]
-<IMG2.png, id=308, 7.90453pt x 7.52812pt>
+<IMG2.png, id=318, 7.90453pt x 7.52812pt>
 File: IMG2.png Graphic file (type png)
 <use IMG2.png>
-Package pdftex.def Info: IMG2.png  used on input line 1186.
+Package pdftex.def Info: IMG2.png  used on input line 1189.
 (pdftex.def)             Requested size: 39.52248pt x 37.64046pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1188--1231
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1234
 
  []
 
 [29 <./IMG2.png>] [30]
-Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
+Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
 
  []
 
-<IMG1.png, id=319, 135.12984pt x 32.74734pt>
+<IMG1.png, id=329, 135.12984pt x 32.74734pt>
 File: IMG1.png Graphic file (type png)
 <use IMG1.png>
-Package pdftex.def Info: IMG1.png  used on input line 1287.
+Package pdftex.def Info: IMG1.png  used on input line 1290.
 (pdftex.def)             Requested size: 135.1295pt x 32.74724pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1288--1289
+Underfull \hbox (badness 10000) in paragraph at lines 1291--1292
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
+Underfull \hbox (badness 10000) in paragraph at lines 1292--1293
 
  []
 
 [31 <./IMG1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1310--1311
+Underfull \hbox (badness 10000) in paragraph at lines 1313--1314
 
  []
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1347--1348
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1348--1349
+Underfull \hbox (badness 10000) in paragraph at lines 1351--1352
 
  []
 
 [33] [34] [35] [36]
 Missing character: There is no ; in font nullfont!
  [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1620--1645
+Underfull \hbox (badness 10000) in paragraph at lines 1623--1648
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1620--1645
+Underfull \hbox (badness 10000) in paragraph at lines 1623--1648
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1645--1659
+Underfull \hbox (badness 10000) in paragraph at lines 1648--1662
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1645--1659
+Underfull \hbox (badness 10000) in paragraph at lines 1648--1662
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1645--1659
+Underfull \hbox (badness 10000) in paragraph at lines 1648--1662
 
  []
 
@@ -1497,87 +1545,87 @@ Missing character: There is no ; in font nullfont!
  [40]
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+Underfull \hbox (badness 10000) in paragraph at lines 1742--1760
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+Underfull \hbox (badness 10000) in paragraph at lines 1742--1760
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+Underfull \hbox (badness 10000) in paragraph at lines 1742--1760
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1757
+Underfull \hbox (badness 10000) in paragraph at lines 1742--1760
 
  []
 
 [41]
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1757--1766
+Underfull \hbox (badness 10000) in paragraph at lines 1760--1769
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1757--1766
+Underfull \hbox (badness 10000) in paragraph at lines 1760--1769
 
  []
 
 [42] [43] [44]
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1905--1915
+Underfull \hbox (badness 10000) in paragraph at lines 1927--1937
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1905--1915
+Underfull \hbox (badness 10000) in paragraph at lines 1927--1937
 
  []
 
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1915--1925
+Underfull \hbox (badness 10000) in paragraph at lines 1937--1947
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1915--1925
+Underfull \hbox (badness 10000) in paragraph at lines 1937--1947
 
  []
 
 [45]
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1925--1981
+Underfull \hbox (badness 10000) in paragraph at lines 1947--2003
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1925--1981
+Underfull \hbox (badness 10000) in paragraph at lines 1947--2003
 
  []
 
 Missing character: There is no ; in font nullfont!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1981--2039
+Underfull \hbox (badness 10000) in paragraph at lines 2003--2061
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1981--2039
+Underfull \hbox (badness 10000) in paragraph at lines 2003--2061
 
  []
 
 [46]
 Missing character: There is no ; in font nullfont!
 
-Overfull \hbox (54.80644pt too wide) in paragraph at lines 2039--2048
+Overfull \hbox (54.80644pt too wide) in paragraph at lines 2061--2070
 []\OT1/cmr/m/n/10 Problem 13.1.5: Find the sim-pli-fied SOP from $\OML/cmm/m/it
 /10 F \OT1/cmr/m/n/10 = [][](0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it
 /10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \
@@ -1587,29 +1635,40 @@ OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2039--2048
+Underfull \hbox (badness 10000) in paragraph at lines 2061--2070
 
  []
 
 [47]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2049.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2049.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+ [48]
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2111--2119
+[][] [] 
+ []
+
+[49]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2122.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2122.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2049.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2049.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2122.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2122.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: D7CC113D4BD328F210E4AA0AB110035E;2008.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2049.
+(rerunfilecheck)             Checksum: 57C5A81E1F10CB68F5E7206B1E9EC90E;2120.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2122.
  ) 
 Here is how much of TeX's memory you used:
- 42926 strings out of 492895
- 986313 string characters out of 3123735
- 1179137 words of memory out of 3000000
- 46257 multiletter control sequences out of 15000+200000
- 536378 words of font info for 39 fonts, out of 3000000 for 9000
+ 44386 strings out of 492895
+ 1011040 string characters out of 3123735
+ 1193056 words of memory out of 3000000
+ 47684 multiletter control sequences out of 15000+200000
+ 537922 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,98p,931b,968s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,12n,98p,931b,1269s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmbx10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmbx12.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/f
@@ -1623,10 +1682,12 @@ amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/gytan/AppData/Local/Pro
 grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Users/gytan/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on Notes.pdf (47 pages, 314306 bytes).
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxfont/line10.pfb><
+C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/sy
+mbols/msam10.pfb>
+Output written on Notes.pdf (49 pages, 333079 bytes).
 PDF statistics:
- 455 PDF objects out of 1000 (max. 8388607)
- 84 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 480 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 500000)
+ 319 words of extra memory for PDF output out of 10000 (max. 10000000)
 
