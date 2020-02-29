@@ -14,7 +14,8 @@
 \usepackage{karnaughmap}
 \usepackage{caption}
 \usepackage{subcaption}
-\usetikzlibrary{positioning, circuits.logic.US}
+\usetikzlibrary{positioning, circuits.logic.US, external}
+\tikzexternalize[prefix=figures/]
 
 \hypersetup{
     colorlinks,
@@ -1372,7 +1373,7 @@ Using a truth table, find the values of 0, 5, and 6. 0 is 000, 5 is 101, and 6 i
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
 	\node[and gate] (and1) {};
     \draw (and1.input 1)--++(180:3cm) node[left] (M) {M};
-    \node[below= of A] (B) {B};
+    \node[below= of M] (B) {B};
     \node[not gate, right=1.5cm of B,scale=.85] (not1) {};
     \draw (not1.input)--++(180:5mm) coordinate (aux) |- (B);
     \node[below= of B] (X) {X};
@@ -1514,15 +1515,15 @@ $\text{ALARM}=\text{PANIC}+\text{ENABLE}\cdot \text{EXITING}'\cdot(\text{WINDOW}
 	\draw (not2.input)--++(180:5mm) coordinate (aux) |- (Y);
 	\node [not gate, right=1.5cm of Z, yshift=-.75cm, scale=.85] (not3) {};
 	\draw (not3.input)--++(180:5mm) coordinate (aux) |- (Z);
-	\node[and gate, right=3.5cm of A, logic gate inputs = nnn] (and1) {};
-	\node[and gate, right=3.5cm of B, logic gate inputs = nnn] (and2) {};
-	\node[and gate, right=3.5cm of C, logic gate inputs = nnn] (and3) {};
-	\node[or gate, right=1.5cm of and2] (or1) {};
+	\node[and gate, right=3.5cm of X, logic gate inputs = nnn] (and1) {};
+	\node[and gate, right=3.5cm of Y, logic gate inputs = nnn] (and2) {};
+	\node[and gate, right=3.5cm of Z, logic gate inputs = nnn] (and3) {};
+	\node[or gate, right=1.5cm of and2, logic gate inputs = nnn] (or1) {};
 	\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
 	\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
 	\draw (and3.input 3)--++(180:5mm) coordinate (aux) |- (not3.output);
 	\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
-	\draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (not3.output);;\
+	\draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (not3.output);
 	\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (X);
 	\draw (and2.input 3)--++(180:5mm) coordinate (aux) |- (not3.output);
 	\draw (and3.input 1)--++(180:5mm) coordinate (aux) |- (X);
@@ -1575,8 +1576,8 @@ This is a two level, three input gate $F=\ol{x}y\ol{z}+x\ol{yz}+xy\ol{z}$. Using
 	\node [not gate, right=1.5cm of Y, scale=.85] (not2) {};
 	\draw (not2.input)--++(180:5mm) coordinate (aux) |- (Y);
 	\node[below=of Y] (Z) {Z};
-	\node[and gate, right=3.5cm of X,yshift=-.5cm] (and1) {};
-	\node[and gate, right=3.5cm of Z,yshift=.5cm] (and2) {};
+	\node[and gate, right=3.5cm of X,yshift=-.5cm, logic gate inputs = nnn] (and1) {};
+	\node[and gate, right=3.5cm of Z,yshift=.5cm, logic gate inputs = nnn] (and2) {};
 	\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
 	\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
 	\draw (and1.input 3)--++(180:5mm) coordinate (aux) |- (Z);
@@ -1680,13 +1681,13 @@ $F=x\ol{x}+x\ol{xy}+x\ol{x}z+xy\ol{z}+xyz+x\ol{zx}+x\ol{zy}$\\
 This takes too long! For POS functions, simplifying them algebraically is far too complicated. We need an alternative. 
 \item Instead of solving algebraically, we use Karnaugh maps. Some Karnaugh maps are shown below.\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={XY}, function={}]{4};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={XY}, function={}]{4};
 \end{tikzpicture}\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={XYZ}, function={}]{8};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={XYZ}, function={}]{8};
 \end{tikzpicture}\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={WXYZ}, function={}]{16};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={WXYZ}, function={}]{16};
 \end{tikzpicture}
 \item There are a few things to note about K-Maps. First, working with more than four variables generally isn't worth it, at which computer aided design begins to be used. Second, the order of the numbers is in gray code. 
 \item Why gray code? Take the two terms $A'BC+ABC$. If we apply the distributive property we get $BC(A'+A)$. Then, we can apply the complement theorem to get $(A'+A)=1$, which reduces to just $BC$. This can be interpreted from the K-Map through gray code, forcing terms that can cancel to be adjacent. 
@@ -1700,7 +1701,7 @@ x & y & F\\
 1 & 1 & D\\
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={xy}, function={F}]{4};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={xy}, function={F}]{4};
 \end{tikzpicture}
 \item Problem 12.1.3: How does the below truth table map to a K-Map?\\
 \begin{tabular}{ccc|c}
@@ -1716,7 +1717,7 @@ x & y & z & F\\
 1 & 1 & 1 & H\\
 \end{tabular}\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={xyz}, function={F}, binaryidx]{8};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={xyz}, function={F}, binaryidx]{8};
 \end{tikzpicture}
 \item To use the K-Map for reduction, some vocabulary terms need to get defined.
 \begin{itemize}
@@ -1743,7 +1744,7 @@ $F=\ol{yz}+x\ol{y}z+xy$\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{3}{04}{blue}
 \karnaughmapcolorfield[fill]{3}{6754}{red}
-\karnaughmap[dontcare=X, variables={xyz}, function={F}]{1000 1111};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={xyz}, function={F}]{1000 1111};
 \end{tikzpicture}\\~\\
 $\ol{xyz}+x\ol{yz}$\\
 $\ol{yz}(\cancel{\ol{x}+x}^1)$\\
@@ -1755,16 +1756,16 @@ $\ol{yz}$\\~\\
 101 & x$\ol{y}$z\\
 \end{tabular} If it's the same, it stays, but if it changes it goes.\\~\\
 Distinguished 1's: 0, 6, 7, 5\\
-Essential prime implicant: $\ol{yz}$, $x$\\
+Essential prime implicant(s): $\ol{yz}$, $x$\\
 \answer{$F=\ol{yz}+x$}
 \item Problem 12.1.6: Find the simplified SOP for $F=\sum_{x,y,z}(0,1,4,5,7)$ using a K-Map.\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{3}{0145}{blue}
 \karnaughmapcolorfield[fill]{3}{57}{red}
-\karnaughmap[dontcare=X, variables={xyz}, function={F}]{1100 1101};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={xyz}, function={F}]{1100 1101};
 \end{tikzpicture}\\~\\
 Distinguished 1's: 0, 1, 4, 7\\
-Essential prime implicant: $\ol{y}$, $xz$\\
+Essential prime implicant(s): $\ol{y}$, $xz$\\
 \answer{$F=\ol{y}+xz$}
 \end{itemize}
 \subsection{Assigned Reading}
@@ -1934,15 +1935,15 @@ Essential prime implicant: $\ol{y}$, $xz$\\
 \begin{enumerate}
 \item [(a)] 2-variable\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={XY}, function={}]{4};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={XY}, function={}]{4};
 \end{tikzpicture}
 \item [(b)] 3-variable\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={XYZ}, function={}]{8};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={XYZ}, function={}]{8};
 \end{tikzpicture}
 \item [(c)] 4-variable\\
 \begin{tikzpicture}
-\karnaughmap[dontcare=X, variables={WXYZ}, function={}]{16};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={WXYZ}, function={}]{16};
 \end{tikzpicture}
 \end{enumerate}
 \item Observe the below K-Map.\\
@@ -1951,7 +1952,7 @@ Essential prime implicant: $\ol{y}$, $xz$\\
 \karnaughmapcolorfield[fill]{4}{3B}{yellow!50!orange}
 \karnaughmapcolorfield[fill]{4}{5D}{yellow!50!green}
 \karnaughmapcolorfield[fill]{4}{23}{blue!50!green}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0111 0101 0001 0100};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{0111 0101 0001 0100};
 \end{tikzpicture}\\
 Take note of how adjacent 1 cells were grouped to correspond to their prime implicant, or ``product terms that cover only input combinations for which the function has a 1 output, and that would cover at least one input combination with a 0 output if any variable were removed.''
 \end{itemize}
@@ -1964,19 +1965,19 @@ Take note of how adjacent 1 cells were grouped to correspond to their prime impl
 \karnaughmapcolorfield[fill]{4}{0}{blue}
 \karnaughmapcolorfield[fill]{4}{6E}{red}
 \karnaughmapcolorfield[fill]{4}{9B}{yellow}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1000 0010 0101 0010};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{1000 0010 0101 0010};
 \end{tikzpicture}\\~\\
 Distinguished 1's: 0,6,9,11,14\\
-Essential prime implicant: $\ol{ABCD}$, $A\ol{B}D, BC\ol{D}$\\
+Essential prime implicant(s): $\ol{ABCD}$, $A\ol{B}D, BC\ol{D}$\\
 \answer{$F=\ol{ABCD}+A\ol{B}D+BC\ol{D}$}
 \item Problem 13.1.2: Simplify $F=\sum_{A,B,C,D}(0,2,8,10,15)$.\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{4}{028A}{blue}
 \karnaughmapcolorfield[fill]{4}{F}{red}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1010 0000 1010 0001};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{1010 0000 1010 0001};
 \end{tikzpicture}\\~\\
 Distinguished 1's: 0,2,8,10,15\\
-Essential prime implicant: $ABCD, \ol{BD}$\\
+Essential prime implicant(s): $ABCD, \ol{BD}$\\
 \answer{$F=ABCD+\ol{BD}$}
 \pagebreak
 \item Problem 13.1.3: Find the shorthand POS and simplified SOP and draw the two level logic diagram for $F=\prod_{A,B,C}(1,2,5)$.\\~\\
@@ -2006,7 +2007,7 @@ A & B & C & F\\
 \karnaughmapcolorfield[fill]{3}{46}{yellow!50!orange}
 \karnaughmapcolorfield[fill]{3}{67}{yellow!50!green}
 \karnaughmapcolorfield[fill]{3}{37}{blue!50!green}
-\karnaughmap[dontcare=X, variables={ABC}, function={F}]{1001 1011};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{1001 1011};
 \end{tikzpicture}\\
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
 \node[] (A) {A};
@@ -2033,8 +2034,8 @@ A & B & C & F\\
 \draw (or1.output) |- (F);
 \end{tikzpicture}\\
 Distinguished 1's: 0, 3\\
-Essential prime implicant: $\ol{BC}, BC$\\
-$F=\ol{BC}+BC+A\ol{C}$
+Essential prime implicant(s): $\ol{BC}, BC$\\
+\answer{$F=\ol{BC}+BC+A\ol{C}$}
 \item Problem 13.1.4: Find the shorthand POS and simplified SOP and draw the two level logic diagram for $F=\prod_{A,B,C}(0,3,4,6)$.\\~\\
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -2061,7 +2062,7 @@ A & B & C & F\\
 \karnaughmapcolorfield[fill]{3}{2}{blue}
 \karnaughmapcolorfield[fill]{3}{15}{red}
 \karnaughmapcolorfield[fill]{3}{57}{yellow}
-\karnaughmap[dontcare=X, variables={ABC}, function={F}]{0110 0101};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{0110 0101};
 \end{tikzpicture}\\
 \begin{tikzpicture}[circuit logic US, node distance=8mm]
 \node[] (A) {A};
@@ -2091,17 +2092,18 @@ A & B & C & F\\
 \draw (or1.output) |- (F);
 \end{tikzpicture}\\
 Distinguished 1's: 1, 2, 7\\
-Essential prime implicant: $\ol{B}C, \ol{A}B\ol{C}, AC$\\
-$F=\ol{B}C+\ol{A}B\ol{C}+AC$
+
+Essential prime implicant(s): $\ol{B}C, \ol{A}B\ol{C}, AC$\\
+\answer{$F=\ol{B}C+\ol{A}B\ol{C}+AC$}
 \item Problem 13.1.5: Find the simplified SOP from $F=\prod_{A,B,C,D}(0,1,2,3,4,6,8,10,11,14)$ and draw the 2 level logic diagram.\\~\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{4}{9D}{blue}
 \karnaughmapcolorfield[fill]{4}{CD}{red}
 \karnaughmapcolorfield[fill]{4}{57DF}{yellow}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0000 0101 0100 1101};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{0000 0101 0100 1101};
 \end{tikzpicture}\\
 Distinguished 1's: 5, 7, 12, 15, 9\\
-Essential prime implicant: $AB\ol{C}, A\ol{C}D, BD$\\
+Essential prime implicant(s): $AB\ol{C}, A\ol{C}D, BD$\\
 \end{itemize}
 \pagebreak
 \section{2/26/2020}
@@ -2116,10 +2118,10 @@ Essential prime implicant: $AB\ol{C}, A\ol{C}D, BD$\\
 \karnaughmapcolorfield[fill]{4}{37}{blue!50!green}
 \karnaughmapcolorfield[fill]{4}{7F}{blue!50!violet}
 \karnaughmapcolorfield[fill]{4}{DF}{red!50!violet}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{1101 1001 0000 0101};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{1101 1001 0000 0101};
 \end{tikzpicture}\\
 Distinguished 1's: 4, 13\\
-Essential prime implicant: $\ol{ACD}, ABD$\\
+Essential prime implicant(s): $\ol{ACD}, ABD$\\
 \answer{$F=\ol{ACD}+ABD+\ol{AB}D+BCD\therefore$ Cost is 4}
 \item Problem 14.1.2: Draw the K-Map for $F=\sum_{A,B,C,D}(1,2,7,9,10,11,15)$ and state the cost.\\
 \begin{tikzpicture}
@@ -2129,10 +2131,10 @@ Essential prime implicant: $\ol{ACD}, ABD$\\
 \karnaughmapcolorfield[fill]{4}{BF}{blue!50!green}
 \karnaughmapcolorfield[fill]{4}{9B}{blue!50!violet}
 \karnaughmapcolorfield[fill]{4}{AB}{red!50!violet}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{0110 0001 0111 0001};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{0110 0001 0111 0001};
 \end{tikzpicture}\\
 Distinguished 1's: 1, 2, 7\\
-Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
+Essential prime implicant(s): $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \answer{$F=\ol{BC}D+\ol{B}C\ol{D}+BCD+A\ol{B}D+A\ol{B}C\therefore$ Cost is 5}
 \pagebreak
 \item 5-variable K-Maps take the form of $f(A,B,C,D,E)$. To solve these, we use two 4-variable K-Maps, one with $A=0$ (for 0-15) and one with $A=1$ (for 16-31). We combine adjacent 1's in three directions: vertically, horizontally, and out of the page. Below is an example of a 5-variable K-Map.
@@ -2142,16 +2144,16 @@ Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{4}{2367}{blue}
 \karnaughmapcolorfield[fill]{4}{9D}{red}
-\karnaughmap[dontcare=X, variables={ABCD}, function={}]{0011 0011 0100 0100};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={}]{0011 0011 0100 0100};
 \end{tikzpicture}}
 \subcaptionbox{$E=1$}[.5\textwidth]
 {\begin{tikzpicture}
 \karnaughmapcolorfield[fill]{4}{2367}{blue}
 \karnaughmapcolorfield[fill]{4}{9D}{red}
 \karnaughmapcolorfield[fill]{4}{89}{yellow}
-\karnaughmap[dontcare=X, variables={ABCD}, function={}]{0011 0011 1100 0100};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={}]{0011 0011 1100 0100};
 \end{tikzpicture}}
-\center{$F=AC+A\ol{C}D+A\ol{BC}E$}
+\center{\answer{$F=AC+A\ol{C}D+A\ol{BC}E$}}
 \end{figure}
 \item Problem 14.1.3: Solve the 5-variable K-Map $F(A,B,C,D,E)=\sum(1,2,7,12,16,18,22,23,26,29,31)$.
 \begin{figure}[h]
@@ -2162,7 +2164,7 @@ Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \karnaughmapcolorfield[fill]{4}{2}{yellow!50!orange}
 \karnaughmapcolorfield[fill]{4}{7}{yellow!50!green}
 \karnaughmapcolorfield[fill]{4}{C}{blue!50!green}
-\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{0110 0001 0000 1000};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={BCDE}, function={F}]{0110 0001 0000 1000};
 \end{tikzpicture}}
 \subcaptionbox{$A=1$}[.5\textwidth]{
 \begin{tikzpicture}
@@ -2171,12 +2173,12 @@ Essential prime implicant: $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \karnaughmapcolorfield[fill]{4}{67}{yellow!50!green}
 \karnaughmapcolorfield[fill]{4}{7F}{blue!50!green}
 \karnaughmapcolorfield[fill]{4}{FD}{blue!50!violet}
-\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{1010 0011 0010 0101};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={BCDE}, function={F}]{1010 0011 0010 0101};
 \end{tikzpicture}}
 \center{
 Distinguished 1's: 1, 12, 2, 7, 16, 26, 29\\
 Essential prime implicants: $\ol{ABCD}E, \ol{A}BC\ol{DE}, \ol{BC}D\ol{E}, \ol{B}CDE, A\ol{BCE}, ABCE, A\ol{C}D\ol{E}$\\
-$F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}$
+\answer{$F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}$}
 }
 \end{figure}
 \pagebreak
@@ -2191,34 +2193,96 @@ $F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}$
 \karnaughmapcolorfield[fill]{4}{15}{yellow!50!orange}
 \karnaughmapcolorfield[fill]{4}{9B}{yellow!50!green}
 \karnaughmapcolorfield[fill]{4}{AB}{blue!50!green}
-\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{010X 0X00 011X 0000};
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={BCDE}, function={F}]{010X 0X00 011X 0000};
 \end{tikzpicture}}
 \subcaptionbox{$A=1$}[.5\textwidth]{
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{15}{red!50!orange}
-\karnaughmapcolorfield[fill]{4}{9B}{yellow!50!orange}
-\karnaughmapcolorfield[fill]{4}{AB}{yellow!50!green}
-\karnaughmap[dontcare=X, variables={BCDE}, function={F}]{0100 0100 0XX1 0000};
+\karnaughmapcolorfield[fill]{4}{15}{blue}
+\karnaughmapcolorfield[fill]{4}{9B}{red}
+\karnaughmapcolorfield[fill]{4}{AB}{yellow}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={BCDE}, function={F}]{0100 0100 0XX1 0000};
 \end{tikzpicture}}
 \center{
 Distinguished 1's: 1, 9, 10, 17, 21\\
 Essential prime implicants: $\ol{BD}E, B\ol{C}E, B\ol{C}D$\\
-$F=\ol{BD}E+B\ol{C}E+B\ol{C}D$
+\answer{$F=\ol{BD}E+B\ol{C}E+B\ol{C}D$}
 }
 \end{figure}
 \item Problem 14.1.5: Draw the K-Map for $F(A,B,C,D)=\sum(1,6,7)+d(3,5,13,15)$.\\
 \begin{tikzpicture}
-\karnaughmapcolorfield[fill]{4}{1357}{red!50!orange}
-\karnaughmapcolorfield[fill]{4}{57DF}{yellow!50!orange}
-\karnaughmapcolorfield[fill]{4}{67}{yellow!50!green}
-\karnaughmap[dontcare=X, variables={ABCD}, function={F}]{010X 0X11 0000 0X0X};
+\karnaughmapcolorfield[fill]{4}{1357}{blue}
+\karnaughmapcolorfield[fill]{4}{57DF}{red}
+\karnaughmapcolorfield[fill]{4}{67}{yellow}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{010X 0X11 0000 0X0X};
 \end{tikzpicture}\\
 Distinguished 1's: 1, 6\\
-Essential prime implicant: $\ol{A}D, \ol{A}BC$\\
-$F=\ol{A}D+\ol{A}BC$
+Essential prime implicant(s): $\ol{A}D, \ol{A}BC$\\
+\answer{$F=\ol{A}D+\ol{A}BC$}
 \end{itemize}
 \pagebreak
 \section{2/28/2020}
+\subsection{Lecture Slides}
+\begin{itemize}
+\item Thus far, we have been focusing on minimization with SOP, but what about POS? POS minimization is important to understand for considering other designs in the future. It has similar rules to SOP minimization, but flipped. 
+\item Recall the ``recipe'' for SOP minimization from page 42. We will now construct a ``recipe'' for constructing a POS K-Map.
+\begin{enumerate}
+\item [1.] Place all of the maxterms on the K-Map.
+\item [2.] Draw all of the PIs, starting with the largest size possible and then working your way down. All PIs must be powers of 2. This time, we cover 0's. 
+\item [3.] Determine the distinguished 0's. Using these distinguished 0's, find the essential prime implicants. 
+\item [4.] Begin creating the function using these essential prime implicants.
+\item [5.] Look at the map and check if there are any 0's not covered by prime implicants. 
+\end{enumerate}
+\item Problem 15.1.1: Find the simplified POS for $F=\prod_{w,x,y,z}(1,2,5,6,9,10,13,15)$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{159D}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{26}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{2A}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{DF}{blue!50!green}
+\karnaughmap[omitones=true, omitzeros=false, dontcare=X, variables={WXYZ}, function={F}]{1001 1001 1001 1010};
+\end{tikzpicture}\\
+Distinguished 0's: 1, 5, 6, 9, 10, 15\\
+Essential prime implicant(s): $(W+\ol{Y}+Z), (X+\ol{Y}+Z), (Y+\ol{Z}), (\ol{W}+\ol{X}+\ol{Y})$\\
+\answer{$F=(W+\ol{Y}+Z)(X+\ol{Y}+Z)(Y+\ol{Z})(\ol{W}+\ol{X}+\ol{Y})$}
+\pagebreak
+\item Problem 15.1.2: Find the simplified POS for $F=\prod_{w,x,y,z}(1,2,5,6,9,10,13,15)+d(0,3,14)$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{0123}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{159D}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{26AE}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{DF}{blue!50!green}
+\karnaughmapcolorfield[fill]{4}{EF}{blue!50!violet}
+\karnaughmap[omitones=true, omitzeros=false, dontcare=X, variables={WXYZ}, function={F}]{X00X 1001 1001 1000};
+\end{tikzpicture}\\
+Distinguished 0's: 5, 6, 9, 10\\
+Essential prime implicant(s): $(Y+\ol{Z}), (\ol{Y}+Z)$\\
+\answer{$F=(Y+\ol{Z})(\ol{Y}+Z)(\ol{W}+\ol{X}+\ol{Z})$}
+\item Problem 15.1.3: Find the simplified POS for $F=\prod_{x,y,z}(1,5,6)+d(2,7)$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{15}{red!50!orange}
+\karnaughmapcolorfield[fill]{3}{57}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{3}{67}{yellow!50!green}
+\karnaughmapcolorfield[fill]{3}{26}{blue!50!green}
+\karnaughmap[omitones=true, omitzeros=false, dontcare=X, variables={XYZ}, function={F}]{10X1 100X};
+\end{tikzpicture}\\
+Distinguished 0's: 1\\
+Essential prime implicant(s): $(Y+\ol{Z})$\\
+\answer{$F=(Y+\ol{Z})(\ol{X}+\ol{Y})$}
+\item You may also encounter a situation where you need to convert a function to a K-Map to ultimately end up with a simplified form. 
+\pagebreak
+\item Problem 15.1.4: Convert the following function into a map and find the simplified SOP. $F=\ol{AB}C\ol{D}+\ol{ABCD}+\ol{ABD}+\ol{A}BC+\ol{A}BCD+A\ol{BC}D+A\ol{BC}+A\ol{BD}$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{028A}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{26}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{67}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{89}{blue!50!green}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{1010 0011 1110 0000};
+\end{tikzpicture}\\
+Distinguished 0's: 0, 7, 10, 10\\
+Essential prime implicant(s): $A\ol{BC}, \ol{BD}, \ol{A}BC$\\
+\answer{$F=A\ol{BC}+\ol{BD}+\ol{A}BC$}
+\end{itemize}
+\pagebreak
+\section{3/02/2020}
 \subsection{Lecture Slides}
 \subsection{Assigned Reading}
 \end{document}
