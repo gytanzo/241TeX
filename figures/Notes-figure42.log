@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  29 FEB 2020 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  2 MAR 2020 14:22
 entering extended mode
 **\def\tikzexternalrealjob{Notes}\input{Notes}
 (Notes.tex ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ar
@@ -1126,7 +1126,7 @@ No auxiliary output files.
 Package hyperref Info: Option `colorlinks' set `true' on input line 26.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
-No file Notes-figure42.aux.
+No file figures/Notes-figure42.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
@@ -1675,14 +1675,19 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2039--2097
+Underfull \hbox (badness 10000) in paragraph at lines 2039--2095
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2039--2095
 
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (54.80644pt too wide) in paragraph at lines 2097--2106
+Overfull \hbox (54.80644pt too wide) in paragraph at lines 2098--2107
 []\OT1/cmr/m/n/10 Problem 13.1.5: Find the sim-pli-fied SOP from $\OML/cmm/m/it
 /10 F \OT1/cmr/m/n/10 = [][](0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it
 /10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \
@@ -1692,12 +1697,12 @@ OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2097--2106
+Underfull \hbox (badness 10000) in paragraph at lines 2098--2107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2097--2106
+Underfull \hbox (badness 10000) in paragraph at lines 2098--2107
 
  []
 
@@ -1710,24 +1715,29 @@ isable this.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2147--2155
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2148--2156
 [][] [] 
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-\openout4 = `Notes-figure42.dpth'.
+\openout4 = `figures/Notes-figure42.dpth'.
 
 Missing character: There is no ; in font nullfont!
 [48
 
 {C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2167--2177
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2168--2178
 [][] [] 
  []
 
 
-Overfull \hbox (116.86758pt too wide) in paragraph at lines 2157--2184
+Overfull \hbox (35.36456pt too wide) in paragraph at lines 2181--2183
+ [][] 
+ []
+
+
+Overfull \hbox (116.86758pt too wide) in paragraph at lines 2158--2184
 []\OT1/cmr/m/n/10 Problem 14.1.3: Solve the 5-variable K-Map $\OML/cmm/m/it/10 
 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cm
 m/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7\OML/cmm/m/it/
@@ -1735,6 +1745,11 @@ m/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7\OML/cmm/m/it/
 \OT1/cmr/m/n/10 18\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 22\OML/cmm/m/it/10 ; \OT1/
 cmr/m/n/10 23\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 26\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 29\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 31)$.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2158--2184
+
  []
 
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
@@ -1769,7 +1784,7 @@ m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15)$.
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (24.33847pt too wide) in paragraph at lines 2234--2245
+Overfull \hbox (24.33847pt too wide) in paragraph at lines 2234--2246
 []\OT1/cmr/m/n/10 Problem 15.1.1: Find the sim-pli-fied POS for $\OML/cmm/m/it/
 10 F \OT1/cmr/m/n/10 = [][](1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/
 10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \O
@@ -1780,7 +1795,7 @@ T1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
 
-Overfull \hbox (29.33849pt too wide) in paragraph at lines 2245--2256
+Overfull \hbox (29.33849pt too wide) in paragraph at lines 2246--2258
 []\OT1/cmr/m/n/10 Problem 15.1.2: Find the sim-pli-fied POS for $\OML/cmm/m/it/
 10 F \OT1/cmr/m/n/10 = [][](1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/
 10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \O
@@ -1788,32 +1803,29 @@ T1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr
 /m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15) +
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 2245--2256
-
- []
-
 A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
 isable this.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2269.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2269.
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2269.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2269.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2269.
+A tikzpicture has been optimized away. Use '/tikz/external/optimize=false' to d
+isable this.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2287.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2287.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2287.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2287.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2287.
  ) 
 Here is how much of TeX's memory you used:
- 44169 strings out of 492895
- 1013526 string characters out of 3123735
- 1181922 words of memory out of 3000000
- 47548 multiletter control sequences out of 15000+200000
+ 44172 strings out of 492895
+ 1013986 string characters out of 3123735
+ 1182000 words of memory out of 3000000
+ 47549 multiletter control sequences out of 15000+200000
  542868 words of font info for 65 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,13n,98p,964b,1341s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,13n,98p,964b,1343s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmmi10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmr10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmr7.pfb>
-Output written on Notes-figure42.pdf (1 page, 30821 bytes).
+Output written on figures/Notes-figure42.pdf (1 page, 30821 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  2 named destinations out of 1000 (max. 500000)

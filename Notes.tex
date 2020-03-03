@@ -38,7 +38,7 @@
 \begin{itemize}
 \item Don't cheat. 
 \end{itemize}
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item Analog devices and systems process time-varying signals that can take on potentially any kind of valid across any measurable physical quantity. 
 \item Digital circuits and systems act the same way, with the key difference being we pretend they don't. A digital signal is modeled as taking on only two discrete values: 0 and 1. 
@@ -130,7 +130,7 @@ $16+4+2+1$\\
 \end{itemize}
 \answer{0011111110100010} 
 \end{itemize}
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item Addition and subtraction using binary numbers uses the same conventions you would use to add and subtract standard numbers. Four examples for addition and four examples for subtraction are shown below. 
 \item Addition\\
@@ -259,7 +259,7 @@ $-$ & 111\\
 \end{tabular}\hspace{.5cm}Broke it!\\
 \answer{Proven. Writing either ``Error'' or ``Broke it'' is acceptable.}
 \end{itemize}
-\subsection{Assigned Readings}
+\subsection{Assigned Readingss}
 \begin{itemize}
 \item In the signed-magnitude system, a number consists of a magnitude and a symbol indicating whether the number is positive or negative. We assume that the sign is positive if no sign is specified. There are two representations of zero, ``+0'' and ``-0'', both with the same value.
 \item The signed-magnitude system is applied to binary numbers using an extra bit position used to represent the sign, called the sign bit. The most significant bit is typically used as the sign bit, with 0 representing a positive value and 1 representing a negative value.
@@ -547,7 +547,7 @@ b11110010.
 \end{itemize}
 \answer{b11101100}
 \end{itemize}
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item Multiplying binary numbers functions very similarly to normal multiplication. Forming shifted multiplicands is trivial in binary multiplication since the only multiplier digits are 0 and 1. An example of this multiplication is shown below.\\
 \begin{tabular}{ccc}
@@ -728,7 +728,7 @@ $\times$ & \textcolor{white}{00000}0101\\
 \end{tabular}\\
 \answer{b00011001}
 \end{itemize}\pagebreak
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item A set of $n$-bit strings in which different bit strings represent different numbers or other things is called a code. A particular combination of $n$ 1-bit values is called a code word. 
 \item There may not necessarily be a mathematical relationship between a particular code word and what it is supposed to represent. Furthermore, a code using $n$-bit strings doesn't need to contain $2^n$ valid code words. 
@@ -864,7 +864,7 @@ $.6\cdot.2=1.2$ & 1 \\
 \end{tabular}\\
 \answer{b110.0100110011}
 \end{itemize}
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item Boolean algebra is an algebraic system designed to ``give expression ... to the fundamental laws of reasoning in the symbolic language of a Calculus.''
 \item Eventually, Boolean algebra was applied to analyze and describe the behavior of circuits built from relays. In a system called switching algebra, the condition of a relay contact, whether it be open or closed, is represented by a variable X that can have one of two possible values: 0 or 1. 
@@ -1086,7 +1086,7 @@ Swapping 0 and 1 is NOT the same as complementing.
 \item A minterm is the function output for an input combination of 1, and is also a normal product term.
 \item A maxterm is the function output for an input combination of 0, and is also a normal sum term. 
 \end{itemize}\pagebreak
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item A logic circuit can be represented with a minimum amount of detail by representing it as a ``black box'' with a certain number of inputs and outputs. Below is an example of a logic circuit.\\
 \begin{tikzpicture}[>=stealth,blk/.style={draw, minimum width=3cm, minimum height=2cm}]
@@ -1389,7 +1389,7 @@ Using a truth table, find the values of 0, 5, and 6. 0 is 000, 5 is 101, and 6 i
     \draw (or1.output) |- (T);
 \end{tikzpicture}
 \end{itemize}
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item A logic circuit description is occasionally just a list of input combinations for when a signal would be on or off. For example, the description of a 4-bit prime-number detector might be ``Given a 4-bit input combination $N=N_3N_2N_1N_0$, produce a 1 output for $N=1,2,3,5,7,11,13$.''\pagebreak
 \item A logic function described in this way can be designed directly from a given canonical sum or produce expression. For the above prime-number detector, we would have...\\
@@ -1768,7 +1768,7 @@ Distinguished 1's: 0, 1, 4, 7\\
 Essential prime implicant(s): $\ol{y}$, $xz$\\
 \answer{$F=\ol{y}+xz$}
 \end{itemize}
-\subsection{Assigned Reading}
+\subsection{Assigned Readings}
 \begin{itemize}
 \item We have previously described AND, OR, and NOT gates. We also want to use NAND and NOR gates, as these are faster than AND and OR gates in most technologies. 
 \pagebreak
@@ -2157,7 +2157,7 @@ Essential prime implicant(s): $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \end{figure}
 \item Problem 14.1.3: Solve the 5-variable K-Map $F(A,B,C,D,E)=\sum(1,2,7,12,16,18,22,23,26,29,31)$.
 \begin{figure}[h]
-\captionsetup[subfigure]{}
+\captionsetup[subfigure]{font=footnotesize}
 \subcaptionbox{$A=0$}[.5\textwidth]{
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{4}{1}{red!50!orange}
@@ -2177,11 +2177,10 @@ Essential prime implicant(s): $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \end{tikzpicture}}
 \center{
 Distinguished 1's: 1, 12, 2, 7, 16, 26, 29\\
-Essential prime implicants: $\ol{ABCD}E, \ol{A}BC\ol{DE}, \ol{BC}D\ol{E}, \ol{B}CDE, A\ol{BCE}, ABCE, A\ol{C}D\ol{E}$\\
-\answer{$F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}$}
+EPIs: $\ol{ABCD}E, \ol{A}BC\ol{DE}, \ol{BC}D\ol{E}, \ol{B}CDE, A\ol{BCE}, ABCE, A\ol{C}D\ol{E}$\\
+$\boxed{F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}}$
 }
 \end{figure}
-\pagebreak
 \item Incompletely specified functions contain a don't care condition which is denoted by an `X'. A don't care is an input condition that either can't occur or even if it occurs it doesn't matter. A circuit with one or more don't cares is called an incompletely specified circuit. 
 \item When forming prime implicant's, treat don't cares as a 1, but ignore them when actually selecting prime implicants. Never select a prime implicant only to cover a don't care. 
 \item Problem 14.1.4: Draw the 5-variable K-Map $F(A,B,C,D,E)=\sum(1,9,10,17,21,27)+d(3,5,11,25,26)$.
@@ -2277,12 +2276,704 @@ Essential prime implicant(s): $(Y+\ol{Z})$\\
 \karnaughmapcolorfield[fill]{4}{89}{blue!50!green}
 \karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABCD}, function={F}]{1010 0011 1110 0000};
 \end{tikzpicture}\\
-Distinguished 0's: 0, 7, 10, 10\\
+Distinguished 1's: 0, 7, 10, 10\\
 Essential prime implicant(s): $A\ol{BC}, \ol{BD}, \ol{A}BC$\\
 \answer{$F=A\ol{BC}+\ol{BD}+\ol{A}BC$}
 \end{itemize}
 \pagebreak
 \section{3/02/2020}
 \subsection{Lecture Slides}
-\subsection{Assigned Reading}
+\begin{itemize}
+\item We sometimes use other gates because they can be more efficient or convenient. 
+\item The first gate we will go over is the NAND gate, a Not AND gate.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[nand gate, right=of X, yshift=-.55cm] (nand1) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of nand1, xshift=1.25cm] (Z) {};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (nand1.output) node[above, xshift=1cm] (above) {X NAND Y} node[below, xshift=.85cm] (below) {$(X\cdot Y)$};
+\end{tikzpicture}\\
+\begin{tabular}{ccc}
+\hline
+X & Y & X NAND Y\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0\\
+\hline
+\end{tabular}
+\item Below are some other perspectives of a NAND gate.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[and gate, right=of X, yshift=-.55cm] (and1) {};
+\node[not gate, right=of and1, xshift=.35cm, scale=.85] (not1) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (and1.output) node[above, xshift=.45cm] (xdoty) {$X\cdot Y$};
+\node[right=of not1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (not1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=(X\cdot Y)'$};
+\end{tikzpicture}}\hspace{.75cm}
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[not gate, right=of X] (not1) {};
+\node[not gate, right=of Y] (not2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (X);
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (Y);
+\node[or gate, right=of not1, yshift=-.55cm, xshift=.5cm] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output) node[above, xshift=.3cm] (Xprime) {$X'$};
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (not2.output) node[above, xshift=.3cm] (Yprime) {$Y'$};
+\node[right=of or1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (or1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=X'+Y'$};
+\end{tikzpicture}}\\
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[nand gate, right=of X, yshift=-.55cm] (nand1) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of nand1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=(X\cdot Y)'$};
+\end{tikzpicture}}
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[or gate, right=of X, yshift=-.55cm, logic gate inputs = ii] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of or1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (or1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=X'+Y'$};
+\node[below=of equalsdot, yshift=.5cm] (botright) {};
+\node[above=of equalsdot, yshift=-.5cm] (topright) {};
+\draw[red,line width=.75 mm] (X)--(botright);
+\draw[red,line width=.75 mm] (Y)--(topright);
+\end{tikzpicture}}
+\end{figure}
+\item The next gate is the NOR gate, or a Not OR gate.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[nor gate, right=of X, yshift=-.55cm] (nor1) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of nor1, xshift=1.25cm] (Z) {};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (nor1.output) node[above, xshift=1cm] (above) {X NOR Y} node[below, xshift=.85cm] (below) {$(X+Y)$};
+\end{tikzpicture}\\
+\begin{tabular}{ccc}
+\hline
+X & Y & X NAND Y\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 0\\
+\hline
+\end{tabular}
+\pagebreak
+\item Below are some other perspectives of a NOR gate.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[or gate, right=of X, yshift=-.55cm] (or1) {};
+\node[not gate, right=of or1, xshift=.35cm, scale=.85] (not1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (or1.output) node[above, xshift=.45cm] (xdoty) {$X+Y$};
+\node[right=of not1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (not1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=(X+Y)'$};
+\end{tikzpicture}}\hspace{.75cm}
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[not gate, right=of X] (not1) {};
+\node[not gate, right=of Y] (not2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (X);
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (Y);
+\node[and gate, right=of not1, yshift=-.55cm, xshift=.5cm] (and1) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output) node[above, xshift=.3cm] (Xprime) {$X'$};
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (not2.output) node[above, xshift=.3cm] (Yprime) {$Y'$};
+\node[right=of and1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (and1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=X'\cdot Y'$};
+\end{tikzpicture}}\\
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[nor gate, right=of X, yshift=-.55cm] (nor1) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of nor1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=(X+Y)'$};
+\end{tikzpicture}}
+\subcaptionbox{}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[and gate, right=of X, yshift=-.55cm, logic gate inputs = ii] (and1) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of and1] (Z) {Z};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (and1.output);
+\node[right=of Z, xshift=-1cm] (equalsdot) {$=X'\cdot Y'$};
+\node[below=of equalsdot, yshift=.5cm] (botright) {};
+\node[above=of equalsdot, yshift=-.5cm] (topright) {};
+\draw[red,line width=.75 mm] (X)--(botright);
+\draw[red,line width=.75 mm] (Y)--(topright);
+\end{tikzpicture}}
+\end{figure}
+\item Why do we use these new gates? The answer is simple: These are complete sets. One gate can be used to create a complete logic gate set (AND, OR, and NOT). Not having to mess around with other types of configurations makes setup much easier.
+\item In the end, it's all about mapping. 
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{Replacing a NOT with a NAND}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[nand gate, right=of X] (nand1) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (X);
+\node[right=of nand1] (X') {$X'$};
+\draw (nand1.output) |- (X');
+\end{tikzpicture}}\\
+\subcaptionbox{Replacing an AND with a NAND}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X1) {$X_1$};
+\node[below=of X1] (X2) {$X_2$};
+\node[nand gate, right=of X1, yshift=-.55cm] (nand1) {};
+\node[nand gate, right=of nand1] (nand2) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (X1);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (X2);
+\draw (nand2.input 1)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\draw (nand2.input 2)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\node[right=of nand2] (multiply) {$X_1\cdot X_2$};
+\draw (nand2.output) |- (multiply);
+\end{tikzpicture}}\\
+\subcaptionbox{Replacing an OR with a NAND}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X1) {$X_1$};
+\node[below=of X1] (X2) {$X_2$};
+\node[nand gate, right=of X1] (nand1) {};
+\node[nand gate, right=of X2] (nand2) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (X1);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (X1);
+\draw (nand2.input 1)--++(180:5mm) coordinate (aux) |- (X2);
+\draw (nand2.input 2)--++(180:5mm) coordinate (aux) |- (X2);
+\node[nand gate, right=of nand1, yshift=-.55cm] (nand3) {};
+\draw (nand3.input 1)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\draw (nand3.input 2)--++(180:5mm) coordinate (aux) |- (nand2.output);
+\node[right=of nand3] (plusultra) {$X_1+X_2$};
+\draw (nand3.output) |- (plusultra);
+\end{tikzpicture}}
+\end{figure}
+\item So why does this work? In short, we are adapting DeMorgan's Law and the Involution Theorems. 
+\item Problem 16.1.1: Convert the given logic diagram into one only using NAND gates.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node[below=of B] (C) {C};
+\node[not gate, right=of A, scale=.85] (not1) {};
+\node[and gate, right=of not1, yshift=-.55cm] (and1) {};
+\node[or gate, below=of and1] (or1) {};
+\node[not gate, right=of or1, scale=.85] (not2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (A);
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (or1.output);
+\node[and gate, right=of not2, yshift=.65cm] (and2) {};
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
+\node[right=of and2] (M) {M};
+\draw (and2.output) |- (M);
+\end{tikzpicture}\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node[below=of B] (C) {C};
+\node[nand gate, right=of A, scale=.85] (nand1) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (A);
+\node[nand gate, right=of C, scale=.85] (nand2) {};
+\draw (nand2.input 1)--++(180:5mm) coordinate (aux) |- (C);
+\draw (nand2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node [nand gate, above= of nand2, yshift=-.45cm, scale=.85] (nand3) {};
+\draw (nand3.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand3.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\node[nand gate, right=of nand3, yshift=-.45cm, scale=.85] (nand4) {};
+\draw (nand4.input 1)--++(180:5mm) coordinate (aux) |- (nand3.output);
+\draw (nand4.input 2)--++(180:5mm) coordinate (aux) |- (nand2.output);
+\node[nand gate, right=of nand4, scale=.85] (nand5) {};
+\draw (nand5.input 1)--++(180:5mm) coordinate (aux) |- (nand4.output);
+\draw (nand5.input 2)--++(180:5mm) coordinate (aux) |- (nand4.output);
+\node[nand gate, right=of nand1, yshift=-.55cm, scale=.85] (nand6) {};
+\draw (nand6.input 1)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\draw (nand6.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\node[nand gate, right=of nand6, scale=.85] (nand7) {};
+\draw (nand7.input 1)--++(180:5mm) coordinate (aux) |- (nand6.output);
+\draw (nand7.input 2)--++(180:5mm) coordinate (aux) |- (nand6.output);
+\node[nand gate, right=of nand7, yshift=-.75cm, scale=.85] (nand8) {};
+\draw (nand8.input 1)--++(180:5mm) coordinate (aux) |- (nand7.output);
+\draw (nand8.input 2)--++(180:5mm) coordinate (aux) |- (nand5.output);
+\node[nand gate, right=of nand8, scale=.85] (nand9) {};
+\draw (nand9.input 1)--++(180:5mm) coordinate (aux) |- (nand8.output);
+\draw (nand9.input 2)--++(180:5mm) coordinate (aux) |- (nand8.output);
+\node[right=of nand9] (M) {M};
+\draw (nand9.output) |- (M);
+\end{tikzpicture}
+\item Problem 16.1.2: Convert the given logic diagram into one only using NAND gates.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node [not gate, right=1.5cm of B, yshift=-.55cm, scale=.85] (not1) {};
+\node[below=of B] (C) {C};
+\node[and gate, right=3cm of A, yshift=-.55cm] (and1) {};
+\node[and gate, right=3cm of C, yshift=.1cm] (and2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node[or gate, right=of and1, yshift=-.9cm] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and2.output);
+\node[right=of or1] (F) {F};
+\draw (or1.output) |- (F);
+\end{tikzpicture}\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node [nand gate, right=1.5cm of B, yshift=-.55cm, scale=.85] (nand1) {};
+\node[below=of B] (C) {C};
+\node[nand gate, right=3cm of A, yshift=-.55cm, scale=.85] (nand2) {};
+\node[nand gate, right=3cm of C, yshift=.08cm, scale=.85] (nand3) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand2.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nand2.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand3.input 1)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\draw (nand3.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node[nand gate, right=of nand2, color=blue, scale=.85] (nand4) {};
+\draw[blue] (nand4.input 1)--++(180:5mm) coordinate (aux) |- (nand2.output);
+\draw[blue] (nand4.input 2)--++(180:5mm) coordinate (aux) |- (nand2.output);
+\node[nand gate, right=of nand3, color=blue, scale=.85] (nand5) {};
+\draw[blue] (nand5.input 1)--++(180:5mm) coordinate (aux) |- (nand3.output);
+\draw[blue] (nand5.input 2)--++(180:5mm) coordinate (aux) |- (nand3.output);
+\node[nand gate, right=of nand4, color=blue, scale=.85] (nand6) {};
+\draw[blue] (nand6.input 1)--++(180:5mm) coordinate (aux) |- (nand4.output);
+\draw[blue] (nand6.input 2)--++(180:5mm) coordinate (aux) |- (nand4.output);
+\node[nand gate, right=of nand5, color=blue, scale=.85] (nand7) {};
+\draw[blue] (nand7.input 1)--++(180:5mm) coordinate (aux) |- (nand5.output);
+\draw[blue] (nand7.input 2)--++(180:5mm) coordinate (aux) |- (nand5.output);
+\node[nand gate, right=of nand6, scale=.85, yshift=-.9cm] (nand8) {};
+\draw (nand8.input 1)--++(180:5mm) coordinate (aux) |- (nand6.output);
+\draw (nand8.input 2)--++(180:5mm) coordinate (aux) |- (nand7.output);
+\node[right=of nand8] (F) {F};
+\draw (nand8.output) |- (F);
+\end{tikzpicture}\\
+Using involution, we can cross out the blue elements, giving us...\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node [nand gate, right=1.5cm of B, yshift=-.55cm, scale=.85] (nand1) {};
+\node[below=of B] (C) {C};
+\node[nand gate, right=3cm of A, yshift=-.55cm, scale=.85] (nand2) {};
+\node[nand gate, right=3cm of C, yshift=.08cm, scale=.85] (nand3) {};
+\draw (nand1.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand2.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nand2.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nand3.input 1)--++(180:5mm) coordinate (aux) |- (nand1.output);
+\draw (nand3.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node[nand gate, right=of nand2, scale=.85, yshift=-.9cm] (nand4) {};
+\draw (nand4.input 1)--++(180:5mm) coordinate (aux) |- (nand2.output);
+\draw (nand4.input 2)--++(180:5mm) coordinate (aux) |- (nand3.output);
+\node[right=of nand4] (F) {F};
+\draw (nand4.output) |- (F);
+\end{tikzpicture}
+\item We also have mappings for NOR gate conversions.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{Replacing a NOT with a NOR}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[nor gate, right=of X] (nor1) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (X);
+\node[right=of nor1] (X') {$X'$};
+\draw (nor1.output) |- (X');
+\end{tikzpicture}}\\
+\subcaptionbox{Replacing an AND with a NOR}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X1) {$X_1$};
+\node[below=of X1] (X2) {$X_2$};
+\node[nor gate, right=of X1] (nor1) {};
+\node[nor gate, right=of X2] (nor2) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (X1);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (X1);
+\draw (nor2.input 1)--++(180:5mm) coordinate (aux) |- (X2);
+\draw (nor2.input 2)--++(180:5mm) coordinate (aux) |- (X2);
+\node[nor gate, right=of nor1, yshift=-.55cm] (nor3) {};
+\draw (nor3.input 1)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\draw (nor3.input 2)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\node[right=of nor3] (plusultra) {$X_1+X_2$};
+\draw (nor3.output) |- (plusultra);
+\end{tikzpicture}}\\
+\end{figure}
+\clearpage
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{Replacing an OR with a NAND}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X1) {$X_1$};
+\node[below=of X1] (X2) {$X_2$};
+\node[nor gate, right=of X1, yshift=-.55cm] (nor1) {};
+\node[nor gate, right=of nor1] (nor2) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (X1);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (X2);
+\draw (nor2.input 1)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\draw (nor2.input 2)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\node[right=of nor2] (multiply) {$X_1\cdot X_2$};
+\draw (nor2.output) |- (multiply);
+\end{tikzpicture}}
+\end{figure}
+\item Problem 16.1.3: Convert the given logic diagram into one only using NOR gates.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node [not gate, right=1.5cm of B, yshift=-.55cm, scale=.85] (not1) {};
+\node[below=of B] (C) {C};
+\node[and gate, right=3cm of A, yshift=-.55cm] (and1) {};
+\node[and gate, right=3cm of C, yshift=.1cm] (and2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node[or gate, right=of and1, yshift=-.9cm] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and2.output);
+\node[right=of or1] (F) {F};
+\draw (or1.output) |- (F);
+\end{tikzpicture}\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node [nor gate, right=1.5cm of A, yshift=-.25cm, scale=.85] (nor1) {};
+\node[below=of A] (B) {B};
+\node [nor gate, right=1.5cm of B, yshift=.25cm, scale=.85] (nor2) {};
+\node[below=of B] (C) {C};
+\node[nor gate, right=4.5cm of A, yshift=-.55cm, scale=.85] (nor3) {};
+\node[nor gate, right=4.5cm of C, yshift=.08cm, scale=.85] (nor4) {};
+\node [nor gate, right=.8cm of nor2, yshift=-.45cm, scale=.85] (nor5) {};
+\node [nor gate, below=of nor5, scale=.85] (nor6) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nor2.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor2.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor3.input 1)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\draw (nor3.input 2)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\draw (nor5.input 1)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\draw (nor5.input 2)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\draw (nor6.input 1)--++(180:5mm) coordinate (aux) |- (C);
+\draw (nor6.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\draw (nor4.input 1)--++(180:5mm) coordinate (aux) |- (nor5.output);
+\draw (nor4.input 2)--++(180:5mm) coordinate (aux) |- (nor6.output);
+\node[nor gate, right=of nor3, yshift=-.9cm, scale=.85] (nor7) {};
+\draw (nor7.input 1)--++(180:5mm) coordinate (aux) |- (nor3.output);
+\draw (nor7.input 2)--++(180:5mm) coordinate (aux) |- (nor4.output);
+\node[nor gate, right=of nor7, scale=.85] (nor8) {};
+\draw (nor8.input 1)--++(180:5mm) coordinate (aux) |- (nor7.output);
+\draw (nor8.input 2)--++(180:5mm) coordinate (aux) |- (nor7.output);
+\node[right=of nor8] (F) {F};
+\draw (nor8.output) |- (F);
+\end{tikzpicture}
+\item Problem 16.1.4: Convert the given logic diagram into one only using NOR gates.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node[below=of B] (C) {C};
+\node[not gate, right=of A, scale=.85] (not1) {};
+\node[and gate, right=of not1, yshift=-.55cm] (and1) {};
+\node[or gate, below=of and1] (or1) {};
+\node[not gate, right=of or1, scale=.85] (not2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (A);
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (or1.output);
+\node[and gate, right=of not2, yshift=.65cm] (and2) {};
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
+\node[right=of and2] (M) {M};
+\draw (and2.output) |- (M);
+\end{tikzpicture}\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node[below=of B] (C) {C};
+\node[nor gate, right=of A, scale=.85, color=blue] (nor1) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (A);
+\node[nor gate, right=of nor1, scale=.85, color=blue] (nor2) {};
+\draw[blue] (nor2.input 1)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\draw[blue] (nor2.input 2)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\node[nor gate, right=of B, yshift=.3cm, scale=.85] (nor3) {};
+\node[nor gate, right=of C, scale=.85] (nor4) {};
+\draw (nor3.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor3.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor4.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor4.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node[nor gate, right=of nor2, yshift=-.55cm, scale=.85] (nor5) {};
+\draw (nor5.input 1)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\draw (nor5.input 2)--++(180:5mm) coordinate (aux) |- (nor3.output);
+\node[nor gate, right=of nor4, scale=.85, color=blue] (nor6) {};
+\draw[blue] (nor6.input 1)--++(180:5mm) coordinate (aux) |- (nor4.output);
+\draw[blue] (nor6.input 2)--++(180:5mm) coordinate (aux) |- (nor4.output);
+\node[nor gate, right=of nor6, scale=.85, color=blue] (nor7) {};
+\draw[blue] (nor7.input 1)--++(180:5mm) coordinate (aux) |- (nor6.output);
+\draw[blue] (nor7.input 2)--++(180:5mm) coordinate (aux) |- (nor6.output);
+\node[nor gate, right=of nor7, scale=.85] (nor8) {};
+\draw (nor8.input 1)--++(180:5mm) coordinate (aux) |- (nor7.output);
+\draw (nor8.input 2)--++(180:5mm) coordinate (aux) |- (nor7.output);
+\node[nor gate, right=of nor5, scale=.85] (nor9) {};
+\draw (nor9.input 1)--++(180:5mm) coordinate (aux) |- (nor5.output);
+\draw (nor9.input 2)--++(180:5mm) coordinate (aux) |- (nor5.output);
+\node[nor gate, right=of nor9, scale=.85, yshift=-1cm] (nor10) {};
+\draw (nor10.input 1)--++(180:5mm) coordinate (aux) |- (nor9.output);
+\draw (nor10.input 2)--++(180:5mm) coordinate (aux) |- (nor8.output);
+\node[right=of nor10] (M) {M};
+\draw (nor10.output) |- (M);
+\end{tikzpicture}\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A};
+\node[below=of A] (B) {B};
+\node[below=of B] (C) {C};
+\node[nor gate, right=of B, yshift=.3cm, scale=.85] (nor1) {};
+\node[nor gate, right=of C, scale=.85] (nor2) {};
+\draw (nor1.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor2.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (nor2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+\node[nor gate, right=of nor1, scale=.85, yshift=.55cm] (nor3) {};
+\node[nor gate, right=of nor2, scale=.85] (nor4) {};
+\draw (nor3.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (nor3.input 2)--++(180:5mm) coordinate (aux) |- (nor1.output);
+\draw (nor4.input 1)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\draw (nor4.input 2)--++(180:5mm) coordinate (aux) |- (nor2.output);
+\node[nor gate, right=of nor3, scale=.85] (nor5) {};
+\node[nor gate, right=of nor5, yshift=-.9cm] (nor6) {};
+\draw (nor5.input 1)--++(180:5mm) coordinate (aux) |- (nor3.output);
+\draw (nor5.input 2)--++(180:5mm) coordinate (aux) |- (nor3.output);
+\draw (nor6.input 1)--++(180:5mm) coordinate (aux) |- (nor5.output);
+\draw (nor6.input 2)--++(180:5mm) coordinate (aux) |- (nor4.output);
+\node[right=of nor6] (M) {M};
+\draw (nor6.output) |- (M);
+\end{tikzpicture}
+\item Another new gate is the XOR gate.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[xor gate, right=of X, yshift=-.55cm] (xor1) {};
+\draw (xor1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (xor1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of xor1, xshift=1.25cm] (Z) {};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (xor1.output) node[above, xshift=1cm] (above) {X XOR Y};
+\end{tikzpicture}\\
+\begin{tabular}{ccc}
+\hline
+X & Y & X XOR Y\\
+\hline
+0 & 0 & 0\\
+0 & 1 & 1\\
+1 & 0 & 1\\
+1 & 1 & 0\\
+\hline
+\end{tabular}
+\item It can be tricky to recognize when XOR can be used. A general rule of thumb is not to use this type of gate when told to only use specific gates. You can use truth tables, arithmetic, k-maps, and inspection to otherwise find when to use the XOR gate.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{Using 2-input gates}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (x) {x};
+\node[below=of x] (y) {y};
+\node[below=of y] (z) {z};
+\node[xor gate, right=of x, yshift=-.55cm] (xor1) {};
+\node[xor gate, right=of xor1, yshift=-.85cm] (xor2) {};
+\draw (xor1.input 1)--++(180:5mm) coordinate (aux) |- (x);
+\draw (xor1.input 2)--++(180:5mm) coordinate (aux) |- (y);
+\draw (xor2.input 1)--++(180:5mm) coordinate (aux) |- (xor1.output);
+\draw (xor2.input 2)--++(180:5mm) coordinate (aux) |- (z);
+\node[right=of xor2] (F) {$F=x\oplus y\oplus z$};
+\draw (xor2.output) |- (F);
+\end{tikzpicture}}\\
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{Using 3-input gate}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (x) {x};
+\node[below=of x] (y) {y};
+\node[below=of y] (z) {z};
+\node[xor gate, right=of y] (xor1) {};
+\draw (xor1.input 1)--++(180:5mm) coordinate (aux) |- (x);
+\draw (xor1.west)--++(180:5mm) coordinate (aux) |- (y);
+\draw (xor1.input 2)--++(180:5mm) coordinate (aux) |- (z);
+\node[right=of xor1] (F) {$F=x\oplus y\oplus z$};
+\draw (xor1.output) |- (F);
+\end{tikzpicture}}
+\end{figure}
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{Odd function $F=A\oplus B\oplus C$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={BCA}, function={F}]{01 10 10 01};
+\end{tikzpicture}}
+\subcaptionbox{Even function $F=(A\oplus B\oplus C)'$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={BCA}, function={F}]{10 01 01 10};
+\end{tikzpicture}}
+\end{figure}
+\pagebreak
+\item The last new logic gate is the XNOR gate. XNOR is the even function and the complement of XOR. It is also $(x\oplus y)'=xy+x'y'$.\\
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[xnor gate, right=of X, yshift=-.55cm] (xnor1) {};
+\draw (xnor1.input 1)--++(180:5mm) coordinate (aux) |- (X);
+\draw (xnor1.input 2)--++(180:5mm) coordinate (aux) |- (Y);
+\node[right=of xnor1, xshift=1.25cm] (Z) {};
+\draw (Z)--++(180:5mm) coordinate (aux) |- (xnor1.output) node[above, xshift=1cm] (above) {X XNOR Y};
+\end{tikzpicture}\\
+\begin{tabular}{ccc}
+\hline
+X & Y & X XNOR Y\\
+\hline
+0 & 0 & 1\\
+0 & 1 & 0\\
+1 & 0 & 0\\
+1 & 1 & 1\\
+\hline
+\end{tabular}
+\item How do you break down a logic diagram when you have more than 2 inputs but simultaneously have a limited amount of gate inputs?
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{3-input odd function}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (x) {x};
+\node[below=of x] (y) {y};
+\node[below=of y] (z) {z};
+\node[xor gate, right=of x, yshift=-.55cm] (xor1) {};
+\node[xor gate, right=of xor1, yshift=-.85cm] (xor2) {};
+\draw (xor1.input 1)--++(180:5mm) coordinate (aux) |- (x);
+\draw (xor1.input 2)--++(180:5mm) coordinate (aux) |- (y);
+\draw (xor2.input 1)--++(180:5mm) coordinate (aux) |- (xor1.output);
+\draw (xor2.input 2)--++(180:5mm) coordinate (aux) |- (z);
+\node[right=of xor2] (F) {};
+\draw (xor2.output) |- (F);
+\end{tikzpicture}}
+\subcaptionbox{3-input even function}[.5\textwidth]{
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (x) {x};
+\node[below=of x] (y) {y};
+\node[below=of y] (z) {z};
+\node[xor gate, right=of x, yshift=-.55cm] (xor1) {};
+\node[xnor gate, right=of xor1, yshift=-.85cm] (xnor1) {};
+\draw (xor1.input 1)--++(180:5mm) coordinate (aux) |- (x);
+\draw (xor1.input 2)--++(180:5mm) coordinate (aux) |- (y);
+\draw (xnor1.input 1)--++(180:5mm) coordinate (aux) |- (xor1.output);
+\draw (xnor1.input 2)--++(180:5mm) coordinate (aux) |- (z);
+\node[right=of xnor1] (F) {};
+\draw (xnor1.output) |- (F);
+\end{tikzpicture}}
+\end{figure}
+\end{itemize}
+\subsection{Assigned Readings}
+\begin{itemize}
+\item We previously discussed analysis methods to analyze the behavior of a circuit. However, these are flawed in that they only predict the steady-state behavior of a circuit. That is,  they predict a circuit's output as a function of its inputs under the assumption that the inputs have been stable for a long time. However, the actual delay from an input change to the corresponding output change in a real logic circuit is nonzero and can depend on many factors.
+\item Because of circuit delays, the transient behavior of a combinational logic circuit may differ from what is predicted by steady-state analysis. In particular, a circuit's output may produce a short pulse, often called a glitch, at a time when steady-state analysis would suggest such an output wouldn't occur. A hazard is said to exist when a circuit has the possibility of producing such a glitch. 
+\item Depending on how a circuit's output is produced, a system's operation might not even be adversely impacted by a glitch. When a glitch is harmful, however, it is up to the logic designer to be prepared to eliminate the hazards, or the possibilities of glitches occurring. 
+\pagebreak
+\item A static-1 hazard is the possibility of a circuit's output producing a 0 glitch when we would expect the output to remain at a nice steady 1 based on a static analysis of the function. It has the following formal definition:
+\begin{displayquote}
+``A static-1 hazard is a pair of input combinations that: (a) differ in only one input variable and (b) both give a 1 output; such that it is possible for a momentary 0 output to occur during a transition in the differing input variable.''
+\end{displayquote}
+\item A static-0 hazard is the possibility of a 1 glitch when we expect the circuit to have a steady 0 output. It has the following formal definition:
+\begin{displayquote}
+``A static-0 hazard is a pair of input combinations that: (a) differ in only one input variable and (b) both give a 0 output; such that is possible for a momentary 1 output to occur during a transition in the differing input variable.''
+\end{displayquote}
+\item Karnaugh maps can be used to detect static hazards in a two-level SOP or POS circuit. The existence or nonexistence of static hazards depends on the circuit design for a logic function. 
+\item A properly designed two-level SOP (AND-OR) circuit has no static-0 hazards. A static-0 hazard would only exist in the circuit if both a variable and its complement were connected to the same AND gate. However, these can have static-1 hazards. 
+\item For static-1 hazard analysis, we circle the product terms corresponding to the AND gates in the circuit and we search for adjacent 1 cells that are not covered by a single product term. 
+\item Below is a Karnaugh map.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{37}{blue}
+\karnaughmapcolorfield[fill]{3}{46}{red}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={XYZ}, function={F}]{00 01 10 11};
+\end{tikzpicture}\\
+It should be immediately obvious that there is no single product term that can cover both combinations 111 and 110. Thus, it is theoretically possible for the output to momentarily ``glitch'' to 0 if the AND gate output that covers one of the combinations goes to 0 before the other can go to 1. This is solved by simply adding an extra product term (another AND gate) to over the hazardous pair, shown below.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{37}{blue}
+\karnaughmapcolorfield[fill]{3}{46}{red}
+\karnaughmapcolorfield[fill]{3}{67}{yellow}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={XYZ}, function={F}]{00 01 10 11};
+\end{tikzpicture}\\
+The extra product term is called the consensus, which is what we add to eliminate hazards. 
+\item A properly designed two-level POS (OR-AND) circuit has no static-1 hazards. It can however have static-0 hazards, which are eliminated in a manner dual to the foregoing.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{As originally designed}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{1357}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{4C}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{}{blue!50!green}
+\karnaughmapcolorfield[fill]{4}{ABEF}{blue!50!violet}
+\karnaughmapcolorfield[fill]{4}{}{red!50!violet}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={WXYZ}, function={F}]{0101 1101 0011 1011};
+\end{tikzpicture}}
+\subcaptionbox{With extra product terms to cover static-1 hazards}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{4}{1357}{red!50!orange}
+\karnaughmapcolorfield[fill]{4}{CE}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{4}{4C}{yellow!50!green}
+\karnaughmapcolorfield[fill]{4}{37BF}{blue!50!green}
+\karnaughmapcolorfield[fill]{4}{ABEF}{blue!50!violet}
+\karnaughmapcolorfield[fill]{4}{45}{red!50!violet}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={WXYZ}, function={F}]{0101 1101 0011 1011};
+\end{tikzpicture}}
+\end{figure}
+\item A dynamic hazard is the possibility of an output changing more than once as the result of a single input transition. Multiple output transitions can occur if there are multiple paths with different delays from the input to the output. Dynamic hazards do not appear in properly designed two-level AND-OR or OR-AND circuits. 
+\item Only a few situations (such as the design of feedback sequential circuits) require hazard-free combinational circuits. Methods for finding hazards in arbitrary circuits can be difficult, so if you absolutely need a hazard-free design, it is best to utilize a circuit structure that is simple to analyze. 
+\item If cost isn't a problem, a brute force method for designing a hazard-free circuit is just to use the complete sum of the logic function. 
+\item Everything that has been said about AND-OR circuits applies to NAND-NAND circuits, and everything said about OR-AND circuits applies to NOR-NOR circuits. 
+\end{itemize}
+\pagebreak
+\section{3/5/2020}
+\subsection{Lecture Slides}
+\begin{itemize}
+\item
+\end{itemize}
+\subsection{Assigned Readings}
+\begin{itemize}
+\item 
+\end{itemize}
 \end{document}

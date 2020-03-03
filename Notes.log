@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  29 FEB 2020 15:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2020.2.21)  3 MAR 2020 17:42
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -1468,7 +1468,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1125--1184
  []
 
 [29 <./figures/Notes-figure0.pdf>]
-<IMG2.png, id=359, 7.90453pt x 7.52812pt>
+<IMG2.png, id=374, 7.90453pt x 7.52812pt>
 File: IMG2.png Graphic file (type png)
 <use IMG2.png>
 Package pdftex.def Info: IMG2.png  used on input line 1190.
@@ -1489,7 +1489,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1277--1278
 
  []
 
-<IMG1.png, id=389, 135.12984pt x 32.74734pt>
+<IMG1.png, id=404, 135.12984pt x 32.74734pt>
 File: IMG1.png Graphic file (type png)
 <use IMG1.png>
 Package pdftex.def Info: IMG1.png  used on input line 1291.
@@ -1682,12 +1682,7 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 2168--2178
  []
 
 
-Overfull \hbox (35.36456pt too wide) in paragraph at lines 2181--2183
- [][] 
- []
-
-
-Overfull \hbox (116.86758pt too wide) in paragraph at lines 2158--2185
+Overfull \hbox (116.86758pt too wide) in paragraph at lines 2158--2184
 []\OT1/cmr/m/n/10 Problem 14.1.3: Solve the 5-variable K-Map $\OML/cmm/m/it/10 
 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cm
 m/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7\OML/cmm/m/it/
@@ -1697,19 +1692,17 @@ cmr/m/n/10 23\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 26\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 29\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 31)$.
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[52 <./figures/Notes-figure39.pdf> <./figures/Notes-figure40.pdf>]
+[52 <./figures/Notes-figure39.pdf> <./figures/Notes-figure40.pdf> <./figures/No
+tes-figure41.pdf> <./figures/Notes-figure42.pdf>]
 ===== Image 'figures/Notes-figure43' is up-to-date. ======
 ===== Image 'figures/Notes-figure44' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2197--2205
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2196--2204
 [][] [] 
  []
 
 
-Overfull \hbox (55.3676pt too wide) in paragraph at lines 2187--2211
+Overfull \hbox (55.3676pt too wide) in paragraph at lines 2186--2210
 []\OT1/cmr/m/n/10 Problem 14.1.4: Draw the 5-variable K-Map $\OML/cmm/m/it/10 F
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cmm
 /m/it/10 ; \OT1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/
@@ -1717,12 +1710,9 @@ Overfull \hbox (55.3676pt too wide) in paragraph at lines 2187--2211
 \OT1/cmr/m/n/10 27) +
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 ===== Image 'figures/Notes-figure45' is up-to-date. ======
 
-Overfull \hbox (23.1697pt too wide) in paragraph at lines 2211--2221
+Overfull \hbox (23.1697pt too wide) in paragraph at lines 2210--2220
 []\OT1/cmr/m/n/10 Problem 14.1.5: Draw the K-Map for $\OML/cmm/m/it/10 F\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 ) = [](1\OML/cmm/m/it/10 ;
  \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7) + \OML/cmm/m/it/10 d\OT
@@ -1730,12 +1720,11 @@ r/m/n/10 (\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 ) = [](1\OML/cmm/m/it/10 ;
 m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15)$. 
  []
 
-[53 <./figures/Notes-figure41.pdf> <./figures/Notes-figure42.pdf> <./figures/No
-tes-figure45.pdf>] [54 <./figures/Notes-figure43.pdf> <./figures/Notes-figure44
-.pdf>]
+[53 <./figures/Notes-figure43.pdf> <./figures/Notes-figure44.pdf> <./figures/No
+tes-figure45.pdf>]
 ===== Image 'figures/Notes-figure46' is up-to-date. ======
 
-Overfull \hbox (24.33847pt too wide) in paragraph at lines 2235--2247
+Overfull \hbox (24.33847pt too wide) in paragraph at lines 2234--2246
 []\OT1/cmr/m/n/10 Problem 15.1.1: Find the sim-pli-fied POS for $\OML/cmm/m/it/
 10 F \OT1/cmr/m/n/10 = [][](1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/
 10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \O
@@ -1743,10 +1732,10 @@ T1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr
 /m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15)$. 
  []
 
-[55 <./figures/Notes-figure46.pdf>]
+[54 <./figures/Notes-figure46.pdf>]
 ===== Image 'figures/Notes-figure47' is up-to-date. ======
 
-Overfull \hbox (29.33849pt too wide) in paragraph at lines 2247--2259
+Overfull \hbox (29.33849pt too wide) in paragraph at lines 2246--2258
 []\OT1/cmr/m/n/10 Problem 15.1.2: Find the sim-pli-fied POS for $\OML/cmm/m/it/
 10 F \OT1/cmr/m/n/10 = [][](1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/
 10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \O
@@ -1755,24 +1744,160 @@ T1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr
  []
 
 ===== Image 'figures/Notes-figure48' is up-to-date. ======
-[56 <./figures/Notes-figure47.pdf> <./figures/Notes-figure48.pdf>]
+[55 <./figures/Notes-figure47.pdf> <./figures/Notes-figure48.pdf>]
 ===== Image 'figures/Notes-figure49' is up-to-date. ======
-[57 <./figures/Notes-figure49.pdf>] [58]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2288.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2288.
+[56 <./figures/Notes-figure49.pdf>]
+===== Image 'figures/Notes-figure50' is up-to-date. ======
+===== Image 'figures/Notes-figure51' is up-to-date. ======
+
+Overfull \hbox (20.40369pt too wide) in paragraph at lines 2323--2323
+ [][] 
+ []
+
+===== Image 'figures/Notes-figure52' is up-to-date. ======
+
+Overfull \hbox (27.62868pt too wide) in paragraph at lines 2338--2338
+ [][] 
+ []
+
+===== Image 'figures/Notes-figure53' is up-to-date. ======
+===== Image 'figures/Notes-figure54' is up-to-date. ======
+
+Overfull \hbox (23.56177pt too wide) in paragraph at lines 2323--2365
+[][]  [] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2323--2365
+[] [] 
+ []
+
+===== Image 'figures/Notes-figure55' is up-to-date. ======
+[57 <./figures/Notes-figure50.pdf> <./figures/Notes-figure51.pdf> <./figures/No
+tes-figure52.pdf> <./figures/Notes-figure53.pdf> <./figures/Notes-figure54.pdf>
+ <./figures/Notes-figure55.pdf>]
+===== Image 'figures/Notes-figure56' is up-to-date. ======
+
+Overfull \hbox (25.12032pt too wide) in paragraph at lines 2402--2402
+ [][] 
+ []
+
+===== Image 'figures/Notes-figure57' is up-to-date. ======
+
+Overfull \hbox (22.91206pt too wide) in paragraph at lines 2417--2417
+ [][] 
+ []
+
+===== Image 'figures/Notes-figure58' is up-to-date. ======
+===== Image 'figures/Notes-figure59' is up-to-date. ======
+
+Overfull \hbox (23.56177pt too wide) in paragraph at lines 2402--2444
+[][]  [] 
+ []
+
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2402--2444
+[] [] 
+ []
+
+===== Image 'figures/Notes-figure60' is up-to-date. ======
+===== Image 'figures/Notes-figure61' is up-to-date. ======
+===== Image 'figures/Notes-figure62' is up-to-date. ======
+
+Overfull \hbox (4.60265pt too wide) in paragraph at lines 2486--2486
+ [][] 
+ []
+
+===== Image 'figures/Notes-figure63' is up-to-date. ======
+===== Image 'figures/Notes-figure64' is up-to-date. ======
+[58 <./figures/Notes-figure56.pdf> <./figures/Notes-figure57.pdf> <./figures/No
+tes-figure58.pdf> <./figures/Notes-figure59.pdf> <./figures/Notes-figure60.pdf>
+ <./figures/Notes-figure61.pdf> <./figures/Notes-figure62.pdf> <./figures/Notes
+-figure63.pdf>]
+===== Image 'figures/Notes-figure65' is up-to-date. ======
+===== Image 'figures/Notes-figure66' is up-to-date. ======
+===== Image 'figures/Notes-figure67' is up-to-date. ======
+===== Image 'figures/Notes-figure68' is up-to-date. ======
+===== Image 'figures/Notes-figure69' is up-to-date. ======
+
+Overfull \hbox (4.03654pt too wide) in paragraph at lines 2641--2641
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2625--2642
+
+ []
+
+[59 <./figures/Notes-figure64.pdf> <./figures/Notes-figure65.pdf> <./figures/No
+tes-figure66.pdf> <./figures/Notes-figure67.pdf> <./figures/Notes-figure68.pdf>
+ <./figures/Notes-figure69.pdf>]
+===== Image 'figures/Notes-figure70' is up-to-date. ======
+===== Image 'figures/Notes-figure71' is up-to-date. ======
+===== Image 'figures/Notes-figure72' is up-to-date. ======
+===== Image 'figures/Notes-figure73' is up-to-date. ======
+===== Image 'figures/Notes-figure74' is up-to-date. ======
+===== Image 'figures/Notes-figure75' is up-to-date. ======
+===== Image 'figures/Notes-figure76' is up-to-date. ======
+[60
+
+ <./figures/Notes-figure70.pdf> <./figures/Notes-figure71.pdf> <./figures/Notes
+-figure72.pdf> <./figures/Notes-figure73.pdf> <./figures/Notes-figure74.pdf> <.
+/figures/Notes-figure75.pdf>]
+===== Image 'figures/Notes-figure77' is up-to-date. ======
+
+Overfull \hbox (26.27763pt too wide) in paragraph at lines 2829--2829
+ [][] 
+ []
+
+===== Image 'figures/Notes-figure78' is up-to-date. ======
+===== Image 'figures/Notes-figure79' is up-to-date. ======
+===== Image 'figures/Notes-figure80' is up-to-date. ======
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2849--2854
+[][] [] 
+ []
+
+[61 <./figures/Notes-figure76.pdf> <./figures/Notes-figure77.pdf> <./figures/No
+tes-figure78.pdf> <./figures/Notes-figure79.pdf> <./figures/Notes-figure80.pdf>
+]
+===== Image 'figures/Notes-figure81' is up-to-date. ======
+===== Image 'figures/Notes-figure82' is up-to-date. ======
+===== Image 'figures/Notes-figure83' is up-to-date. ======
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2892--2907
+[][] [] 
+ []
+
+[62 <./figures/Notes-figure81.pdf> <./figures/Notes-figure82.pdf> <./figures/No
+tes-figure83.pdf>]
+===== Image 'figures/Notes-figure84' is up-to-date. ======
+===== Image 'figures/Notes-figure85' is up-to-date. ======
+[63 <./figures/Notes-figure84.pdf>]
+===== Image 'figures/Notes-figure86' is up-to-date. ======
+===== Image 'figures/Notes-figure87' is up-to-date. ======
+
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2952--2963
+[][] [] 
+ []
+
+[64 <./figures/Notes-figure85.pdf> <./figures/Notes-figure86.pdf> <./figures/No
+tes-figure87.pdf>] [65]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2979.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2979.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2288.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2288.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2979.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2979.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: 239517E07644259B2B1A38EEBCD43E1F;2412.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2288.
+(rerunfilecheck)             Checksum: EE2F3C1589C044535EA7625ABC919A58;2602.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2979.
  ) 
 Here is how much of TeX's memory you used:
- 44276 strings out of 492895
- 1014321 string characters out of 3123735
- 1181544 words of memory out of 3000000
- 47485 multiletter control sequences out of 15000+200000
+ 44336 strings out of 492895
+ 1015136 string characters out of 3123735
+ 1181547 words of memory out of 3000000
+ 47488 multiletter control sequences out of 15000+200000
  541965 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,12n,98p,931b,910s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1789,14 +1914,15 @@ C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 
 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/gytan/AppData/Local/Progr
 ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/gytan/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/
-gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.p
-fb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/latxfont/line10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/symbols/msam10.pfb>
-Output written on Notes.pdf (58 pages, 478072 bytes).
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/
+gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
+b><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmti10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/latxfont/line10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on Notes.pdf (65 pages, 612926 bytes).
 PDF statistics:
- 1008 PDF objects out of 1200 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 609 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1413 PDF objects out of 1440 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 823 words of extra memory for PDF output out of 10000 (max. 10000000)
 

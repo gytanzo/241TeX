@@ -1,42 +1,45 @@
 \contentsline {section}{\numberline {1}1/27/2020}{3}{section.1}% 
 \contentsline {subsection}{\numberline {1.1}Lecture Notes}{3}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Assigned Reading}{3}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.2}Assigned Readings}{3}{subsection.1.2}% 
 \contentsline {section}{\numberline {2}1/29/2020}{5}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Lecture Notes}{5}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}Assigned Reading}{6}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.2}Assigned Readings}{6}{subsection.2.2}% 
 \contentsline {section}{\numberline {3}1/31/2020}{7}{section.3}% 
 \contentsline {subsection}{\numberline {3.1}Lecture Notes}{7}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Assigned Readings}{8}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.2}Assigned Readingss}{8}{subsection.3.2}% 
 \contentsline {section}{\numberline {4}2/3/2020}{11}{section.4}% 
 \contentsline {subsection}{\numberline {4.1}Lecture Slides}{11}{subsection.4.1}% 
-\contentsline {subsection}{\numberline {4.2}Assigned Reading}{14}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.2}Assigned Readings}{14}{subsection.4.2}% 
 \contentsline {section}{\numberline {5}2/5/2020}{16}{section.5}% 
 \contentsline {subsection}{\numberline {5.1}Lecture Slides}{16}{subsection.5.1}% 
-\contentsline {subsection}{\numberline {5.2}Assigned Reading}{18}{subsection.5.2}% 
+\contentsline {subsection}{\numberline {5.2}Assigned Readings}{18}{subsection.5.2}% 
 \contentsline {section}{\numberline {6}2/7/2020}{20}{section.6}% 
 \contentsline {subsection}{\numberline {6.1}Lecture Notes}{20}{subsection.6.1}% 
-\contentsline {subsection}{\numberline {6.2}Assigned Reading}{21}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.2}Assigned Readings}{21}{subsection.6.2}% 
 \contentsline {section}{\numberline {7}2/10/2020}{25}{section.7}% 
 \contentsline {subsection}{\numberline {7.1}Lecture Notes}{25}{subsection.7.1}% 
 \contentsline {section}{\numberline {8}2/12/2020}{27}{section.8}% 
 \contentsline {subsection}{\numberline {8.1}Lecture Notes}{27}{subsection.8.1}% 
-\contentsline {subsection}{\numberline {8.2}Assigned Reading}{29}{subsection.8.2}% 
+\contentsline {subsection}{\numberline {8.2}Assigned Readings}{29}{subsection.8.2}% 
 \contentsline {section}{\numberline {9}2/14/2020}{32}{section.9}% 
 \contentsline {subsection}{\numberline {9.1}Lecture Slides}{32}{subsection.9.1}% 
-\contentsline {subsection}{\numberline {9.2}Assigned Reading}{34}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.2}Assigned Readings}{34}{subsection.9.2}% 
 \contentsline {section}{\numberline {10}2/17/2020}{36}{section.10}% 
 \contentsline {subsection}{\numberline {10.1}Lecture Slides}{36}{subsection.10.1}% 
 \contentsline {section}{\numberline {11}2/19/2020}{38}{section.11}% 
 \contentsline {subsection}{\numberline {11.1}Lecture Slides}{38}{subsection.11.1}% 
 \contentsline {section}{\numberline {12}2/21/2020}{40}{section.12}% 
 \contentsline {subsection}{\numberline {12.1}Lecture Slides}{40}{subsection.12.1}% 
-\contentsline {subsection}{\numberline {12.2}Assigned Reading}{43}{subsection.12.2}% 
+\contentsline {subsection}{\numberline {12.2}Assigned Readings}{43}{subsection.12.2}% 
 \contentsline {section}{\numberline {13}2/24/2020}{48}{section.13}% 
 \contentsline {subsection}{\numberline {13.1}Lecture Slides}{48}{subsection.13.1}% 
 \contentsline {section}{\numberline {14}2/26/2020}{51}{section.14}% 
 \contentsline {subsection}{\numberline {14.1}Lecture Slides}{51}{subsection.14.1}% 
-\contentsline {section}{\numberline {15}2/28/2020}{55}{section.15}% 
-\contentsline {subsection}{\numberline {15.1}Lecture Slides}{55}{subsection.15.1}% 
-\contentsline {section}{\numberline {16}3/02/2020}{58}{section.16}% 
-\contentsline {subsection}{\numberline {16.1}Lecture Slides}{58}{subsection.16.1}% 
-\contentsline {subsection}{\numberline {16.2}Assigned Reading}{58}{subsection.16.2}% 
+\contentsline {section}{\numberline {15}2/28/2020}{54}{section.15}% 
+\contentsline {subsection}{\numberline {15.1}Lecture Slides}{54}{subsection.15.1}% 
+\contentsline {section}{\numberline {16}3/02/2020}{57}{section.16}% 
+\contentsline {subsection}{\numberline {16.1}Lecture Slides}{57}{subsection.16.1}% 
+\contentsline {subsection}{\numberline {16.2}Assigned Readings}{62}{subsection.16.2}% 
+\contentsline {section}{\numberline {17}3/5/2020}{65}{section.17}% 
+\contentsline {subsection}{\numberline {17.1}Lecture Slides}{65}{subsection.17.1}% 
+\contentsline {subsection}{\numberline {17.2}Assigned Readings}{65}{subsection.17.2}% 
