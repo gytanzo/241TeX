@@ -2962,9 +2962,46 @@ The extra product term is called the consensus, which is what we add to eliminat
 \end{tikzpicture}}
 \end{figure}
 \item A dynamic hazard is the possibility of an output changing more than once as the result of a single input transition. Multiple output transitions can occur if there are multiple paths with different delays from the input to the output. Dynamic hazards do not appear in properly designed two-level AND-OR or OR-AND circuits. 
+\pagebreak
+\item Let's go over an example of a dynamic hazard. Consider the below circuit. It has three paths from input X to output F. One of the paths goes through a slower OR gate and another goes through an even slower OR gate. If the circuit's input is $W,X,Y,Z=0,0,0,1$, then the output will be 1, as shown below.\\ 
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (W) {W};
+\node[below=of W] (X) {X};
+\node[below=of X] (Y) {Y};
+\node[below=of Y] (belowY1) {};
+\node[below=of belowY1] (belowY2) {};
+\node[below=of belowY2] (Z) {Z};
+\node[right=of W] (rightW) {};
+\node[right=of Y] (rightY) {};
+\node[not gate, right=of belowY1, scale=.85] (not1) {};
+\node[not gate, right=of belowY2, scale=.85] (not2) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (X);
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (W);
+\node[or gate, right=of rightW] (or1) {slow};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (W);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (X);
+\node[or gate, right=of rightY] (or2) {slower};
+\draw (or2.input 1)--++(180:5mm) coordinate (aux) |- (Y);
+\draw (or2.input 2)--++(180:5mm) coordinate (aux) |- (not1.output);
+\node[and gate, right=of or2] (and1) {};
+\node[below= of and1] (belowAnd) {};
+\node[and gate, below=of belowAnd, logic gate inputs = nnn] (and2) {};
+\draw[blue] (and1.input 1)--++(180:5mm) coordinate (aux) |- (or1.output);
+\draw[blue] (and1.input 2)--++(180:5mm) coordinate (aux) |- (or2.output);
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
+\draw (and2.input 3)--++(180:5mm) coordinate (aux) |- (Z);
+\node[or gate, right=of and1] (or3) {};
+\draw[blue] (or3.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (or3.input 2)--++(180:5mm) coordinate (aux) |- (and2.output);
+\node[right=of or3] (F) {F};
+\draw (or3.output) |- (F);
+\end{tikzpicture}\\
+Now, let's suppose we change the X input to a 1. Assuming that all of the gates except the two ``slow'' gates are very fast, the transitions not marked blue will occur next, and the output goes to zero. Eventually the output of the ``slow'' gate changes and the output becomes a 1. Finally, the output of the ``slower'' gate changes and the output is finally at 0. 
 \item Only a few situations (such as the design of feedback sequential circuits) require hazard-free combinational circuits. Methods for finding hazards in arbitrary circuits can be difficult, so if you absolutely need a hazard-free design, it is best to utilize a circuit structure that is simple to analyze. 
 \item If cost isn't a problem, a brute force method for designing a hazard-free circuit is just to use the complete sum of the logic function. 
-\item Everything that has been said about AND-OR circuits applies to NAND-NAND circuits, and everything said about OR-AND circuits applies to NOR-NOR circuits. 
+\item Everything that has been said about AND-OR circuits applies to NAND-NAND circuits, and everything said about OR-AND circuits applies to NOR-NOR circuits.
+\item It is important to note that most hazards aren't actually that dangerous. Any combinational circuit can be analyzed for the presence of a hazard, however any well designed synchronous digital system is specifically structured to prevent the occurrence of hazards. Hazard analysis is typically only necessary in asynchronous sequential circuits. 
 \end{itemize}
 \pagebreak
 \section{3/5/2020}
