@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.6)  8 MAR 2020 15:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.6)  8 MAR 2020 16:36
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -1732,7 +1732,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3417.
 Here is how much of TeX's memory you used:
  37004 strings out of 481258
  879529 string characters out of 2906189
- 1298434 words of memory out of 3000000
+ 1297434 words of memory out of 3000000
  51719 multiletter control sequences out of 15000+200000
  549778 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1762,7 +1762,7 @@ ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
 Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxf
 ont/line10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msam10.pfb>
-Output written on Notes.pdf (77 pages, 1028482 bytes).
+Output written on Notes.pdf (77 pages, 1028512 bytes).
 PDF statistics:
  1645 PDF objects out of 1728 (max. 8388607)
  153 named destinations out of 1000 (max. 500000)
