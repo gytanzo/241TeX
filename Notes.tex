@@ -30,9 +30,13 @@
 \newcommand{\answer}[1]{\boxed{\text{Answer: #1}}}
 \newcommand{\ol}[1]{\overline{#1}}
 
+\title{CSE241: Digital Systems}
 \author{Ben Miller}
+\date{Instructed by: Jennifer Winikus}
 
 \begin{document}
+\maketitle
+\pagebreak
 \tableofcontents
 \pagebreak
 \section{1/27/2020}
@@ -3127,7 +3131,7 @@ $^{1}_0$ & 2L 2H 2L 2H\\
 \karnaughmapcolorfield[fill]{3}{04}{blue}
 \karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{1001 1101};
 \end{tikzpicture}\\
-If you specify that B is the only factor (it is the only thing that changes in $111\leftrightarrow101$, you don't have to draw A and B in the timing diagram. 
+If you specify that B is the only factor (it is the only thing that changes in $111\leftrightarrow101$), you don't have to draw A and B in the timing diagram. 
 \begin{figure}[h]
 \huge
 \tikzexternaldisable
@@ -3187,12 +3191,227 @@ $F$ $^{1}_0$ & 5H 1L N(A1) 2H\\
 \end{itemize}
 \subsection{Assigned Readings}
 \begin{itemize}
-\item Read 8.1.
+\item An adder combines two arithmetic operands using the addition rules previously discussed. 
+\item An adder can perform subtraction as the addition of the minuend and the complemented negated subtrahend, but you can also build subtractors that perform subtraction directly. 
+\item The simplest adder is called a half adder, and it adds two 1-bit operands A and B producing a 2-bit sum. The sum can range from 0 to 2 in base 10 and requires two bits to express. The low-order bit of the sum can be named the HS (or half sum) and the high-order bit can be named CO (or carry-out). We can write the following equations for HS and CO.
+\begin{displayquote}
+$HS=A\oplus B$\\
+$\textcolor{white}{HS}=A\cdot B'+A'\cdot B$\\
+$CO=A\cdot B$
+\end{displayquote}
+\pagebreak
+\item To add operands with more than one bit, we must also provide for the carries between bit positions. The building block for this sort of operation is called a full adder. Besides the addend-inputs $A$ and $B$, a full adder also has a carry-bit input ($C_{in}$). The sum of the three inputs can range from 0 to 3, which can still be expressed with just two output bits, $S$ and $C_{OUT}$.
+\begin{displayquote}
+$S=A\oplus B\oplus C_{in}$\\
+$\textcolor{white}{S}=A\cdot B'\cdot C_{in}'+A'\cdot B\cdot C_{in}'+A'\cdot B'\cdot C_{in}+A\cdot B\cdot C_{in}$\\
+$C_{OUT}=A\cdot B+A\cdot C_{in}+B\cdot C_{in}$
+\end{displayquote}
+Here, S is 1 if an odd number of the inputs are 1 and $C_{out}$ is 1 if two or more of the inputs are 1. 
+\item Two binary words, each with $n$ bits, can be added using a ripple adder, or a cascade of $n$ full-adder stages each handling a single bit. The circuit for a 4-bit ripple adder looks like this.\\
+\includegraphics[scale=.7]{IMG6}\\
+The carry input to the least significant bit (in this case $c_0$) is normally set to 0 and the carry output of each full adder is connected to the carry input of the next most significant full adder. 
+\item A ripple adder is slow since in the worst case a carry most propagate from the least significant full adder to the most significant one. 
+\item A faster adder must be made. This can be done by obtaining each sum output $s_i$ with just two levels of logic, accomplished by writing an equation for $s_i$ in terms of $x_0$-$x_i$, $y_0$-$y_i$, and $c_0$, a total of $2i+3$ inputs. Then, you ``multiply/add out'' to obtain an SOP or POS expression and build the corresponding circuit. Unfortunately, beyond $s_2$ the resulting expressions have too many terms, limiting the usage of this method.
+\item A full subtractor handles one bit of the binary subtraction algorithm, having inputs $A$ (the minuend), $B$ (the subtrahend), and $B_{in}$ (the borrow in). It also has the outputs $D$ (difference) and $B_{out}$ (borrow out). We can write logic expressions corresponding to binary subtraction as follows:
+\begin{displayquote}
+$D=A\oplus B\oplus B_{in}$\\
+$B_{out}=A'\cdot B+A'\cdot B_{in}+B\cdot B_{in}$
+\end{displayquote}
+\item Any $n$-bit adder circuit can function as a subtractor by complementing the subtrahend and treating the carry-in and carry-out signals as borrows with the opposite active level. 
+\item The most well known method to speed up adders are called carry lookaheads. The logic equation for sum bit $i$ of a binary adder can actually be written simply as $s_i=a_i\oplus b_i\oplus c_i$.
+\item While all of the addend bits are normally presented to an adder's inputs and are valid almost simultaneously, the output of this above equation is invalid until the carry input is valid. This can be a problem in ripple-adder designs where it takes a long time for the most significant carry input bit to be valid. 
+\item A carry-lookahead adder uses three-level equations in each adder stage. Each stage's sum output is produced by combining its carry bit above with two addend bits.
+\item In any given technology, the carry equations beyond a certain bit position cannot be implemented effectively in just three levels of logic, for they would require gates with too many inputs. Wider AND and OR functions can be build with two or more levels of logic, but a more economical approach is to use carry lookahead only for a small group where the equations can be implemented in three levels and then use ripple carry between groups. 
+\item A $74x283$ is an MSI 4-bit binary adder that forms its sum and carry outputs with just a few levels of logic using the carry-lookahead technique. 
+\item Fast group-ripple adders with more than four inputs can be made by cascading the carry outputs and inputs of 283's.
+\item We can take carry lookaheads eveh further by creating group-carry-lookahead outputs for each $n$-bit group and combining these into two levels of logic to provide the carry inputs for all of the groups without rippling carries in between them. 
 \end{itemize}
 \pagebreak
 \section{3/6/2020}
 \subsection{Lecture Readings}
 \begin{itemize}
-\item 
+\item Problem 18.1.1: Fix the hazard for $F=B'C'+BC+AB'$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{04}{red!50!orange}
+\karnaughmapcolorfield[fill]{3}{37}{yellow!50!orange}
+\karnaughmapcolorfield[fill]{3}{45}{yellow!50!green}
+\karnaughmapcolorfield[fill]{3}{57}{red!50!violet}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{1001 1101};
+\end{tikzpicture}\\
+The hazard occurs at $111\leftrightarrow101$, so we can add $AC$ to fix the hazard. 
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+$B$ $^{1}_0$ & 2L 2H 3L 1L N(N2)\\
+$B'$ $^{1}_0$ & 2.5H N(D1) 2L .5H N(D2) 3H\\
+$C'$ $^1_0$ & 8L\\
+$B'C'$ $^{1}_0$ & 8L\\
+$BC$ $^{1}_0$ & 1.5L N(D3) 1L 2H 1L N(D4) 2.5L\\
+$AB'$ $^{1}_0$ & 2H N(D5) 1H 2L 1H N(D6) 2H \\
+$AC$ $^1_0$ & 8H\\
+$F$ $^{1}_0$ & 8H\\
+\extracode
+\begin{pgfonlayer}{background}
+\normalsize
+\node at (N2)[above](N1){10ns issue};
+\node at (N1)[above]{without fix};
+\node at (D1)[above]{10ns};
+\node at (D2)[above]{10ns};
+\node at (D3)[above]{10ns};
+\node at (D4)[above]{10ns};
+\node at (D5)[below]{10ns};
+\node at (D6)[below]{10ns};
+\huge
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{figure}
+\item Problem 18.1.2: Fix the hazard for $F=AC'+BC$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{37}{red}
+\karnaughmapcolorfield[fill]{3}{67}{yellow}
+\karnaughmapcolorfield[fill]{3}{46}{blue}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{0001 1011};
+\end{tikzpicture}\\
+To fix the hazard, we need to fix $AB$, which is where the transition $110\leftrightarrow111$ occurs. Since C is the only value changing, we can exclude $A$ and $B$ from the timing diagram. 
+\pagebreak
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+$C$ $^{1}_0$ & 3L 2H 3L\\
+$AB$ $^{1}_0$ & 8H\\
+\extracode
+\end{tikztimingtable}
+\end{figure}
+\item Dynamic hazards occur when the output is supposed to change but oscillates for a brief period of time before settling down. These occur because of race conditions. We identify these through timing diagrams, logic gate inspections, and analysis.
+\item Problem 18.1.3: Does the below logic diagram have a dynamic hazard?
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A}; 
+\node[below=of A] (B) {B};
+\node[below=of B] (C) {C};
+
+\node[not gate, right=of A, scale=.85] (not1) {};
+\node[right=of C] (place1) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (A);
+
+\node[and gate, right=of not1, yshift=-.55cm] (and1) {slwr};
+\node[and gate, right=of place1] (and2) {slow};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+
+\node[right=of and1, yshift=-.9cm] (place2) {};
+\node[not gate, right=of and2, scale=.85] (not2) {};
+\draw (not2.input)--++(180:5mm) coordinate (aux) |- (and2.output);
+
+\node[and gate, right=of place2] (and3) {};
+\draw (and3.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (and3.input 2)--++(180:5mm) coordinate (aux) |- (not2.output);
+
+\node[right=of and3] (M) {M};
+\draw (and3.output) |- (M);
+\end{tikzpicture}\\
+This logic diagram doesn't have any dynamic hazards, as they all cancel out. The delay the first not gate introduces to the slwr (stand-in for slower) gate is equivalent to the delay introduced to the second not gate by the slow gate. 
+\item Problem 18.1.4: Does the below logic diagram have a dynamic hazard?
+\begin{tikzpicture}[circuit logic US, node distance=8mm]
+\node[] (A) {A}; 
+\node[below=of A] (A1) {};
+\node[below=of A1] (B) {B};
+\node[below=of B] (B1) {};
+\node[below=of B1] (C) {C};
+
+\node[right=of A, xshift=.35cm] (place1) {};
+\node[not gate, right=of B1, scale=.85] (not1) {};
+\draw (not1.input)--++(180:5mm) coordinate (aux) |- (B);
+
+\node[and gate, right=of place1, yshift=-.55cm] (and1) {};
+\node[and gate, right=of not1, yshift=-.55cm] (and2) {};
+\draw (and1.input 1)--++(180:5mm) coordinate (aux) |- (A);
+\draw (and1.input 2)--++(180:5mm) coordinate (aux) |- (B);
+\draw (and2.input 1)--++(180:5mm) coordinate (aux) |- (not1.output);
+\draw (and2.input 2)--++(180:5mm) coordinate (aux) |- (C);
+
+\node[or gate, right=of and1, yshift=-1.6cm] (or1) {};
+\draw (or1.input 1)--++(180:5mm) coordinate (aux) |- (and1.output);
+\draw (or1.input 2)--++(180:5mm) coordinate (aux) |- (and2.output);
+
+\node[right=of or1] (F) {F};
+\draw (or1.output) |- (F);
+\end{tikzpicture}\\
+This logic diagram does indeed have a dynamic hazard. The first path ($A\to\text{and}\to\text{or}\to F$) goes through only one logic gate, the and gate. The second path ($B\to\text{not}\to\text{and}\to\text{or}\to F$), however, goes through two, which will introduce greater delay and thus brings a race condition. 
+\item So how do we solve these dynamic hazards? It's complicated. You should first try a two level design, described below. If that doesn't work, you can also try clocked synchronization.
+\begin{itemize}
+\item If SOP: Check your $\text{not gates}\to\text{and gates}\to\text{or gates}$.
+\item If POS: Check your $\text{not gates}\to\text{or gates}\to\text{and gates}$.
 \end{itemize}
+There should be a uniform number of gates in all paths.
+\item MSI stands for medium scale integration and involves from 20 to about 200 logic gates. Our AND gate IC has four gates, making it SSI. MSI is the direction of complexity we will soon be approaching.
+\item The MSI combinational logic devices we will be looking at are adders, subtractors, multiplexors, decoders, encoders, and shifters. 
+\item For this next section, you must recall binary addition. If you need a refresher, go read pages 6-8.
+\item The half adder is, bluntly, the addition that happens on the right most bit. There is no carry in, which is a key component of half adding. Furthermore, a sum bit and a carry out bit are produced. 
+\item Below is an example of an implemented half adder.\\
+\begin{tabular}{cc|cc}
+\multicolumn{2}{c|}{Arithmetic: $A+B$} & Carry bit & Sum bit \\ 
+\hline 
+A & B & C & S \\ 
+\hline 
+0 & 0 & 0 & 0 \\ 
+0 & 1 & 0 & 1 \\ 
+1 & 0 & 0 & 1 \\ 
+1 & 1 & 1 & 0 \\ 
+\end{tabular}\\
+This half adder table essentially creates two K-Maps, both shown below.
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{$S=A'B+AB'\to S=A\oplus B$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{2}{1}{blue}
+\karnaughmapcolorfield[fill]{2}{2}{red}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={AB}, function={}]{0110};
+\end{tikzpicture}}
+\subcaptionbox{$C=AB$}[.5\textwidth]
+{\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{2}{3}{blue}
+\karnaughmapcolorfield[fill]{2}{}{red}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={AB}, function={}]{0001};
+\end{tikzpicture}}
+\end{figure}
+\item A full adder is what we use to consider the remainder of the bits when working with addition between two numbers. There is now also a carry in that we must consider.\\
+\includegraphics[scale=.7]{IMG5}
+\pagebreak
+\item So what does a full adder look like when implemented?\\
+\begin{tabular}{ccc|cc}
+\multicolumn{3}{c|}{$A+B+C_{in}$} &   &   \\ 
+$A$ & $B$ & $C_{in}$ & $C_{out}$ & S \\ 
+\hline 
+0 & 0 & 0 & 0 & 0 \\ 
+0 & 0 & 1 & 0 & 1 \\ 
+0 & 1 & 0 & 0 & 1 \\ 
+0 & 1 & 1 & 1 & 0 \\ 
+1 & 0 & 0 & 0 & 1 \\ 
+1 & 0 & 1 & 1 & 0 \\ 
+1 & 1 & 0 & 1 & 0 \\ 
+1 & 1 & 1 & 1 & 1 \\  
+\end{tabular} 
+\begin{figure}[h]
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{$S$}[.5\textwidth]{
+\begin{tikzpicture}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={}]{0110 1001};
+\end{tikzpicture}}
+\subcaptionbox{$C$}[.5\textwidth]
+{\begin{tikzpicture}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={}]{0001 0111};
+\end{tikzpicture}}
+\end{figure}
+\item If we want to calculate multiple complex numbers, we need to chain together multiple FAs, because at the end of the day one FA is still a single bit.\\
+\includegraphics[scale=.7]{IMG6}
+\item The biggest issue with this approach comes from propagation delays. The FA's need a long time until they get the correct value, which can significantly lower overall efficiency.
+\item The solution to this comes with fast adders, which are adders specifically designed to address propagation delay. We are only briefly looking at these to understand their purpose and key ideas.
+\item Propagation delays are a significant problem with ripple delays, so the solution is just to carry out all of the delays at once. The only problem is that this can create \textit{extremely} complicated. 
+\item To avoid ``gate explosion,'' we divide and conquer. This is known as HCLA or the Hierarchical Carry Look Ahead Adder (also known as the Grouped Carry Lookahaead Adder). 
+\end{itemize}
+\pagebreak
 \end{document}
