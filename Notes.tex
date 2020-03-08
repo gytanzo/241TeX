@@ -14,6 +14,8 @@
 \usepackage{karnaughmap}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{tikz-timing}
+\usetikzlibrary{fit}
 \usetikzlibrary{positioning, circuits.logic.US, external}
 \tikzexternalize[prefix=figures/]
 
@@ -3007,9 +3009,189 @@ Now, let's suppose we change the X input to a 1. Assuming that all of the gates 
 \section{3/5/2020}
 \subsection{Lecture Slides}
 \begin{itemize}
-\item
+\item Time is officially a component of circuit designs, now. Why? ``Time is real,'' and getting used to it now will make future designs much more practical. 
+\item We look at time using a timing diagram, which is just a twist on the normal truth table. 0 is represented as a low wave value and 1 is represented as a high wave value.
+\begin{figure}[!ht]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+& L 2H L      \\ 
+\extracode
+\end{tikztimingtable}
+\end{figure}
+\item While we do operate in 0 and 1, the values always exist and are continuous. Timing diagrams are what we actually work with and show behaviors such as verifying functionality and time impacts.
+\begin{figure}[!ht]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+& 3L 2H 3L 2H 3L 2H 3L      \\ 
+\extracode
+\end{tikztimingtable}
+\end{figure}
+\item Three variables aren't enough to draw a timing diagram for a function such as $F=B'C'+BC+AB'$. Those three variables only have eight possible combinations, which isn't enough. To draw the timing diagram, we need to look at all of the possible combinations.
+\item Determining all of the potential transitions can be annoying. We need to consider design behaviors. 
+\item Recall that Gray Code is used with sensors because there is less change between values leaving less room for error. We can use a similar approach here to identify places where errors can occur. To find our ``edge cases,'' we just need to look at our K-Map. First we are going to identify where these edge cases can occur, and then we will understand what is going on at these edge cases.
+\item An edge case, when working in SOP, is a transition between cells containing minterms. Specifically, these occur with adjacent, but not overlapping, prime implicants. A transition inside of a prime implicant doesn't matter as its stable.
+\pagebreak
+\item Problem 17.1.1: Draw the timing diagram for $F=B'C'+BC+AB'$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{45}{red}
+\karnaughmapcolorfield[fill]{3}{37}{yellow}
+\karnaughmapcolorfield[fill]{3}{04}{blue}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{1001 1101};
+\end{tikzpicture}\\
+The transition between $111\leftrightarrow101$ is left uncovered (Note: Yes, you can draw implicants connecting these two but here she only drew the original function)!
+\begin{figure}[!ht]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+$A$ $^1$ & 8H\\
+$B$ $^{1}_0$ & 3H 2L 3H\\
+$C$ $^{1}_0$ & 8H\\
+$B'C'$ $^{1}_0$ & 8L\\
+$BC$ $^{1}_0$ & 3H 2L 3H\\
+$AB'$ $^{1}_0$ & 3L 2H 3L\\
+$F$ $^{1}_0$ & 3H N(B1) 2H N(B2) 3H\\
+\extracode
+\begin{pgfonlayer}{background}
+\node at (B1)[circle,fill,inner sep=1.5pt]{};
+\node at (B2)[circle,fill,inner sep=1.5pt]{};
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{figure}
+\item Problem 17.1.2: Draw the timing diagram for $F=AC'+BC$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{37}{red}
+\karnaughmapcolorfield[fill]{3}{}{yellow}
+\karnaughmapcolorfield[fill]{3}{46}{blue}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{0001 1011};
+\end{tikzpicture}
+\pagebreak
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+$A$ $^{1}_0$ & 8H\\
+$B$ $^{1}_0$ & 8H\\
+$C$ $^{1}_0$ & 3L 2H 3L\\
+$AC'$ $^{1}_0$ & 3H 2L 3H\\
+$BC$ $^{1}_0$ & 3L 2H 3L\\
+$F$ $^{1}_0$ & 3H N(B1) 2H N(B2) 3H\\
+\extracode
+\begin{pgfonlayer}{background}
+\node at (B1)[circle,fill,inner sep=1.5pt]{};
+\node at (B2)[circle,fill,inner sep=1.5pt]{};
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{figure}
+\item Transition times in gates and other electronical technologies result in hazards. Let's first go over static hazards, which exist when two adjacent one's in a K-Map are not covered by a prime implicant in the resulting minimal function. To fix it, include additional prime implicants whenever there are two adjacent one's. While the resulting function will no longer be minimal, there will be no undesired behavior. 
+\item A hazard can also be described as the brief period of time where the value of an output changes even though the input's change should have left the output unaffected. A static 1 hazard is occurs when it should stay 1, and a static 0 hazard occurs when it should stay 0.
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{$1\to1$}[.5\textwidth]{
+\begin{tikztimingtable}
+$^{1}_0$ & 3H 2L 3H\\
+\extracode
+\end{tikztimingtable}}
+\subcaptionbox{$0\to0$}[.5\textwidth]{
+\begin{tikztimingtable}
+$^{1}_0$ & 3L 2H 3L\\
+\extracode
+\end{tikztimingtable}}
+\caption*{(a) Static hazard}
+\end{figure}
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\captionsetup[subfigure]{font=footnotesize}
+\subcaptionbox{$1\to0$}[.5\textwidth]{
+\begin{tikztimingtable}
+$^{1}_0$ & 2H 2L 2H 2L\\
+\extracode
+\end{tikztimingtable}}
+\subcaptionbox{$0\to1$}[.5\textwidth]{
+\begin{tikztimingtable}
+$^{1}_0$ & 2L 2H 2L 2H\\
+\extracode
+\end{tikztimingtable}}
+\caption*{(b) Dynamic hazard}
+\end{figure}
+\item Static-1 Hazards look like this between a circuit diagram and the timing diagram.\\
+\includegraphics[scale=.6]{IMG3}
+\item Problem 17.1.2: Identify the hazard for $F=B'C'+BC+AB'$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{45}{red}
+\karnaughmapcolorfield[fill]{3}{37}{yellow}
+\karnaughmapcolorfield[fill]{3}{04}{blue}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{1001 1101};
+\end{tikzpicture}\\
+If you specify that B is the only factor (it is the only thing that changes in $111\leftrightarrow101$, you don't have to draw A and B in the timing diagram. 
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+$B$ $^{1}_0$ & 2L N(N1) 2H 4L\\
+$B'$ $^{1}_0$ & 2.5H 2L 3.5H\\
+$B'C'$ $^{1}_0$ & 8L\\
+$BC$ $^{1}_0$ & 2.5L N(D1) 2H N(C1) 3.5L\\
+$AB'$ $^{1}_0$ & 3H N(D2) 2L N(C2) 1.5H N(C3) 1.5H \\
+$F$ $^{1}_0$ & 5H 1L 1.5H N(N2) .5H\\
+\extracode
+\begin{pgfonlayer}{background}
+\normalsize
+\node at (N1)[below]{delay};
+\node at (N2)[above]{static 1};
+\node at (N2)[below]{hazard};
+\node at (C3)[below]{delay};
+	\pgfmathanglebetweenpoints{\pgfpointanchor{C1}{center}}		    {\pgfpointanchor{C2}{center}}
+            \pgfmathsetmacro{\myangle}{\pgfmathresult}
+            \node[draw=blue, rounded corners=2pt, rotate fit=     	\myangle, fit=(C1) (C2)] {};
+\pgfmathanglebetweenpoints{\pgfpointanchor{D1}{center}}		    {\pgfpointanchor{D2}{center}}
+            \pgfmathsetmacro{\myangle}{\pgfmathresult}
+            \node[draw=blue, rounded corners=2pt, rotate fit=     	\myangle, fit=(D1) (D2)] {};
+\huge
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{figure}
+\item Problem 17.1.4: Identify the hazard for $F=AC'+BC$.\\
+\begin{tikzpicture}
+\karnaughmapcolorfield[fill]{3}{37}{red}
+\karnaughmapcolorfield[fill]{3}{}{yellow}
+\karnaughmapcolorfield[fill]{3}{46}{blue}
+\karnaughmap[omitones=false, omitzeros=true, dontcare=X, variables={ABC}, function={F}]{0001 1011};
+\end{tikzpicture}
+\pagebreak
+\begin{figure}[h]
+\huge
+\tikzexternaldisable
+\begin{tikztimingtable}
+$C$ $^{1}_0$ & 2L 2H 4L\\
+$C'$ $^{1}_0$ & 2.5H 2L 3.5H\\
+$AC'$ $^{1}_0$ & 3H 2L 3H\\
+$BC$ $^{1}_0$ & 2.5L 2H 3.5L\\
+$F$ $^{1}_0$ & 5H 1L N(A1) 2H\\
+\extracode
+\begin{pgfonlayer}{background}
+\normalsize
+\node at (A1)[below](A2){static 1};
+\node at (A2)[below]{hazard};
+\huge
+\end{pgfonlayer}
+\end{tikztimingtable}
+\end{figure}
+\item You don't need to know much about static-0 hazards besides ``they happen in POS.''\\
+\includegraphics[scale=.7]{IMG4}
+\item So how do we fix these? We need to review a previously discussed subject: Function equivalence. This is when two functions accomplish the same thing but with different terms. This is crucial in making things smaller and faster, but can come at the price of getting hazards. 
 \end{itemize}
 \subsection{Assigned Readings}
+\begin{itemize}
+\item Read 8.1.
+\end{itemize}
+\pagebreak
+\section{3/6/2020}
+\subsection{Lecture Readings}
 \begin{itemize}
 \item 
 \end{itemize}
