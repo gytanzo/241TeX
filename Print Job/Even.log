@@ -1,0 +1,796 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.6)  9 MAR 2020 13:57
+entering extended mode
+**./Even.tex
+(Even.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-03>
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\report.cls"
+Document Class: report 2019/12/20 v1.4l Standard LaTeX document class
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size12.clo"
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
+y"
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
+y"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen135
+))
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen136
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
+"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count176
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count177
+\leftroot@=\count178
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count179
+\DOTSCASE@=\count180
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen137
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
+\dotsspace@=\muskip16
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
+\tag@help=\toks18
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
+\andhelp@=\toks19
+\eqnshift@=\dimen138
+\alignsep@=\dimen139
+\tagshift@=\dimen140
+\tagwidth@=\dimen141
+\totwidth@=\dimen142
+\lineht@=\dimen143
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.
+sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\amssymb.s
+ty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen144
+\Gin@req@width=\dimen145
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\pdfpages.
+sty"
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count188
+\calc@Bcount=\count189
+\calc@Adimen=\dimen146
+\calc@Bdimen=\dimen147
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count190
+\calc@Cskip=\skip54
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/eso-pic\eso-pic.st
+y"
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/atbegshi\atbegsh
+i.sty"
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/infwarerr\infwar
+err.sty"
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ltxcmds\ltxcmds.
+sty"
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/iftex\iftex.sty"
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+))
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xcolor.sty"
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\color
+.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+))
+\AM@pagewidth=\dimen148
+\AM@pageheight=\dimen149
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdfpages\pppdftex.
+def"
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box47
+\AM@global@opts=\toks23
+\AM@pagecnt=\count191
+\AM@toc@title=\toks24
+\c@AM@survey=\count192
+\AM@templatesizebox=\box48
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
+d-pdfmode.def"
+File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count193
+\l__pdf_internal_box=\box49
+) (Even.aux)
+\openout1 = `Even.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count194
+\scratchdimen=\dimen150
+\scratchbox=\box50
+\nofMPsegments=\count195
+\nofMParguments=\count196
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count197
+\MPscratchDim=\dimen151
+\MPnumerator=\count198
+\makeMPintoPDFobject=\count199
+\everyMPtoPDFconversion=\toks26
+)
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty"
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+\AtBeginShipoutBox=\box51
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/pdflscape\pdflscap
+e.sty"
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\lscape.st
+y"
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+<Notes.pdf, id=1, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 10.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 10.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=4, page=1, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 1>
+Package pdftex.def Info: Notes.pdf , page1 used on input line 10.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 1>
+Package pdftex.def Info: Notes.pdf , page1 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 1>
+Package pdftex.def Info: Notes.pdf , page1 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 1>
+Package pdftex.def Info: Notes.pdf , page1 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 1>
+Package pdftex.def Info: Notes.pdf , page1 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [1
+
+ <./Notes.pdf{C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+>]
+<Notes.pdf, id=25, page=2, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 2>
+Package pdftex.def Info: Notes.pdf , page2 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 2>
+Package pdftex.def Info: Notes.pdf , page2 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 2>
+Package pdftex.def Info: Notes.pdf , page2 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [2 <./Notes.pdf>]
+<Notes.pdf, id=39, page=3, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 3>
+Package pdftex.def Info: Notes.pdf , page3 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 3>
+Package pdftex.def Info: Notes.pdf , page3 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 3>
+Package pdftex.def Info: Notes.pdf , page3 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [3 <./Notes.pdf>]
+<Notes.pdf, id=43, page=4, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 4>
+Package pdftex.def Info: Notes.pdf , page4 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 4>
+Package pdftex.def Info: Notes.pdf , page4 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 4>
+Package pdftex.def Info: Notes.pdf , page4 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [4 <./Notes.pdf>]
+<Notes.pdf, id=62, page=5, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 5>
+Package pdftex.def Info: Notes.pdf , page5 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 5>
+Package pdftex.def Info: Notes.pdf , page5 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 5>
+Package pdftex.def Info: Notes.pdf , page5 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [5 <./Notes.pdf>]
+<Notes.pdf, id=81, page=6, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 6>
+Package pdftex.def Info: Notes.pdf , page6 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 6>
+Package pdftex.def Info: Notes.pdf , page6 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 6>
+Package pdftex.def Info: Notes.pdf , page6 used on input line 10.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [6 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 11.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 11.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=87, page=9, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 9>
+Package pdftex.def Info: Notes.pdf , page9 used on input line 11.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 9>
+Package pdftex.def Info: Notes.pdf , page9 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 9>
+Package pdftex.def Info: Notes.pdf , page9 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 9>
+Package pdftex.def Info: Notes.pdf , page9 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 9>
+Package pdftex.def Info: Notes.pdf , page9 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [7 <./Notes.pdf>]
+<Notes.pdf, id=92, page=10, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 10>
+Package pdftex.def Info: Notes.pdf , page10 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 10>
+Package pdftex.def Info: Notes.pdf , page10 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 10>
+Package pdftex.def Info: Notes.pdf , page10 used on input line 11.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [8 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 12.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 12.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=103, page=19, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 19>
+Package pdftex.def Info: Notes.pdf , page19 used on input line 12.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 19>
+Package pdftex.def Info: Notes.pdf , page19 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 19>
+Package pdftex.def Info: Notes.pdf , page19 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 19>
+Package pdftex.def Info: Notes.pdf , page19 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 19>
+Package pdftex.def Info: Notes.pdf , page19 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [9 <./Notes.pdf>]
+<Notes.pdf, id=107, page=20, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 20>
+Package pdftex.def Info: Notes.pdf , page20 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 20>
+Package pdftex.def Info: Notes.pdf , page20 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 20>
+Package pdftex.def Info: Notes.pdf , page20 used on input line 12.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+[10 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 13.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 13.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=113, page=23, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 23>
+Package pdftex.def Info: Notes.pdf , page23 used on input line 13.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 23>
+Package pdftex.def Info: Notes.pdf , page23 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 23>
+Package pdftex.def Info: Notes.pdf , page23 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 23>
+Package pdftex.def Info: Notes.pdf , page23 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 23>
+Package pdftex.def Info: Notes.pdf , page23 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [11 <./Notes.pdf>]
+<Notes.pdf, id=117, page=24, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 24>
+Package pdftex.def Info: Notes.pdf , page24 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 24>
+Package pdftex.def Info: Notes.pdf , page24 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 24>
+Package pdftex.def Info: Notes.pdf , page24 used on input line 13.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [12 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 14.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 14.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=123, page=27, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 27>
+Package pdftex.def Info: Notes.pdf , page27 used on input line 14.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 27>
+Package pdftex.def Info: Notes.pdf , page27 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 27>
+Package pdftex.def Info: Notes.pdf , page27 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 27>
+Package pdftex.def Info: Notes.pdf , page27 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 27>
+Package pdftex.def Info: Notes.pdf , page27 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [13 <./Notes.pdf>]
+<Notes.pdf, id=128, page=28, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 28>
+Package pdftex.def Info: Notes.pdf , page28 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 28>
+Package pdftex.def Info: Notes.pdf , page28 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 28>
+Package pdftex.def Info: Notes.pdf , page28 used on input line 14.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+[14 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 15.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 15.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=134, page=33, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 33>
+Package pdftex.def Info: Notes.pdf , page33 used on input line 15.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 33>
+Package pdftex.def Info: Notes.pdf , page33 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 33>
+Package pdftex.def Info: Notes.pdf , page33 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 33>
+Package pdftex.def Info: Notes.pdf , page33 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 33>
+Package pdftex.def Info: Notes.pdf , page33 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [15 <./Notes.pdf>]
+<Notes.pdf, id=146, page=34, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 34>
+Package pdftex.def Info: Notes.pdf , page34 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 34>
+Package pdftex.def Info: Notes.pdf , page34 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 34>
+Package pdftex.def Info: Notes.pdf , page34 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [16 <./Notes.pdf>]
+<Notes.pdf, id=150, page=35, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 35>
+Package pdftex.def Info: Notes.pdf , page35 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 35>
+Package pdftex.def Info: Notes.pdf , page35 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 35>
+Package pdftex.def Info: Notes.pdf , page35 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [17 <./Notes.pdf>]
+<Notes.pdf, id=165, page=36, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 36>
+Package pdftex.def Info: Notes.pdf , page36 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 36>
+Package pdftex.def Info: Notes.pdf , page36 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 36>
+Package pdftex.def Info: Notes.pdf , page36 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+[18 <./Notes.pdf>]
+<Notes.pdf, id=174, page=37, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 37>
+Package pdftex.def Info: Notes.pdf , page37 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 37>
+Package pdftex.def Info: Notes.pdf , page37 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 37>
+Package pdftex.def Info: Notes.pdf , page37 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [19 <./Notes.pdf>]
+<Notes.pdf, id=206, page=38, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 38>
+Package pdftex.def Info: Notes.pdf , page38 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 38>
+Package pdftex.def Info: Notes.pdf , page38 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 38>
+Package pdftex.def Info: Notes.pdf , page38 used on input line 15.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [20 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 16.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 16.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=226, page=41, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 41>
+Package pdftex.def Info: Notes.pdf , page41 used on input line 16.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 41>
+Package pdftex.def Info: Notes.pdf , page41 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 41>
+Package pdftex.def Info: Notes.pdf , page41 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 41>
+Package pdftex.def Info: Notes.pdf , page41 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 41>
+Package pdftex.def Info: Notes.pdf , page41 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [21 <./Notes.pdf>]
+<Notes.pdf, id=258, page=42, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 42>
+Package pdftex.def Info: Notes.pdf , page42 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 42>
+Package pdftex.def Info: Notes.pdf , page42 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 42>
+Package pdftex.def Info: Notes.pdf , page42 used on input line 16.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+
+[22 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 17.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 17.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=286, page=45, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 45>
+Package pdftex.def Info: Notes.pdf , page45 used on input line 17.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 45>
+Package pdftex.def Info: Notes.pdf , page45 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 45>
+Package pdftex.def Info: Notes.pdf , page45 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 45>
+Package pdftex.def Info: Notes.pdf , page45 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 45>
+Package pdftex.def Info: Notes.pdf , page45 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [23 <./Notes.pdf>]
+<Notes.pdf, id=300, page=46, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 46>
+Package pdftex.def Info: Notes.pdf , page46 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 46>
+Package pdftex.def Info: Notes.pdf , page46 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 46>
+Package pdftex.def Info: Notes.pdf , page46 used on input line 17.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [24 <./Notes.pdf>]
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 18.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf>
+Package pdftex.def Info: Notes.pdf  used on input line 18.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+<Notes.pdf, id=317, page=77, 597.50829pt x 845.0471pt>
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 77>
+Package pdftex.def Info: Notes.pdf , page77 used on input line 18.
+(pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 77>
+Package pdftex.def Info: Notes.pdf , page77 used on input line 18.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 77>
+Package pdftex.def Info: Notes.pdf , page77 used on input line 18.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 77>
+Package pdftex.def Info: Notes.pdf , page77 used on input line 18.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+File: Notes.pdf Graphic file (type pdf)
+<use Notes.pdf, page 77>
+Package pdftex.def Info: Notes.pdf , page77 used on input line 18.
+(pdftex.def)             Requested size: 597.53416pt x 845.08372pt.
+ [25 <./Notes.pdf>]
+(Even.aux) ) 
+Here is how much of TeX's memory you used:
+ 3887 strings out of 481258
+ 55217 string characters out of 2906189
+ 291051 words of memory out of 3000000
+ 19387 multiletter control sequences out of 15000+200000
+ 532636 words of font info for 25 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 40i,18n,46p,256b,429s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/gytan/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/gytan/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/gytan
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:
+/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmr17.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/gytan/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/gytan/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/g
+ytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/latxfont/line10.pfb>
+Output written on Even.pdf (25 pages, 349276 bytes).
+PDF statistics:
+ 363 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
+

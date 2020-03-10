@@ -514,7 +514,7 @@ b11110010.
 \end{tabular}
 \end{itemize}
 \answer{b11110011}
-\item With the Excess-B system, the main idea is to moving zero to a point that isn't zero, called the bias point. This allows you to have both positive and negative values. The Excess-B system is primarily used in specific systems design and IEEE-754 representation.
+\item With the Excess-B system, the main idea is to move zero to a point that isn't zero, called the bias point. This allows you to have both positive and negative values. The Excess-B system is primarily used in specific systems design and IEEE-754 representation.
 \item There is the potential for an incorrect answer when performing binary math, specifically when there is a carry in to the sign bit but not out (or vice versa). Unless explicitly stated, use two's complement when using signed numbers.
 \item Addition between two positive or two negative numbers may be incorrect answer that is out of range. If there is a carry into and out of the sign bit, the answer is correct. Otherwise, the answer is false. In the event that this occurs, you can declare the answer to have ``overflowed'' and leave it there or redo the math with a larger amount of bits.\pagebreak
 \item Problem 4.1.11: Add -7 to 7 in 4-bit.
@@ -869,6 +869,7 @@ $.6\cdot.2=1.2$ & 1 \\
 \hline 
 \end{tabular}\\
 \answer{b110.0100110011}
+\item There are two conditions that allow you to stop doing the above process. The first is if the number to the right of the radix point is 0, because 0 multiplied by anything is 0. 0.500000 is just .5, mathematically speaking. If this never happens, you got to ten places, which is what happened above. 
 \end{itemize}
 \subsection{Assigned Readings}
 \begin{itemize}
@@ -906,8 +907,7 @@ $.6\cdot.2=1.2$ & 1 \\
 (T11$'$) & $(X+Y)\cdot(X'+Z)\cdot(Y+Z)=(X+Y)\cdot(X'+Z)$ &  &  &  \\ 
 \hline 
 \end{tabular} 
-\item Several important theorems for an arbitrary number of variables are listed below. Most of these theorems are proved using a two-step method called finite induction, where one first proves the theorem true for $n=2$ and then for $n=i$, concluding as a result it is true for $n=i+1$.\pagebreak
-
+\item Several important theorems for an arbitrary number of variables are listed below. Most of these theorems are proved using a two-step method called finite induction, where one first proves the theorem true for $n=2$ and then for $n=i$, concluding as a result it is true for $n=i+1$.\\
 \hspace*{-3.5cm}\begin{tabular}{|ccc|}
 \hline 
 (T12) & $X+X+...+X=X$ & (Generalized idempotency) \\ 
@@ -944,11 +944,12 @@ $.6\cdot.2=1.2$ & 1 \\
 \item A product term is a single literal or a logical product of two or more literals. Examples: $Z', W\cdot X\cdot Y, X\cdot Y'\cdot Z, W'\cdot Y'\cdot Z$.
 \item A sum-of-product expression is a logical sum of product terms. Examples: $Z'+W\cdot X\cdot Y+X\cdot Y'\cdot Z+W'\cdot Y'\cdot Z$.
 \item A sum term is a single literal of a logical sum of two or more literals. Examples: $Z', W+X+Y, X+Y'+Z, W'+Y'+Z$.
+\pagebreak
 \item A normal term is a product or sum term in which no variable appears more than once. A non-normal term can always be simplified to a constant or a normal term using one of theorems T3, T3$'$, T5, or T5$'$. Examples of non-normal terms: $W\cdot X\cdot X\cdot Y', W+W+X'+Y, X\cdot X'\cdot Y$. Examples of normal terms: $W\cdot X\cdot Y', W+X'+Y$.
 \item An n-variable minterm is a normal product term with n literals. There are $2^n$ such product terms. Some examples of 4-variable minterms: $W'\cdot X'\cdot Y'\cdot Z', W\cdot X\cdot Y'\cdot Z, W'\cdot X'\cdot Y\cdot Z'$
 \item An n-variable maxterm is a normal sum term with n literals. There are $2^n$ such sum terms. Examples of 4-variable maxterms: $W'+X'+Y'+Z', W+X'+Y'+Z, W'+X'+Y+Z'$
 \end{itemize}
-\item There is a close relationship bewteen the truth table and minterms and maxterms. A minterm defined as a product term that is 1 is exactly one row of a truth table. Simiarly, a maxterm defined as a sum term that is 0 is exactly one row of a truth table. 
+\item There is a close relationship bewteen the truth table and minterms and maxterms. A minterm defined as a product term that is 1 in exactly one row of a truth table. Simiarly, a maxterm defined as a sum term that is 0 in exactly one row of a truth table. 
 \item An n-variable minterm can be represented by an n-bit integer, the minterm number. Syntactically, the name minterm i is used to denote the minterm corresponding to row i of the truth table. In minterm i, a particular variable appears complemented if the corresponding bit in the binary representation of i is 0, otherwise it is uncomplemented. A maxterm i is the opposite, with a variable being complemented if the corresponding binary bit i is 1. 
 \item The canonical sum of a logic function is a sum of the minterms corresponding to the truth-table rows for which the function produces a 1 output. 
 \item The canonical product of a logic function is a product of the maxterms corresponding to input combinations for which the function produces a 0 output. 
