@@ -869,7 +869,7 @@ $.6\cdot.2=1.2$ & 1 \\
 \hline 
 \end{tabular}\\
 \answer{b110.0100110011}
-\item There are two conditions that allow you to stop doing the above process. The first is if the number to the right of the radix point is 0, because 0 multiplied by anything is 0. 0.500000 is just .5, mathematically speaking. If this never happens, you got to ten places, which is what happened above. 
+\item There are two conditions that allow you to stop doing the above process. The first is if the number to the right of the radix point is 0, because 0 multiplied by anything is 0. 0.500000 is just .5, mathematically speaking. If this never happens, you go to ten places, which is what happened above. 
 \end{itemize}
 \subsection{Assigned Readings}
 \begin{itemize}
@@ -988,7 +988,7 @@ Red simplifies to 0, blue to 0, and green to 1. Thus, we can first simplify the 
 \item Simplify: $T=Y'*F+X*Y$
 \end{itemize}
 \answer{$T=Y'*F+X*Y$}
-\item: Problem 7.1.4: Simplify $Y=X*X*T+T*T+X$.
+\item Problem 7.1.4: Simplify $Y=X*X*T+T*T+X$.
 \begin{itemize}
 \item Idempotency: $Y=X*T+T+X$
 \item Distributive property: $X(T+1)+T$
@@ -1008,7 +1008,6 @@ Red simplifies to 0, blue to 0, and green to 1. Thus, we can first simplify the 
 \item DeMorgan's Law: $T=X*(Y'*X)+Y$
 \item Distributive Law: $X*Y+X*X'+Y$
 \item Simplification: $T=X*Y'+Y$
-\item Simplification: $T=Y+X$
 \end{itemize}
 \answer{$T=Y+X$}
 \item The main idea behind Shannon's expansion theorem is configuring an expression to contain more variables than the hardware would normally allow.
@@ -2099,7 +2098,6 @@ A & B & C & F\\
 \draw (or1.output) |- (F);
 \end{tikzpicture}\\
 Distinguished 1's: 1, 2, 7\\
-
 Essential prime implicant(s): $\ol{B}C, \ol{A}B\ol{C}, AC$\\
 \answer{$F=\ol{B}C+\ol{A}B\ol{C}+AC$}
 \item Problem 13.1.5: Find the simplified SOP from $F=\prod_{A,B,C,D}(0,1,2,3,4,6,8,10,11,14)$ and draw the 2 level logic diagram.\\~\\
@@ -2144,7 +2142,7 @@ Distinguished 1's: 1, 2, 7\\
 Essential prime implicant(s): $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \answer{$F=\ol{BC}D+\ol{B}C\ol{D}+BCD+A\ol{B}D+A\ol{B}C\therefore$ Cost is 5}
 \pagebreak
-\item 5-variable K-Maps take the form of $f(A,B,C,D,E)$. To solve these, we use two 4-variable K-Maps, one with $A=0$ (for 0-15) and one with $A=1$ (for 16-31). We combine adjacent 1's in three directions: vertically, horizontally, and out of the page. Below is an example of a 5-variable K-Map.
+\item 5-variable K-Maps take the form of $f(A,B,C,D,E)$. To solve these, we use two 4-variable K-Maps, one with $A=0$ (for 0-15) and one with $A=1$ (for 16-31). We combine adjacent 1's in three directions: vertically, horizontally, and out of the page. Below is an example.
 \begin{figure}[h]
 \captionsetup[subfigure]{font=footnotesize}
 \subcaptionbox{$E=0$}[.5\textwidth]{
@@ -2184,8 +2182,10 @@ Essential prime implicant(s): $\ol{BC}D, \ol{B}C\ol{D}, BCD$\\
 \end{tikzpicture}}
 \center{
 Distinguished 1's: 1, 12, 2, 7, 16, 26, 29\\
+\small
 EPIs: $\ol{ABCD}E, \ol{A}BC\ol{DE}, \ol{BC}D\ol{E}, \ol{B}CDE, A\ol{BCE}, ABCE, A\ol{C}D\ol{E}$\\
-$\boxed{F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{CDE}}$
+$F=\ol{ABCD}E+\ol{A}BC\ol{DE}+\ol{BC}D\ol{E}+\ol{B}CDE+A\ol{BCE}+ABCE+A\ol{C}D\ol{E}+A\ol{B}CD$
+\normalsize
 }
 \end{figure}
 \item Incompletely specified functions contain a don't care condition which is denoted by an `X'. A don't care is an input condition that either can't occur or even if it occurs it doesn't matter. A circuit with one or more don't cares is called an incompletely specified circuit. 
@@ -3160,7 +3160,7 @@ $F$ $^{1}_0$ & 5H 1L 1.5H N(N2) .5H\\
 \end{pgfonlayer}
 \end{tikztimingtable}
 \end{figure}
-\item Problem 17.1.4: Identify the hazard for $F=AC'+BC$.\\
+\item Problem 17.1.3: Identify the hazard for $F=AC'+BC$.\\
 \begin{tikzpicture}
 \karnaughmapcolorfield[fill]{3}{37}{red}
 \karnaughmapcolorfield[fill]{3}{}{yellow}
