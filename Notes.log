@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.6)  10 MAR 2020 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7300 64-bit) (preloaded format=pdflatex 2020.3.6)  12 MAR 2020 10:15
 entering extended mode
 **./Notes.tex
 (Notes.tex
@@ -949,6 +949,13 @@ corations\pgflibrarydecorations.pathmorphing.code.tex"))
 \c@tikztimingtrans=\count336
 \c@tikztimingtranspos=\count337
 )
+("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\afterpage.st
+y"
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks44
+\AP@partial=\box71
+\AP@footins=\box72
+)
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/frontendlaye
 r/tikz/libraries\tikzlibraryfit.code.tex"
 File: tikzlibraryfit.code.tex 2020/01/08 v3.1.5b (3.1.5b)
@@ -986,37 +993,37 @@ Package csquotes Info: ... none found.
  (Notes.aux)
 \openout1 = `Notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
+LaTeX Font Info:    ... okay on input line 42.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count339
 \scratchdimen=\dimen323
-\scratchbox=\box71
+\scratchbox=\box73
 \nofMPsegments=\count340
 \nofMParguments=\count341
-\everyMPshowfont=\toks44
+\everyMPshowfont=\toks45
 \MPscratchCnt=\count342
 \MPscratchDim=\dimen324
 \MPnumerator=\count343
 \makeMPintoPDFobject=\count344
-\everyMPtoPDFconversion=\toks45
+\everyMPtoPDFconversion=\toks46
 )
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -1024,8 +1031,8 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\AtBeginShipoutBox=\box72
-Package hyperref Info: Link coloring ON on input line 37.
+\AtBeginShipoutBox=\box74
+Package hyperref Info: Link coloring ON on input line 42.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1041,9 +1048,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count345
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 42.
+LaTeX Info: Redefining \pageref on input line 42.
+LaTeX Info: Redefining \nameref on input line 42.
  (Notes.out) (Notes.out)
 \@outlinefile=\write4
 \openout4 = `Notes.out'.
@@ -1059,345 +1066,367 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 ) ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 ("C:\Users\gytan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(Notes.toc [2])
+{C:/Users/gytan/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]pdfTeX warni
+ng (ext4): destination with the same identifier (name{page.1}) has been already
+ used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 \clearpage
+                [1
+
+] (Notes.toc [1
+
+])
 \tf@toc=\write5
 \openout5 = `Notes.toc'.
 
- [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
+een already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.52 \cleardoublepage
+                      [2]pdfTeX warning (ext4): destination with the same ident
+ifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.72 \item T
+            he leftmost bit of a binary number is called the high-order or m...
+[1
+
+] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--130
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 142--171
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 142--171
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 155--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--200
+Underfull \hbox (badness 10000) in paragraph at lines 155--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--200
-
- []
-
-[7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 184--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--318
+Underfull \hbox (badness 10000) in paragraph at lines 184--213
 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 306--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
+Underfull \hbox (badness 10000) in paragraph at lines 306--331
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--376
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
 
  []
 
-[11] [12] [13] [14]
-Overfull \hbox (3.75066pt too wide) in paragraph at lines 543--544
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 333--389
+
+ []
+
+[8] [9] [10] [11]
+Overfull \hbox (3.75066pt too wide) in paragraph at lines 556--557
 []$\OMS/cmsy/m/n/10  \OT1/cmr/m/n/10 8$ in two's com-ple-ment, af-ter be-ing pa
 dded ap-pro-pri-ately and flipped,
  []
 
 
-Overfull \hbox (9.91719pt too wide) in paragraph at lines 552--553
+Overfull \hbox (9.91719pt too wide) in paragraph at lines 565--566
 []\OT1/cmr/m/n/10 We throw away the ex-cess bit, or the red ``1'', leav-ing us 
 with b11101100. 
  []
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 642--667
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 655--680
 
  []
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 667--692
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 680--705
 
  []
 
-[18]
-Overfull \hbox (24.90556pt too wide) in paragraph at lines 741--768
+[15]
+Overfull \hbox (24.90556pt too wide) in paragraph at lines 754--781
 [] 
  []
 
-[19] [20]
-Overfull \hbox (0.80618pt too wide) in paragraph at lines 836--837
+[16] [17]
+Overfull \hbox (0.80618pt too wide) in paragraph at lines 849--850
 \OT1/cmr/m/n/10 with some-thing that isn't a whole num-ber (which hap-pens very
  fre-quently),
  []
 
-[21] [22]
-Overfull \hbox (109.5951pt too wide) in paragraph at lines 898--910
+[18] [19]
+Overfull \hbox (109.5951pt too wide) in paragraph at lines 911--923
 | [] 
  []
 
 
-Overfull \hbox (96.4691pt too wide) in paragraph at lines 910--922
+Overfull \hbox (96.4691pt too wide) in paragraph at lines 923--935
 | [] 
  []
 
-[23] [24] [25] [26] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1053--1054
+[20] [21] [22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1066--1067
 
  []
 
-[28] [29]
+[25] [26]
 ===== Image 'figures/Notes-figure0' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1112--1113
+Underfull \hbox (badness 10000) in paragraph at lines 1125--1126
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1190
+Underfull \hbox (badness 10000) in paragraph at lines 1144--1203
 
  []
 
-[30 <./figures/Notes-figure0.pdf>]
-<IMG2.png, id=391, 7.90453pt x 7.52812pt>
+[27 <./figures/Notes-figure0.pdf>]
+<IMG2.png, id=393, 7.90453pt x 7.52812pt>
 File: IMG2.png Graphic file (type png)
 <use IMG2.png>
-Package pdftex.def Info: IMG2.png  used on input line 1196.
+Package pdftex.def Info: IMG2.png  used on input line 1209.
 (pdftex.def)             Requested size: 39.52248pt x 37.64046pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1241
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1198--1241
+Underfull \hbox (badness 10000) in paragraph at lines 1211--1254
 
  []
 
 ===== Image 'figures/Notes-figure1' is up-to-date. ======
-[31 <./IMG2.png> <./figures/Notes-figure1.pdf>] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
+[28 <./IMG2.png> <./figures/Notes-figure1.pdf>] [29]
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1297
 
  []
 
-<IMG1.png, id=421, 135.12984pt x 32.74734pt>
+<IMG1.png, id=422, 135.12984pt x 32.74734pt>
 File: IMG1.png Graphic file (type png)
 <use IMG1.png>
-Package pdftex.def Info: IMG1.png  used on input line 1297.
+Package pdftex.def Info: IMG1.png  used on input line 1310.
 (pdftex.def)             Requested size: 135.1295pt x 32.74724pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1298--1299
+Underfull \hbox (badness 10000) in paragraph at lines 1311--1312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1299--1300
+Underfull \hbox (badness 10000) in paragraph at lines 1312--1313
 
  []
 
-[33 <./IMG1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 1320--1321
+[30 <./IMG1.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
 
  []
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1357--1358
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1370--1371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
+Underfull \hbox (badness 10000) in paragraph at lines 1371--1372
 
  []
 
 ===== Image 'figures/Notes-figure2' is up-to-date. ======
 ===== Image 'figures/Notes-figure3' is up-to-date. ======
-[35 <./figures/Notes-figure2.pdf> <./figures/Notes-figure3.pdf>] [36]
+[32 <./figures/Notes-figure2.pdf> <./figures/Notes-figure3.pdf>] [33]
 ===== Image 'figures/Notes-figure4' is up-to-date. ======
 ===== Image 'figures/Notes-figure5' is up-to-date. ======
 ===== Image 'figures/Notes-figure6' is up-to-date. ======
-[37 <./figures/Notes-figure4.pdf> <./figures/Notes-figure5.pdf> <./figures/Note
+[34 <./figures/Notes-figure4.pdf> <./figures/Notes-figure5.pdf> <./figures/Note
 s-figure6.pdf>]
 ===== Image 'figures/Notes-figure7' is up-to-date. ======
-[38 <./figures/Notes-figure7.pdf>]
+[35 <./figures/Notes-figure7.pdf>]
 ===== Image 'figures/Notes-figure8' is up-to-date. ======
 ===== Image 'figures/Notes-figure9' is up-to-date. ======
 ===== Image 'figures/Notes-figure10' is up-to-date. ======
 ===== Image 'figures/Notes-figure11' is up-to-date. ======
-[39 <./figures/Notes-figure8.pdf> <./figures/Notes-figure9.pdf> <./figures/Note
+[36 <./figures/Notes-figure8.pdf> <./figures/Notes-figure9.pdf> <./figures/Note
 s-figure10.pdf>]
 ===== Image 'figures/Notes-figure12' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1655
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1668
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1630--1655
+Underfull \hbox (badness 10000) in paragraph at lines 1643--1668
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1655--1669
+Underfull \hbox (badness 10000) in paragraph at lines 1668--1682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1655--1669
+Underfull \hbox (badness 10000) in paragraph at lines 1668--1682
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1655--1669
+Underfull \hbox (badness 10000) in paragraph at lines 1668--1682
 
  []
 
-[40 <./figures/Notes-figure11.pdf> <./figures/Notes-figure12.pdf>]
+[37 <./figures/Notes-figure11.pdf> <./figures/Notes-figure12.pdf>]
 ===== Image 'figures/Notes-figure13' is up-to-date. ======
 ===== Image 'figures/Notes-figure14' is up-to-date. ======
 ===== Image 'figures/Notes-figure15' is up-to-date. ======
-[41 <./figures/Notes-figure13.pdf> <./figures/Notes-figure14.pdf>]
+[38 <./figures/Notes-figure13.pdf> <./figures/Notes-figure14.pdf>]
 ===== Image 'figures/Notes-figure16' is up-to-date. ======
 ===== Image 'figures/Notes-figure17' is up-to-date. ======
-[42 <./figures/Notes-figure15.pdf> <./figures/Notes-figure16.pdf>]
+[39 <./figures/Notes-figure15.pdf> <./figures/Notes-figure16.pdf>]
 ===== Image 'figures/Notes-figure18' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1749--1767
+Underfull \hbox (badness 10000) in paragraph at lines 1762--1780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1749--1767
+Underfull \hbox (badness 10000) in paragraph at lines 1762--1780
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1749--1767
+Underfull \hbox (badness 10000) in paragraph at lines 1762--1780
 
  []
 
-[43 <./figures/Notes-figure17.pdf>]
+[40 <./figures/Notes-figure17.pdf>]
 ===== Image 'figures/Notes-figure19' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1767--1776
+Underfull \hbox (badness 10000) in paragraph at lines 1780--1789
 
  []
 
-[44 <./figures/Notes-figure18.pdf> <./figures/Notes-figure19.pdf>]
+[41 <./figures/Notes-figure18.pdf> <./figures/Notes-figure19.pdf>]
 ===== Image 'figures/Notes-figure20' is up-to-date. ======
 ===== Image 'figures/Notes-figure21' is up-to-date. ======
-[45 <./figures/Notes-figure20.pdf> <./figures/Notes-figure21.pdf>]
+[42 <./figures/Notes-figure20.pdf> <./figures/Notes-figure21.pdf>]
 ===== Image 'figures/Notes-figure22' is up-to-date. ======
 ===== Image 'figures/Notes-figure23' is up-to-date. ======
 ===== Image 'figures/Notes-figure24' is up-to-date. ======
 ===== Image 'figures/Notes-figure25' is up-to-date. ======
-[46 <./figures/Notes-figure22.pdf> <./figures/Notes-figure23.pdf> <./figures/No
+[43 <./figures/Notes-figure22.pdf> <./figures/Notes-figure23.pdf> <./figures/No
 tes-figure24.pdf> <./figures/Notes-figure25.pdf>]
 ===== Image 'figures/Notes-figure26' is up-to-date. ======
 ===== Image 'figures/Notes-figure27' is up-to-date. ======
 ===== Image 'figures/Notes-figure28' is up-to-date. ======
-[47 <./figures/Notes-figure26.pdf> <./figures/Notes-figure27.pdf>]
+[44 <./figures/Notes-figure26.pdf> <./figures/Notes-figure27.pdf>]
 ===== Image 'figures/Notes-figure29' is up-to-date. ======
-[48 <./figures/Notes-figure28.pdf> <./figures/Notes-figure29.pdf>]
+[45 <./figures/Notes-figure28.pdf> <./figures/Notes-figure29.pdf>]
 ===== Image 'figures/Notes-figure30' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1969--1979
+Underfull \hbox (badness 10000) in paragraph at lines 1982--1992
 
  []
 
 ===== Image 'figures/Notes-figure31' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1979--1989
+Underfull \hbox (badness 10000) in paragraph at lines 1992--2002
 
  []
 
-[49 <./figures/Notes-figure30.pdf> <./figures/Notes-figure31.pdf>]
+[46 <./figures/Notes-figure30.pdf> <./figures/Notes-figure31.pdf>]
 ===== Image 'figures/Notes-figure32' is up-to-date. ======
 ===== Image 'figures/Notes-figure33' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 1989--2045
+Underfull \hbox (badness 10000) in paragraph at lines 2002--2058
 
  []
 
 ===== Image 'figures/Notes-figure34' is up-to-date. ======
 ===== Image 'figures/Notes-figure35' is up-to-date. ======
 
-Underfull \hbox (badness 10000) in paragraph at lines 2045--2103
+Underfull \hbox (badness 10000) in paragraph at lines 2058--2116
 
  []
 
-[50 <./figures/Notes-figure32.pdf> <./figures/Notes-figure33.pdf>]
+[47 <./figures/Notes-figure32.pdf> <./figures/Notes-figure33.pdf>]
 ===== Image 'figures/Notes-figure36' is up-to-date. ======
 
-Overfull \hbox (54.80644pt too wide) in paragraph at lines 2103--2112
+Overfull \hbox (54.80644pt too wide) in paragraph at lines 2116--2125
 []\OT1/cmr/m/n/10 Problem 13.1.5: Find the sim-pli-fied SOP from $\OML/cmm/m/it
 /10 F \OT1/cmr/m/n/10 = [][](0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1\OML/cmm/m/it
 /10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \
@@ -1407,36 +1436,36 @@ OT1/cmr/m/n/10 4\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2103--2112
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2125
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2103--2112
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2125
 
  []
 
-[51 <./figures/Notes-figure34.pdf> <./figures/Notes-figure35.pdf> <./figures/No
+[48 <./figures/Notes-figure34.pdf> <./figures/Notes-figure35.pdf> <./figures/No
 tes-figure36.pdf>]
 ===== Image 'figures/Notes-figure37' is up-to-date. ======
 ===== Image 'figures/Notes-figure38' is up-to-date. ======
-[52 <./figures/Notes-figure37.pdf> <./figures/Notes-figure38.pdf>]
+[49 <./figures/Notes-figure37.pdf> <./figures/Notes-figure38.pdf>]
 ===== Image 'figures/Notes-figure39' is up-to-date. ======
 ===== Image 'figures/Notes-figure40' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2153--2161
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2166--2174
 [][] [] 
  []
 
 ===== Image 'figures/Notes-figure41' is up-to-date. ======
 ===== Image 'figures/Notes-figure42' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2173--2183
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2186--2196
 [][] [] 
  []
 
 
-Overfull \hbox (116.86758pt too wide) in paragraph at lines 2163--2191
+Overfull \hbox (116.86758pt too wide) in paragraph at lines 2176--2204
 []\OT1/cmr/m/n/10 Problem 14.1.3: Solve the 5-variable K-Map $\OML/cmm/m/it/10 
 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cm
 m/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7\OML/cmm/m/it/
@@ -1446,17 +1475,17 @@ cmr/m/n/10 23\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 26\OML/cmm/m/it/10 ; \OT1/cmr/m
 /n/10 29\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 31)$.
  []
 
-[53 <./figures/Notes-figure39.pdf> <./figures/Notes-figure40.pdf> <./figures/No
+[50 <./figures/Notes-figure39.pdf> <./figures/Notes-figure40.pdf> <./figures/No
 tes-figure41.pdf> <./figures/Notes-figure42.pdf>]
 ===== Image 'figures/Notes-figure43' is up-to-date. ======
 ===== Image 'figures/Notes-figure44' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2203--2211
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2216--2224
 [][] [] 
  []
 
 
-Overfull \hbox (55.3676pt too wide) in paragraph at lines 2193--2217
+Overfull \hbox (55.3676pt too wide) in paragraph at lines 2206--2230
 []\OT1/cmr/m/n/10 Problem 14.1.4: Draw the 5-variable K-Map $\OML/cmm/m/it/10 F
 \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A; B; C; D; E\OT1/cmr/m/n/10 ) = [](1\OML/cmm
 /m/it/10 ; \OT1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/
@@ -1466,7 +1495,7 @@ Overfull \hbox (55.3676pt too wide) in paragraph at lines 2193--2217
 
 ===== Image 'figures/Notes-figure45' is up-to-date. ======
 
-Overfull \hbox (23.1697pt too wide) in paragraph at lines 2217--2227
+Overfull \hbox (23.1697pt too wide) in paragraph at lines 2230--2240
 []\OT1/cmr/m/n/10 Problem 14.1.5: Draw the K-Map for $\OML/cmm/m/it/10 F\OT1/cm
 r/m/n/10 (\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 ) = [](1\OML/cmm/m/it/10 ;
  \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 7) + \OML/cmm/m/it/10 d\OT
@@ -1474,11 +1503,11 @@ r/m/n/10 (\OML/cmm/m/it/10 A; B; C; D\OT1/cmr/m/n/10 ) = [](1\OML/cmm/m/it/10 ;
 m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15)$. 
  []
 
-[54 <./figures/Notes-figure43.pdf> <./figures/Notes-figure44.pdf> <./figures/No
+[51 <./figures/Notes-figure43.pdf> <./figures/Notes-figure44.pdf> <./figures/No
 tes-figure45.pdf>]
 ===== Image 'figures/Notes-figure46' is up-to-date. ======
 
-Overfull \hbox (24.33847pt too wide) in paragraph at lines 2241--2253
+Overfull \hbox (24.33847pt too wide) in paragraph at lines 2254--2266
 []\OT1/cmr/m/n/10 Problem 15.1.1: Find the sim-pli-fied POS for $\OML/cmm/m/it/
 10 F \OT1/cmr/m/n/10 = [][](1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/
 10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \O
@@ -1486,10 +1515,10 @@ T1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr
 /m/n/10 13\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 15)$. 
  []
 
-[55 <./figures/Notes-figure46.pdf>]
+[52 <./figures/Notes-figure46.pdf>]
 ===== Image 'figures/Notes-figure47' is up-to-date. ======
 
-Overfull \hbox (29.33849pt too wide) in paragraph at lines 2253--2265
+Overfull \hbox (29.33849pt too wide) in paragraph at lines 2266--2277
 []\OT1/cmr/m/n/10 Problem 15.1.2: Find the sim-pli-fied POS for $\OML/cmm/m/it/
 10 F \OT1/cmr/m/n/10 = [][](1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/
 10 ; \OT1/cmr/m/n/10 5\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 6\OML/cmm/m/it/10 ; \O
@@ -1498,59 +1527,59 @@ T1/cmr/m/n/10 9\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 10\OML/cmm/m/it/10 ; \OT1/cmr
  []
 
 ===== Image 'figures/Notes-figure48' is up-to-date. ======
-[56 <./figures/Notes-figure47.pdf> <./figures/Notes-figure48.pdf>]
+[53 <./figures/Notes-figure47.pdf> <./figures/Notes-figure48.pdf>]
 ===== Image 'figures/Notes-figure49' is up-to-date. ======
-[57 <./figures/Notes-figure49.pdf>]
+[54 <./figures/Notes-figure49.pdf>]
 ===== Image 'figures/Notes-figure50' is up-to-date. ======
 ===== Image 'figures/Notes-figure51' is up-to-date. ======
 
-Overfull \hbox (20.40369pt too wide) in paragraph at lines 2330--2330
+Overfull \hbox (20.40369pt too wide) in paragraph at lines 2342--2342
  [][] 
  []
 
 ===== Image 'figures/Notes-figure52' is up-to-date. ======
 
-Overfull \hbox (27.62868pt too wide) in paragraph at lines 2345--2345
+Overfull \hbox (27.62868pt too wide) in paragraph at lines 2357--2357
  [][] 
  []
 
 ===== Image 'figures/Notes-figure53' is up-to-date. ======
 ===== Image 'figures/Notes-figure54' is up-to-date. ======
 
-Overfull \hbox (23.56177pt too wide) in paragraph at lines 2330--2372
+Overfull \hbox (23.56177pt too wide) in paragraph at lines 2342--2384
 [][]  [] 
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2330--2372
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2342--2384
 [] [] 
  []
 
 ===== Image 'figures/Notes-figure55' is up-to-date. ======
-[58 <./figures/Notes-figure50.pdf> <./figures/Notes-figure51.pdf> <./figures/No
+[55 <./figures/Notes-figure50.pdf> <./figures/Notes-figure51.pdf> <./figures/No
 tes-figure52.pdf> <./figures/Notes-figure53.pdf> <./figures/Notes-figure54.pdf>
  <./figures/Notes-figure55.pdf>]
 ===== Image 'figures/Notes-figure56' is up-to-date. ======
 
-Overfull \hbox (25.12032pt too wide) in paragraph at lines 2409--2409
+Overfull \hbox (25.12032pt too wide) in paragraph at lines 2421--2421
  [][] 
  []
 
 ===== Image 'figures/Notes-figure57' is up-to-date. ======
 
-Overfull \hbox (22.91206pt too wide) in paragraph at lines 2424--2424
+Overfull \hbox (22.91206pt too wide) in paragraph at lines 2436--2436
  [][] 
  []
 
 ===== Image 'figures/Notes-figure58' is up-to-date. ======
 ===== Image 'figures/Notes-figure59' is up-to-date. ======
 
-Overfull \hbox (23.56177pt too wide) in paragraph at lines 2409--2451
+Overfull \hbox (23.56177pt too wide) in paragraph at lines 2421--2463
 [][]  [] 
  []
 
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2409--2451
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2421--2463
 [] [] 
  []
 
@@ -1558,13 +1587,13 @@ Overfull \hbox (2.22221pt too wide) in paragraph at lines 2409--2451
 ===== Image 'figures/Notes-figure61' is up-to-date. ======
 ===== Image 'figures/Notes-figure62' is up-to-date. ======
 
-Overfull \hbox (4.60265pt too wide) in paragraph at lines 2493--2493
+Overfull \hbox (4.60265pt too wide) in paragraph at lines 2505--2505
  [][] 
  []
 
 ===== Image 'figures/Notes-figure63' is up-to-date. ======
 ===== Image 'figures/Notes-figure64' is up-to-date. ======
-[59 <./figures/Notes-figure56.pdf> <./figures/Notes-figure57.pdf> <./figures/No
+[56 <./figures/Notes-figure56.pdf> <./figures/Notes-figure57.pdf> <./figures/No
 tes-figure58.pdf> <./figures/Notes-figure59.pdf> <./figures/Notes-figure60.pdf>
  <./figures/Notes-figure61.pdf> <./figures/Notes-figure62.pdf> <./figures/Notes
 -figure63.pdf>]
@@ -1574,16 +1603,16 @@ tes-figure58.pdf> <./figures/Notes-figure59.pdf> <./figures/Notes-figure60.pdf>
 ===== Image 'figures/Notes-figure68' is up-to-date. ======
 ===== Image 'figures/Notes-figure69' is up-to-date. ======
 
-Overfull \hbox (4.03654pt too wide) in paragraph at lines 2648--2648
+Overfull \hbox (4.03654pt too wide) in paragraph at lines 2660--2660
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2632--2649
+Underfull \hbox (badness 10000) in paragraph at lines 2644--2661
 
  []
 
-[60 <./figures/Notes-figure64.pdf> <./figures/Notes-figure65.pdf> <./figures/No
+[57 <./figures/Notes-figure64.pdf> <./figures/Notes-figure65.pdf> <./figures/No
 tes-figure66.pdf> <./figures/Notes-figure67.pdf> <./figures/Notes-figure68.pdf>
  <./figures/Notes-figure69.pdf>]
 ===== Image 'figures/Notes-figure70' is up-to-date. ======
@@ -1593,14 +1622,14 @@ tes-figure66.pdf> <./figures/Notes-figure67.pdf> <./figures/Notes-figure68.pdf>
 ===== Image 'figures/Notes-figure74' is up-to-date. ======
 ===== Image 'figures/Notes-figure75' is up-to-date. ======
 ===== Image 'figures/Notes-figure76' is up-to-date. ======
-[61
+[58
 
  <./figures/Notes-figure70.pdf> <./figures/Notes-figure71.pdf> <./figures/Notes
 -figure72.pdf> <./figures/Notes-figure73.pdf> <./figures/Notes-figure74.pdf> <.
 /figures/Notes-figure75.pdf>]
 ===== Image 'figures/Notes-figure77' is up-to-date. ======
 
-Overfull \hbox (26.27763pt too wide) in paragraph at lines 2836--2836
+Overfull \hbox (26.27763pt too wide) in paragraph at lines 2848--2848
  [][] 
  []
 
@@ -1608,127 +1637,127 @@ Overfull \hbox (26.27763pt too wide) in paragraph at lines 2836--2836
 ===== Image 'figures/Notes-figure79' is up-to-date. ======
 ===== Image 'figures/Notes-figure80' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2856--2861
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2868--2873
 [][] [] 
  []
 
-[62 <./figures/Notes-figure76.pdf> <./figures/Notes-figure77.pdf> <./figures/No
+[59 <./figures/Notes-figure76.pdf> <./figures/Notes-figure77.pdf> <./figures/No
 tes-figure78.pdf> <./figures/Notes-figure79.pdf> <./figures/Notes-figure80.pdf>
 ]
 ===== Image 'figures/Notes-figure81' is up-to-date. ======
 ===== Image 'figures/Notes-figure82' is up-to-date. ======
 ===== Image 'figures/Notes-figure83' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2899--2914
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2911--2926
 [][] [] 
  []
 
-[63 <./figures/Notes-figure81.pdf> <./figures/Notes-figure82.pdf> <./figures/No
+[60 <./figures/Notes-figure81.pdf> <./figures/Notes-figure82.pdf> <./figures/No
 tes-figure83.pdf>]
 ===== Image 'figures/Notes-figure84' is up-to-date. ======
 ===== Image 'figures/Notes-figure85' is up-to-date. ======
-[64 <./figures/Notes-figure84.pdf>]
+[61 <./figures/Notes-figure84.pdf>]
 ===== Image 'figures/Notes-figure86' is up-to-date. ======
 ===== Image 'figures/Notes-figure87' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 2959--2970
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 2971--2982
 [][] [] 
  []
 
-[65 <./figures/Notes-figure85.pdf> <./figures/Notes-figure86.pdf> <./figures/No
+[62 <./figures/Notes-figure85.pdf> <./figures/Notes-figure86.pdf> <./figures/No
 tes-figure87.pdf>]
 ===== Image 'figures/Notes-figure88' is up-to-date. ======
-[66 <./figures/Notes-figure88.pdf>] [67]
+[63 <./figures/Notes-figure88.pdf>] [64]
 ===== Image 'figures/Notes-figure89' is up-to-date. ======
 ===== Image 'figures/Notes-figure90' is up-to-date. ======
-[68 <./figures/Notes-figure89.pdf> <./figures/Notes-figure90.pdf>]
-Overfull \hbox (4.09407pt too wide) in paragraph at lines 3102--3108
+[65 <./figures/Notes-figure89.pdf> <./figures/Notes-figure90.pdf>]
+Overfull \hbox (4.09407pt too wide) in paragraph at lines 3114--3120
 [][] [] 
  []
 
 
-Overfull \hbox (4.09407pt too wide) in paragraph at lines 3118--3124
+Overfull \hbox (4.09407pt too wide) in paragraph at lines 3130--3136
 [][] [] 
  []
 
-<IMG3.png, id=1394, 520.56984pt x 134.00063pt>
+<IMG3.png, id=1395, 520.56984pt x 134.00063pt>
 File: IMG3.png Graphic file (type png)
 <use IMG3.png>
-Package pdftex.def Info: IMG3.png  used on input line 3127.
+Package pdftex.def Info: IMG3.png  used on input line 3139.
 (pdftex.def)             Requested size: 312.3443pt x 80.40097pt.
 ===== Image 'figures/Notes-figure91' is up-to-date. ======
-[69 <./IMG3.png>]
+[66 <./IMG3.png>]
 ===== Image 'figures/Notes-figure92' is up-to-date. ======
-[70 <./figures/Notes-figure91.pdf> <./figures/Notes-figure92.pdf>]
-<IMG4.png, id=1431, 461.47406pt x 125.71968pt>
+[67 <./figures/Notes-figure91.pdf> <./figures/Notes-figure92.pdf>]
+<IMG4.png, id=1432, 461.47406pt x 125.71968pt>
 File: IMG4.png Graphic file (type png)
 <use IMG4.png>
-Package pdftex.def Info: IMG4.png  used on input line 3190.
+Package pdftex.def Info: IMG4.png  used on input line 3202.
 (pdftex.def)             Requested size: 323.02963pt x 88.00316pt.
 
-Overfull \hbox (3.02966pt too wide) in paragraph at lines 3189--3191
+Overfull \hbox (3.02966pt too wide) in paragraph at lines 3201--3203
 [] 
  []
 
-[71 <./IMG4.png>]
-<IMG6.png, id=1438, 440.77171pt x 151.69171pt>
+[68 <./IMG4.png>]
+<IMG6.png, id=1439, 440.77171pt x 151.69171pt>
 File: IMG6.png Graphic file (type png)
 <use IMG6.png>
-Package pdftex.def Info: IMG6.png  used on input line 3212.
+Package pdftex.def Info: IMG6.png  used on input line 3224.
 (pdftex.def)             Requested size: 308.53809pt x 106.18346pt.
- [72 <./IMG6.png>]
-Overfull \hbox (10.00066pt too wide) in paragraph at lines 3228--3229
+ [69 <./IMG6.png>]
+Overfull \hbox (10.00066pt too wide) in paragraph at lines 3240--3241
 []\OT1/cmr/m/n/10 We can take carry looka-heads eveh fur-ther by cre-at-ing gro
 up-carry-lookahead
  []
 
-[73]
+[70]
 ===== Image 'figures/Notes-figure93' is up-to-date. ======
 ===== Image 'figures/Notes-figure94' is up-to-date. ======
-[74 <./figures/Notes-figure93.pdf> <./figures/Notes-figure94.pdf>]
+[71 <./figures/Notes-figure93.pdf> <./figures/Notes-figure94.pdf>]
 ===== Image 'figures/Notes-figure95' is up-to-date. ======
 ===== Image 'figures/Notes-figure96' is up-to-date. ======
-[75 <./figures/Notes-figure95.pdf> <./figures/Notes-figure96.pdf>]
+[72 <./figures/Notes-figure95.pdf> <./figures/Notes-figure96.pdf>]
 ===== Image 'figures/Notes-figure97' is up-to-date. ======
 ===== Image 'figures/Notes-figure98' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 3374--3381
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 3386--3393
 [][] [] 
  []
 
-<IMG5.png, id=1493, 120.45pt x 183.68625pt>
+<IMG5.png, id=1494, 120.45pt x 183.68625pt>
 File: IMG5.png Graphic file (type png)
 <use IMG5.png>
-Package pdftex.def Info: IMG5.png  used on input line 3383.
+Package pdftex.def Info: IMG5.png  used on input line 3395.
 (pdftex.def)             Requested size: 84.3144pt x 128.57947pt.
-[76 <./figures/Notes-figure97.pdf> <./figures/Notes-figure98.pdf> <./IMG5.png>]
+[73 <./figures/Notes-figure97.pdf> <./figures/Notes-figure98.pdf> <./IMG5.png>]
 ===== Image 'figures/Notes-figure99' is up-to-date. ======
 ===== Image 'figures/Notes-figure100' is up-to-date. ======
 
-Overfull \hbox (2.22221pt too wide) in paragraph at lines 3404--3409
+Overfull \hbox (2.22221pt too wide) in paragraph at lines 3416--3421
 [][] [] 
  []
 
 File: IMG6.png Graphic file (type png)
 <use IMG6.png>
-Package pdftex.def Info: IMG6.png  used on input line 3411.
+Package pdftex.def Info: IMG6.png  used on input line 3423.
 (pdftex.def)             Requested size: 308.53809pt x 106.18346pt.
-[77 <./figures/Notes-figure99.pdf> <./figures/Notes-figure100.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3418.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3418.
+[74 <./figures/Notes-figure99.pdf> <./figures/Notes-figure100.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3430.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3430.
  (Notes.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3418.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3418.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3430.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3430.
 
 Package rerunfilecheck Info: File `Notes.out' has not changed.
-(rerunfilecheck)             Checksum: 45CF38C594F7A9A7A34B414C1B9D3C67;2715.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3418.
+(rerunfilecheck)             Checksum: 8CD97142620787C9C3278608FBCC498B;2717.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3430.
  ) 
 Here is how much of TeX's memory you used:
- 37004 strings out of 481258
- 879529 string characters out of 2906189
- 1297434 words of memory out of 3000000
- 51719 multiletter control sequences out of 15000+200000
+ 37020 strings out of 481258
+ 879808 string characters out of 2906189
+ 1297955 words of memory out of 3000000
+ 51734 multiletter control sequences out of 15000+200000
  549778 words of font info for 93 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,96p,931b,1247s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1757,9 +1786,9 @@ ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/
 Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/latxf
 ont/line10.pfb><C:/Users/gytan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/symbols/msam10.pfb>
-Output written on Notes.pdf (77 pages, 1031766 bytes).
+Output written on Notes.pdf (78 pages, 1031907 bytes).
 PDF statistics:
- 1645 PDF objects out of 1728 (max. 8388607)
- 153 named destinations out of 1000 (max. 500000)
+ 1646 PDF objects out of 1728 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
  924 words of extra memory for PDF output out of 10000 (max. 10000000)
 
