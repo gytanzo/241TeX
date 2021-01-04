@@ -44,4 +44,55 @@
 \BOOKMARK [2][-]{subsection.17.1}{Lecture Slides}{section.17}% 44
 \BOOKMARK [2][-]{subsection.17.2}{Assigned Readings}{section.17}% 45
 \BOOKMARK [1][-]{section.18}{3/06/2020}{}% 46
-\BOOKMARK [2][-]{subsection.18.1}{Lecture Readings}{section.18}% 47
+\BOOKMARK [2][-]{subsection.18.1}{Lecture Slides}{section.18}% 47
+\BOOKMARK [1][-]{section.19}{3/22/2020}{}% 48
+\BOOKMARK [2][-]{subsection.19.1}{Time}{section.19}% 49
+\BOOKMARK [3][-]{subsubsection.19.1.1}{Lecture Slides}{subsection.19.1}% 50
+\BOOKMARK [3][-]{subsubsection.19.1.2}{Assigned Reading}{subsection.19.1}% 51
+\BOOKMARK [2][-]{subsection.19.2}{Documentation}{section.19}% 52
+\BOOKMARK [3][-]{subsubsection.19.2.1}{Lecture Slides}{subsection.19.2}% 53
+\BOOKMARK [3][-]{subsubsection.19.2.2}{Assigned Reading}{subsection.19.2}% 54
+\BOOKMARK [2][-]{subsection.19.3}{Verilog Introduction}{section.19}% 55
+\BOOKMARK [3][-]{subsubsection.19.3.1}{Lecture Slides}{subsection.19.3}% 56
+\BOOKMARK [3][-]{subsubsection.19.3.2}{Assigned Reading}{subsection.19.3}% 57
+\BOOKMARK [2][-]{subsection.19.4}{Verilog Terminology}{section.19}% 58
+\BOOKMARK [3][-]{subsubsection.19.4.1}{Lecture Slides}{subsection.19.4}% 59
+\BOOKMARK [3][-]{subsubsection.19.4.2}{Assigned Reading}{subsection.19.4}% 60
+\BOOKMARK [1][-]{section.20}{3/29/2020}{}% 61
+\BOOKMARK [2][-]{subsection.20.1}{MSI}{section.20}% 62
+\BOOKMARK [2][-]{subsection.20.2}{Shifting}{section.20}% 63
+\BOOKMARK [2][-]{subsection.20.3}{Rotating}{section.20}% 64
+\BOOKMARK [2][-]{subsection.20.4}{Mux Intro}{section.20}% 65
+\BOOKMARK [1][-]{section.21}{4/05/2020}{}% 66
+\BOOKMARK [2][-]{subsection.21.1}{Decoders}{section.21}% 67
+\BOOKMARK [3][-]{subsubsection.21.1.1}{Lecture Slides}{subsection.21.1}% 68
+\BOOKMARK [3][-]{subsubsection.21.1.2}{Assigned Reading}{subsection.21.1}% 69
+\BOOKMARK [2][-]{subsection.21.2}{Encoders}{section.21}% 70
+\BOOKMARK [2][-]{subsection.21.3}{Continuous Assignment}{section.21}% 71
+\BOOKMARK [3][-]{subsubsection.21.3.1}{Lecture Slides}{subsection.21.3}% 72
+\BOOKMARK [3][-]{subsubsection.21.3.2}{Assigned Reading}{subsection.21.3}% 73
+\BOOKMARK [2][-]{subsection.21.4}{Behavioral Verilog}{section.21}% 74
+\BOOKMARK [3][-]{subsubsection.21.4.1}{Lecture Slides}{subsection.21.4}% 75
+\BOOKMARK [3][-]{subsubsection.21.4.2}{Assigned Reading}{subsection.21.4}% 76
+\BOOKMARK [2][-]{subsection.21.5}{Test Benches}{section.21}% 77
+\BOOKMARK [3][-]{subsubsection.21.5.1}{Lecture Slides}{subsection.21.5}% 78
+\BOOKMARK [3][-]{subsubsection.21.5.2}{Assigned Reading}{subsection.21.5}% 79
+\BOOKMARK [1][-]{section.22}{4/12/2020}{}% 80
+\BOOKMARK [2][-]{subsection.22.1}{What Is Sequential Logic?}{section.22}% 81
+\BOOKMARK [3][-]{subsubsection.22.1.1}{Lecture Slides}{subsection.22.1}% 82
+\BOOKMARK [3][-]{subsubsection.22.1.2}{Assigned Reading}{subsection.22.1}% 83
+\BOOKMARK [2][-]{subsection.22.2}{Latches}{section.22}% 84
+\BOOKMARK [2][-]{subsection.22.3}{Flip-Flops}{section.22}% 85
+\BOOKMARK [3][-]{subsubsection.22.3.1}{Lecture Slides}{subsection.22.3}% 86
+\BOOKMARK [3][-]{subsubsection.22.3.2}{Assigned Reading}{subsection.22.3}% 87
+\BOOKMARK [2][-]{subsection.22.4}{Sequential MSI Devices}{section.22}% 88
+\BOOKMARK [3][-]{subsubsection.22.4.1}{Lecture Slides}{subsection.22.4}% 89
+\BOOKMARK [3][-]{subsubsection.22.4.2}{Assigned Reading}{subsection.22.4}% 90
+\BOOKMARK [1][-]{section.23}{4/19/2020}{}% 91
+\BOOKMARK [2][-]{subsection.23.1}{What Is an FSM?}{section.23}% 92
+\BOOKMARK [2][-]{subsection.23.2}{FSM Design Algorithm}{section.23}% 93
+\BOOKMARK [1][-]{section.24}{4/26/2020}{}% 94
+\BOOKMARK [2][-]{subsection.24.1}{Implementation With DFF Review}{section.24}% 95
+\BOOKMARK [2][-]{subsection.24.2}{FSM Verilog Part 2}{section.24}% 96
+\BOOKMARK [2][-]{subsection.24.3}{Implementation With TFF}{section.24}% 97
+\BOOKMARK [2][-]{subsection.24.4}{Memory Devices}{section.24}% 98

@@ -44,4 +44,55 @@
 \contentsline {subsection}{\numberline {17.1}Lecture Slides}{64}{subsection.17.1}%
 \contentsline {subsection}{\numberline {17.2}Assigned Readings}{68}{subsection.17.2}%
 \contentsline {section}{\numberline {18}3/06/2020}{71}{section.18}%
-\contentsline {subsection}{\numberline {18.1}Lecture Readings}{71}{subsection.18.1}%
+\contentsline {subsection}{\numberline {18.1}Lecture Slides}{71}{subsection.18.1}%
+\contentsline {section}{\numberline {19}3/22/2020}{75}{section.19}%
+\contentsline {subsection}{\numberline {19.1}Time}{75}{subsection.19.1}%
+\contentsline {subsubsection}{\numberline {19.1.1}Lecture Slides}{75}{subsubsection.19.1.1}%
+\contentsline {subsubsection}{\numberline {19.1.2}Assigned Reading}{75}{subsubsection.19.1.2}%
+\contentsline {subsection}{\numberline {19.2}Documentation}{78}{subsection.19.2}%
+\contentsline {subsubsection}{\numberline {19.2.1}Lecture Slides}{78}{subsubsection.19.2.1}%
+\contentsline {subsubsection}{\numberline {19.2.2}Assigned Reading}{80}{subsubsection.19.2.2}%
+\contentsline {subsection}{\numberline {19.3}Verilog Introduction}{83}{subsection.19.3}%
+\contentsline {subsubsection}{\numberline {19.3.1}Lecture Slides}{83}{subsubsection.19.3.1}%
+\contentsline {subsubsection}{\numberline {19.3.2}Assigned Reading}{84}{subsubsection.19.3.2}%
+\contentsline {subsection}{\numberline {19.4}Verilog Terminology}{86}{subsection.19.4}%
+\contentsline {subsubsection}{\numberline {19.4.1}Lecture Slides}{86}{subsubsection.19.4.1}%
+\contentsline {subsubsection}{\numberline {19.4.2}Assigned Reading}{88}{subsubsection.19.4.2}%
+\contentsline {section}{\numberline {20}3/29/2020}{91}{section.20}%
+\contentsline {subsection}{\numberline {20.1}MSI}{91}{subsection.20.1}%
+\contentsline {subsection}{\numberline {20.2}Shifting}{91}{subsection.20.2}%
+\contentsline {subsection}{\numberline {20.3}Rotating}{91}{subsection.20.3}%
+\contentsline {subsection}{\numberline {20.4}Mux Intro}{91}{subsection.20.4}%
+\contentsline {section}{\numberline {21}4/05/2020}{93}{section.21}%
+\contentsline {subsection}{\numberline {21.1}Decoders}{93}{subsection.21.1}%
+\contentsline {subsubsection}{\numberline {21.1.1}Lecture Slides}{93}{subsubsection.21.1.1}%
+\contentsline {subsubsection}{\numberline {21.1.2}Assigned Reading}{93}{subsubsection.21.1.2}%
+\contentsline {subsection}{\numberline {21.2}Encoders}{94}{subsection.21.2}%
+\contentsline {subsection}{\numberline {21.3}Continuous Assignment}{95}{subsection.21.3}%
+\contentsline {subsubsection}{\numberline {21.3.1}Lecture Slides}{95}{subsubsection.21.3.1}%
+\contentsline {subsubsection}{\numberline {21.3.2}Assigned Reading}{95}{subsubsection.21.3.2}%
+\contentsline {subsection}{\numberline {21.4}Behavioral Verilog}{97}{subsection.21.4}%
+\contentsline {subsubsection}{\numberline {21.4.1}Lecture Slides}{97}{subsubsection.21.4.1}%
+\contentsline {subsubsection}{\numberline {21.4.2}Assigned Reading}{98}{subsubsection.21.4.2}%
+\contentsline {subsection}{\numberline {21.5}Test Benches}{102}{subsection.21.5}%
+\contentsline {subsubsection}{\numberline {21.5.1}Lecture Slides}{102}{subsubsection.21.5.1}%
+\contentsline {subsubsection}{\numberline {21.5.2}Assigned Reading}{103}{subsubsection.21.5.2}%
+\contentsline {section}{\numberline {22}4/12/2020}{104}{section.22}%
+\contentsline {subsection}{\numberline {22.1}What Is Sequential Logic?}{104}{subsection.22.1}%
+\contentsline {subsubsection}{\numberline {22.1.1}Lecture Slides}{104}{subsubsection.22.1.1}%
+\contentsline {subsubsection}{\numberline {22.1.2}Assigned Reading}{104}{subsubsection.22.1.2}%
+\contentsline {subsection}{\numberline {22.2}Latches}{105}{subsection.22.2}%
+\contentsline {subsection}{\numberline {22.3}Flip-Flops}{106}{subsection.22.3}%
+\contentsline {subsubsection}{\numberline {22.3.1}Lecture Slides}{106}{subsubsection.22.3.1}%
+\contentsline {subsubsection}{\numberline {22.3.2}Assigned Reading}{106}{subsubsection.22.3.2}%
+\contentsline {subsection}{\numberline {22.4}Sequential MSI Devices}{109}{subsection.22.4}%
+\contentsline {subsubsection}{\numberline {22.4.1}Lecture Slides}{109}{subsubsection.22.4.1}%
+\contentsline {subsubsection}{\numberline {22.4.2}Assigned Reading}{109}{subsubsection.22.4.2}%
+\contentsline {section}{\numberline {23}4/19/2020}{113}{section.23}%
+\contentsline {subsection}{\numberline {23.1}What Is an FSM?}{113}{subsection.23.1}%
+\contentsline {subsection}{\numberline {23.2}FSM Design Algorithm}{113}{subsection.23.2}%
+\contentsline {section}{\numberline {24}4/26/2020}{115}{section.24}%
+\contentsline {subsection}{\numberline {24.1}Implementation With DFF Review}{115}{subsection.24.1}%
+\contentsline {subsection}{\numberline {24.2}FSM Verilog Part 2}{115}{subsection.24.2}%
+\contentsline {subsection}{\numberline {24.3}Implementation With TFF}{115}{subsection.24.3}%
+\contentsline {subsection}{\numberline {24.4}Memory Devices}{115}{subsection.24.4}%

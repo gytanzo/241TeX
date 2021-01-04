@@ -16,8 +16,14 @@
 \usepackage{subcaption}
 \usepackage{tikz-timing}
 \usepackage{afterpage}
+\usepackage{listings}
+\usepackage{multirow}
+\usepackage{lmodern}
 \usetikzlibrary{fit, positioning, circuits.logic.US, external}
 \tikzexternalize[prefix=figures/]
+
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
 
 \hypersetup{
     colorlinks,
@@ -34,6 +40,8 @@
     \thispagestyle{empty}%
     \addtocounter{page}{-1}%
     \newpage}
+
+\lstset{language=Verilog, tabsize=2, breaklines=true}
 
 \title{CSE241: Digital Systems}
 \author{Ben Miller}
@@ -3241,7 +3249,7 @@ $B_{out}=A'\cdot B+A'\cdot B_{in}+B\cdot B_{in}$
 \end{itemize}
 \pagebreak
 \section{3/06/2020}
-\subsection{Lecture Readings}
+\subsection{Lecture Slides}
 \begin{itemize}
 \item Problem 18.1.1: Fix the hazard for $F=B'C'+BC+AB'$.\\
 \begin{tikzpicture}
@@ -3427,4 +3435,799 @@ $A$ & $B$ & $C_{in}$ & $C_{out}$ & S \\
 \item To avoid ``gate explosion,'' we divide and conquer. This is known as HCLA or the Hierarchical Carry Look Ahead Adder (also known as the Grouped Carry Lookahaead Adder). 
 \end{itemize}
 \pagebreak
+\section{3/22/2020}
+\subsection{Time}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Let's begin with some review. Recall what signals are from 17.1. We operate in the continuous and ever-present values 0 and 1. These values are used to actually show the behaviors of functions, including verifying functionality and time impacts.
+\item Around this point of class, we also began discussing why time was suddenly important in understanding circuits. Why? Because time \textit{is} real, and getting used to it now will assist with making future designs more practical.
+\item Hardware specifications allow us to actually find where time-related issues occur, because nothing is ideal. Hardware specifications can generally be found in locations such as datasheets.
+\item One example of a time concern can be found in ripple carries. Observe the below picture.\\
+\includegraphics[scale=.7]{IMG6}\\
+The first adder must be completed in order for the correct $c_1$ value to be obtained. This propagation delay stockpiles over time leading to a substantial time concern. \\
+\item Transitions between low and high take time, and more specifically they take energy. A transition in a gate from low to high will cost more than a transition from high to low. In other words, it takes more time to build up charge than it does to release it. 
+\item To control the time between transitions, we need to use a physical device that stabilizes the difference between transitions. This physical device is called a capacitor. Capacitors are our go to device to control the rate of change when moving from high to low. 
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item The outputs of real circuits tale time to react to their inputs. In fact, many of today's circuits and systems are so fast that even the speed-of-light delay in ``propagating an output signal to an input on the other side of a board or chip'' can be significant.
+\item Most digital systems are sequential circuits that operate step-by-step under the control of a periodic clock signal. The speed of said clock is usually limited by the worst-case time it would take for the operations in one step to complete. It is appropriately paramount that a digital designer always be keenly aware of timing behaviors in order to be able to build a circuit that always operates correctly regardless of the conditions.
+\item A timing diagram is used to illustrate the logical behavior of signals in a digital circuit as a function of time. An important part of the documentation for any digital system, these diagrams are also used to explain the relationship between signals within a system as well as to define the timing of external signals that are applied to and produced by a module. These characteristics are called timing specifications. 
+\item The time it takes for a signal to change from one state to the other is called the transition time. More specifically, the time to go from LOW to HIGH is called the rise time and the time to go from HIGH to LOW is called the fall time. 
+\item Arrows are occasionally drawn (particularly in complex timing diagrams) to show causality, or which particular input transitions cause specific output transitions. 
+\item The most important information provided by a timing diagram is the specification of a delay between transitions. Different paths through a circuit may have different delays. Furthermore, the delay through any given path may vary depending on whether the output is changing from LOW to HIGH or from HIGH to LOW. 
+\item Most timing diagrams are accompanied by a timing table that specifies each delays amount and the specific conditions under which it applies. Since the delays of real digital environments can be affected by a vast variety of factors, the delay is rarely specified as a single number and is more commonly given as a range of values. 
+\item The propagation delay of a signal path is the time it takes for a change at the input of the path to produce a change at the output of the path. Propagation delays depend on the internal analog design of the circuit as well as a variety of operational characteristics, including but not limited to...
+\begin{itemize}
+\item Power-supply voltage
+\item Temperature
+\item Output loading
+\item Input rise and fall times
+\item Transition direction
+\item Speed-of-light delays
+\item Noise and crosstalk
+\item Manufacturing tolerances
+\end{itemize}
+\item With all of these difference sources of timing variation, it simply isn't practical to determine the exact timing of a particular application and environment. Fortunately, we don't have to. The industry standard is making good engineering estimates based on the ``maximum,'' ``minimum,'' and ``typical'' propagation delays specified by IC manufacturers. 
+\item A logic designer who combines ICs in a larger circuit can use individual device specifications to analyze the overall circuit timing. For simpler designs this can be done by hand, but for more complex designs a timing analysis program can be used. In both cases the delay of a path through the overall circuit is computed as the sum of the delays through the individual devices on the path plus speed-of-light delays, assuming they are not negligible.
+\item While delays can be highly dependent on the signal routing of a chip, the final routing is unknown until the circuit's design has been completed. Thus, timing analysis is typically analyzed at two different stages in the design. First, the timing can be estimated once the logic design is complete using the known timing for the individual logic elements and an estimate of routing delays based on factors the designer is already aware of at that stage. Later, once the logic elements have been physically placed on the chip, it is possible to calculate the expected delay more precisely using the details of placed elements, wire lengths, and other factors. 
+\item A manufacturer's timing specifications for a device may give a minimum, typical, and maximum value for each propagation delay path and the transition direction. Here is what each of those mean.
+\begin{itemize}
+\item Maximum: The most commonly used specification by experienced designers since a path ``never'' has a propagation delay longer than the maximum. Amusingly, the definition of ``never'' can vary between logic families and manufacturers. 
+\item Typical: The specification most often used by designers who don't expect to be around when ``their product leaves the friendly environment of the engineering lab and is shipped to customers.'' The typical delay is what you would see for a device manufactured on a good day operating under near-ideal conditions. Because of the danger on relying on such a idealistic number, some manufacturers have stopped using them for many newer CMOS logic families.
+\item Minimum: The smallest propagation delay that a path will ever exhibit. Most well-designed circuits don't depend on this number, as the circuit should already work properly if the delay is zero. However, in some very high-speed logic families, a nonzero minimum delay is specified to allow the designer to ensure that hold-time requirements of latches and flip-flops are met.
+\end{itemize}
+\item To permit for a simplified ``worst-case'' analysis, many board-level designers will use a single worse-case delay specification that provides the worst-case conditions of voltage and temperature. While this is a pessimistic view of the overall circuit delay, it always works and saves analysis time.
+\item To accurately analyze the timing of a circuit containing more than a few gates, a designer may have to study its logical behavior with more scrutiny and in excruciating detail. A moderate-sized circuit can have many different paths from a set of input signals to a set of output signals. Thus, to determine the minimum and maximum delays of a circuit, you must look at every possible path.
+\item Of course, since a combinational circuit can potentially have a path between every input and every output, and in some paths a single may even fan out to multiple internal paths, analyzing the different delay paths in a large circuit is usually only practical with the assistance of automated tools. 
+\item Even through the assistance of a simulator, it is still up to the designer to supply the input sequences for which the simulator should produce outputs for. Thus, a designer would still need to have a good feel of what to look for and how to stimulate the circuit in order to produce and observe worst-case delays. 
+\item Instead of using a simulator and supplying your own input sequences, you can use a timing analysis program (or a timing analyzer) instead. Such a program can automatically find all possible delay paths and print out a sorted list of them starting with the slowest. However, these results can be overly pessimistic, as some paths may not actually be used in the normal operation of a circuit, thus a designer must still ``use some intelligence and experience'' in order to interpret the results properly.
+\item On the first attempt, the results for a ``final'' realized circuits may not meet the requirements of the design, whether it be because the circuit is too slow, or parts are too fast, etc. When this happens, the designer must change parts of the circuit as necessary and then re-synthesize the circuit. Afterwards, the timing results must be checked again and this process must be repeated until the performance goals are met. This is called timing closure and with larger projects can take multiple months. 
+\end{itemize}
+\subsection{Documentation}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Generally speaking, documentation is critical in allowing both proper design and efficient maintenance. Documentation is a crucial all-encompassing idea, taking many forms. Some cases necessitate all types of documentation while others do not.
+\item As we get into more and more complicated designs and ideas, knowing how to understand documentation will prove to be very helpful.
+\item Documentation is a key component of communication in both the industry and in research. For computer scientists, this can be important because of the language aspect of the craft. For engineers, documentation is very important with the collaborative and evolutionary structure of the field.
+\item Specifications, often referred to as specs, describe what a system should do. Specs can include inputs, outputs, and functions. Specs are the what, not the how. 
+\item A block diagram is a high level graphical overview used in documentation. It shows function modules and basic interconnections.\\
+\includegraphics[scale=.4]{IMG7}
+\item A logic-device description is used in custom functions. These are commonly seen with ASIC, FPGA, PLD, and CPLD type devices. These are mostly in English, but internal specifications generally need another approach to describe this type of behavior. 
+\item A BOM, or Bill of Materials, is the list of components that will be needed for implementation.
+\item Problem 19.2.1: Create a BOM for the function $F=AB+CD$.\\
+\begin{itemize}
+\item 2 AND gates
+\item 1 OR gate
+\item 5 resistors
+\item 5 LEDs
+\end{itemize}
+\item Test plans are methods and resources used to verify and test the proper operation of a design. These are used both before and after construction. A truth table, for example, tests LED behavior. A timing diagram is another example of a test plan, used for finding hazards.
+\item Active levels are a way of designating what voltage goes with what discrete value. Up until this point, we have considered 1 to be true; this line of thinking is called Active High. The opposite, where 0 is considered true, is called Active Low. Active Low is used for improved compatibility with other devices, better electrical performance, and reduced noise issues.
+\item Names are arbitrary yet an important skill to get good at. A good name tells you what the purpose of a signal, input, or function is. Names can vary between active high and active low, as shown in the above table. Active high is the default logic system, so many active high names don't come with additional symbols added to signify it as active high.
+\item Busses are a communication channel used to transmit data and power. Each wire in a bus has a specific purpose. While colors don't matter, they do help with construction. The connections, however, do matter.
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item Good documentation is essential for the correct design and efficient maintenance of digital systems. In addition to being accurate and complete, documentation must also be somewhat instructive so that almost anybody can figure out how a system works just by reading its documentation.
+\item Although the type of documentation depends on a system's complexity and its environment, all documentation packages should (generally) contain at least the following items.
+\begin{enumerate}
+\item A specification (sometimes shorthanded as spec) describes exactly what the circuit or system is supposed to do, including a description of all inputs and outputs, as well as a list of functions that are to be performed. The spec doesn't have to specify how the system achieves its results, just what those results are supposed to be. 
+\item A block diagram is an informal pictorial description of the system's major functional modules and their basic interconnections.
+\item A logic-device description describes the functions of each ``custom'' logic device used in the system (``standard'' devices are described by data sheets or manufacturer-issued user manuals). Custom devices include application-specific integrated circuits (ASICs), field-programmable gate arrays (FPGAs), and programmable logic devices (PLDs and CPLDs). 
+
+At a high level, these device descriptions are written in English, but the internals are usually described in an HDL like Verilog. Some internals can also be specified using logic diagrams, equations, state tables, or state diagrams. Sometimes, a programming language like C is even used to model the operation of a circuit.
+\item A schematic diagram is a formal specification of the electrical components of the system, their interconnections, and related details needed to build the system. Previously, we have drawn logic diagrams, which are less formal drawings that don't have this level of detail. 
+\item A timing diagram shows the values of various logic signals as a function of time, including the cause-and-effect delays between critical signals.
+\item A circuit description is a narrative text document that in conjunction with other documentation explains how the function works internally. This circuit description should list any assumptions and potential pitfalls in the design of the system, while also bringing attention to any non-obvious design ``tricks.'' 
+\item Finally, a test plan describes the methods and resources that will be necessary to test the system for proper operation, both before and after it is constructed.
+\end{enumerate}
+\item A block diagram shows the inputs, outputs, functional modules, internal data paths, and important control signals of a given system. Larger systems are designed and described hierarchically. At the top level, and in the corresponding block diagram, the system is partitioned into a small number of independent subsystems or blocks that interact with each other in well defined ways. Each of these subsystems or blocks is further partitioned until an appropriate level of detail has been reached. Below is a sample block diagram. Each block is labeled with the function of the block, not the individual components that comprise it.\\
+\includegraphics[scale=.5]{IMG8}
+\item A bus is a collection of two or more related signal lines. In a block diagram, buses may be drawn with a double or heavy line, as shown above. A slash and a number can be used to indicate how many individual signal lines are contained in a bus. Size can also be denoted by the bus' name. Active levels and inversion bubbles may or may not appear in block diagrams, but even if they do they are usually unimportant at this level of detail. 
+\item A buffer, shown below, is a circuit that converts an electrically weak logic signal one into a stronger one with with the same the same logic value.
+\includegraphics{IMG9}
+\item A small circle, called an inversion bubble, denotes logical inversion or complementing. \\
+\includegraphics[scale=5]{IMG2}
+\item Each input and output signal in a logic circuit should have a descriptive alphanumerical label representing the signal's name. HDL and most EDA programs for drawing logic circuits usually allow the use of certain special characters, such as * and \$, to be used in signal names. In a real system, well-chosen signal names convey information the same way that variable names in a software program do. 
+\item Each signal name should have an active level associated with it. A signal is active high if it performs the named action or denotes the named condition when it is HIGH or 1. A signal is active low if it does the inverse and operates at LOW or 0. A signal is said to be asserted when it is at its active level and a signal is said to be negated when not. 
+\item The active level of each signal in a circuit is normally specified as part of its name, based off of some convention. Examples of several different active-level naming conventions are shown below.\\
+\begin{tabular}{|c|c|}
+\hline 
+\textbf{Active Low} & \textbf{Active High} \\ 
+\hline 
+READY- & READY+ \\ 
+\hline 
+ERROR.L & ERROR.H \\ 
+\hline 
+ADDR15(L) & ADDR15(H) \\ 
+\hline 
+RESET* & RESET \\ 
+\hline 
+ENABLE\~ & ENABLE \\ 
+\hline 
+\~GO & GO \\ 
+\hline 
+/RECEIVE & RECEIVE \\ 
+\hline 
+TRANSMIT\_L & TRANSMIT \\ 
+\hline 
+\end{tabular}
+\item It is important to be able to differentiate between signal names, expressions, and equations. A signal name is just a name, in other words just an alphanumeric label. A logic expression combines signal names using switching algebra operators. A logic equation is an assignment of a logic expression to a signal name. 
+\item To represent a circuit between active levels, inversion bubbles are used. In the below circuit, the leftmost elements are active high and the rightmost active low.\\
+\includegraphics[scale=.5]{IMG10}
+\end{itemize}
+\subsection{Verilog Introduction}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Software is a big part of digital design and exploits electronic design automation, or EDA. Automation in this sense is focused on improving the efficiency of the productivity, verification, and quality. 
+\item Software allows for multiple design approaches and considerations in testing. Computer aided engineering, or CAE, is all about the front end of the system and encompasses all of the design and testing tools. Computer aided design, or CAD, is the back end of the system where things like wire routing happen. CAD is typically a tool for non-electric things since we want the backend to do the work for us. 
+\item Key design is all about the design and problem solving of a system. This means that answers are useless.
+\item We can tackle key design using a programming language called Verilog, which is an HDL, or a hardware description language. When we get to more complicated concepts, creating diagrams and subsequently testing logic can get tedious. 
+\item Verilog is only one of the HDLs and was developed in  1984 with C-like syntax. In the 1990's, HDLs allowed for the acceleration of technology, resulting in things like PLDs, CPLDs, and FPGAs becoming cheaper and much more common. However, ASIC also became more difficult to design as a direct result of this as well. 
+\item Presently, we use the IEEE 1364 standard for Verilog: Verilog95 and Verilog01. Another alternative is the Department of Defense approved VHDL. Recently, two more variants have surfaced in System C and SystemVerilog. 
+\item The key concept behind Verilog is that execution is not strictly linear. 
+\item So what is Verilog? Verilog, as previously mentioned, is an HDL, or a hardware description language. It is a modeling language, not just computational, and looks like C. It creates hardware structures, not GUIs, for performing complex calculations.
+\item Verilog is a great prototype and development tool. Field Programmable Gate Arrays, or FPGAs, are able to be configured using the design specified for testing before even manufacturing the design.
+\item Verilog is worth using for a variety of reasons, including...
+\begin{itemize}
+\item Design Entry
+\item Logic Simulation
+\item Logic Synthesis
+\item Timing Verification
+\item Fault Verification 
+\end{itemize}
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item In the 1990s, HDL usage by digital system designers began to accelerate as PLDs, CPLDs, and FPGAs became inexpensive and commonplace. Simultaneously, as ASIC densities continued to increase, it became more difficult to describe large circuits using schematics alone, causing many ASIC designers to turn towards HDLs as a means of designing individual modules within a system-on-a-chip. Today HDLs are by far the most common way to describe both the top-level and detailed module-level design of an ASIC, FPGA, or CPLD. 
+\item Digital design activity is ever moving to higher levels of abstraction. This mode has been both enabled and necessitated by decreasing cost per function and the ever higher level of functionality and integration that can be achieved on a single chip.
+\item On traditional software design, high-level programming languages like C, C++, and Java raise the level of abstraction to a point that designers can create larger, more complex systems, albeit with a sacrifice in performance. However, we would have \textit{no} performance in today's complex software systems if they had to be written in assembly language as they never would have been finished. 
+\item For hardware systems, the situation is similar. Verilog and VHDL allow designers to describe hardware at a high level and then interconnect multiple modules in a hierarchy to perform an even higher-level function.
+\item Typically, a single integrated tool suite can handle several different aspects of an HDL's use. This is informally called the ``HDL compiler,'' but an EDA tool suite for design with HDLs really includes many different tools with their own names and purposes.
+\begin{itemize}
+\item The \textit{text editor} allows you to write, edit, and save an HDL source file. Since the editor is often coupled to the rest of the HDL development system, it often contains HDL-specific features such as recognizing specific filename extensions commonly associated with HDL and recognizing HDL reserved words. 
+\item The \textit{compiler} is responsible for parsing the HDL source file, finding syntax errors, and figuring out what the model is actually ``saying.'' A typical HDL compiler creates a file in an intermediate, technology-neutral digital-design description language typically called an RTL, or register-transfer language.
+\item The \textit{synthesizer}, or \textit{synthesis tool}, targets the RTL design to a specific hardware technology such as the aforementioned ASIC, FPGA, or CPLD. In doing so, it refers to one or more \textit{libraries} containing details of the targeted technology. Synthesis typically has multiple phases, described below.
+\begin{itemize}
+\item The first phase is \textit{mapping} the RTL design into a set of hardware elements that are available in the target technology.
+\item The second phase is \textit{placement} of the needed elements onto a physical substrate, which is usually a chip layout. 
+\item In FPGA and ASIC based designs, the third phase is \textit{routing}, or finding and creating paths between the inputs and outputs of placed elements. In CPLD design, the interconnect is usually fixed and resources were already selected previously based on available connections.
+\end{itemize}
+\item The inputs to a \textit{simulator} are the HDL model and a timed sequence of inputs for the hardware that it describes. This input sequence can be contained in or generated algorithmically by another program called a \textit{test bench} usually written in the same HDL. It can also be described graphically using another tool called a \textit{waveform editor}. 
+\end{itemize}
+\item Several other useful programs and utilities may be found in a typical EDA root suite for an HDL, including...
+\begin{itemize}
+\item A \textit{template generator} creates a text file with the outline of a commonly used HDL structure so that the designer can fill in the blanks to create source code for a very specific purpose.
+\item A \textit{schematic viewer} may create a schematic diagram corresponding to an HDL model based on the RTL output of the compiler. Such a schematic is an accurate representation of the function performed by the final synthesized circuit, with a few exceptions, such as if the compiler output hasn't been targeted and optimized.
+\item A \textit{chip viewer} lets the designer see how the synthesis tool has physically placed and routed a design on the chip.
+\item A \textit{constraints editor} lets the user define instructions and preferences to be used by the synthesizer and other tools as they do their jobs. 
+\item A \textit{timing analyzer} calculates the delays through some or all of the signal paths in the final chip and produces a report showing the worst-case paths and their respective delays.
+\item Finally, a \textit{back annotator} inserts delay clauses or statements into the original HDL source code corresponding to the delays calculated by the timing analyzer. 
+\end{itemize}
+\item It is useful to understand the overall HDL design environment before beginning to learn Verilog itself. There are several steps in an HDL-based design process. Such a process is called the \textit{design flow}. These steps are applicable to any HDl-based design process and are described below.
+\begin{itemize}
+\item The front-end begins with a functional specification of what needs to be designed, followed by figuring out the basic approach for achieving that function at a block-diagram level. Large logic diagrams, like those for software applications, are hierarchical. Verilog provides a good framework for modeling hardware modules and their interfaces and filling in the details later.
+\item Next is actually writing HDL code for the modules, their interface, and their internal details. It is best to use the editor included in the HDL's tool suite for this, as it can provide a large amount of functionality that makes writing the code easier.
+\item After this, you compile the code. The HDL compiler analyzes the code for syntax errors while also checking for compatibility with imported modules. It will also create the internal information necessary for the simulator to process the design later.
+\item The next step is simulation, which is just a larger part of a step called verification. Simulation allows you to define and apply inputs to your design and to observe the outputs without needing to build a physical circuit. Verification is verifying that the circuit works as desired given a large amount of test cases. There are two dimensions to verification: Functional verification, where we study the circuit's logical operation independent of timing considerations, and timing verification, where we study the circuit's operation including estimated delays.
+\item Customarily, you perform through functional verification before beginning the back-end steps. Timing verification is often limited before back-end work has begun. After verification, we begin the first stage of back-end development: mapping, or where we convert the RTL description into a set of primitives or components that can be assembled in the target technology.
+\item In the fitting step, a fitter assigns the mapping primitives or components onto available device resources. The designer can specify additional constraints for this stage, such as the placement of modules within a chip and the pin assignments of external input and output pins.
+\item The final step is the post-fitting timing verification stage. Only at this stage can actual circuit delays due to wire lengths, electrical loading, and other factors be calculated to reasonable precision.
+\end{itemize}
+\end{itemize}
+\subsection{Verilog Terminology}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item List of terms:
+\begin{itemize}
+\item EDA - Electronic Design Automation
+\item Editor - Where you type your content
+\item Compilers - Checks the syntax and other related errors
+\item RTL - Stands for Register Transfer Level (or sometimes known as Register Transfer Language). This is a clear description of the interconnections in the design that the HDL interprets.
+\item Synthesizer - Creates the corresponding circuit and maps the RTL to hardware design.
+\item Simulator - Verifies the design's behavior. The simulator also predicts the electrical and functional behavior of the design without needing to physically create the hardware.
+\item Test bench - Verilog's version of test statements or unit tests. These allow us to consider timing impacts and monitor behaviors. 
+\item Module - Everything we design is located in a module. This is not inclusive of functions, which we will not be working with.
+\item Netlist - Also known as a port list, this describes what connects in and out of a module.
+\item Reserved keywords - A list of terms already existing with another purpose being used by the main program.
+\end{itemize}
+\item Verilog has four main styles/approaches.
+\begin{itemize}
+\item CMOS
+\item Structural/Gate Level
+\item Continuous Assignment/Data Flow
+\item Procedural/Behavioral
+\end{itemize}
+\item The CMOS approach is all about transistor level design. It effectively means the already low gate level is reduced to an even lower level.
+\item With the gate level or structure level approach (these two terms have identical meanings), you design based around only using logic gates, including the primitives: $\tt{and}$, $\tt{not}$, $\tt{nor}$, $\tt{or}$, $\tt{nand}$, $\tt{xnor}$, $\tt{buf}$, $\tt{bufif0}$, $\tt{bufif1}$, and $\tt{notif0}$. This will be the main style we focus on.
+\item With the continuous assignment or data flow approach, outputs are automatically updated as inputs change. The signifier of this method is the $\tt{assign}$ statement.
+\item The procedural or behavioral method is used to implement sequential execution. This is signified by the $\tt{always}$ statement.
+\item All styles need a starting point. This is the fundamental encapsulation of the module. We enclose the program we are doing with two keywords to symbolize the start of the module and the end of the module. This helps when things expand to include modular design. The beginning of the module is denoted with $\tt{module}$ and the end with $\tt{endmodule}$ (think $\backslash$begin\{document\} and $\backslash$end\{document\} in \LaTeX, respectively).
+\item A couple of considerations can be made to make the language transition easier.
+\begin{itemize}
+\item A single line comment is made with the ``//'' characters. For a multi-line comment, you must use ``/* ... */''.
+\item Brackets are replaced with $\tt{begin}$ and $\tt{end}$. 
+\item Code is only executed sequentially when inside an always block.
+\item Verilog compilers are just as strict as compilers in other languages.
+\item Verilog utilizes the line terminator ``;'', similarly to Scala.
+\end{itemize}
+\item Let's look at some general syntax.
+\begin{lstlisting}
+module module_name(port_list);
+	// declare what items in the port list are inputs
+	// declare what items in the port list are outputs
+	// declare what initial variables to be used internally
+	// body of the program
+endmodule
+\end{lstlisting}
+\item Two general data types to know:
+\begin{itemize}
+\item A \textit{reg} holds information until it is changed.
+\item A \textit{wire} is what is used to make a connection between elements.
+\end{itemize}
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item The basic unit if design and programming in Verilog is a \textit{module}, which is a text file containing declarations and statements. A typical Verilog module may correspond to a single piece of hardware in much the same sense as a module in traditional hardware desig, in which the hardware is said to be modeled by a single module or by a collection of modules working together. 
+\item A Verilog module has declarations that describe the names and types of the module's inputs and outputs, as well as local signals, variables, constants, and functions used strictly for internal use in the module. These are not visible outside. The rest of the module contains statements that specify or ``model'' the operation of the module's outputs and internal signals. 
+\item Verilog statements can specify a module's operation behaviorally. They can also specify the module's operation structurally. In this specific case, the statements define instances of other modules and individual components used, such as gates and flip-flops, while also specifying their interconnections, similarly to a logic diagram.
+\item Verilog modules can use a mix of behavioral and structural modules and may do so hierarchically. Just as procedures and functions in a high-level programming language can ``call'' others, Verilog modules can ``instantiate'' other modules. A higher-level module may use a lower-level module multiple times, and multiple top-level modules can use the same lower-level one. 
+\item The scope of signal, constant, and other definitions remains local to each module. Accordingly, values can be passed between modules only by using declared input and output signals. 
+\item This modular approach gives Verilog a great deal of flexibility in designing large systems. For example, a given module can be designed with a rough behavior model during the initial phase of system design so that overall system operation can be checked. Later, it can be replaced with a more intricate behavioral model for synthesis or perhaps even hand-tuned to achieve higher performance. 
+\item Let's now move on to syntax. A simple example module is show below. Like other high-level languages, Verilog mostly ignores spaces and line breaks, which can be used for better readability. Short comments can be begun with two slashes(//) anywhere in a line and stop at the line's end. Verilog also allows C-style, multi-line long comments that begin anywhere with /* and end anywhere with */.
+\begin{lstlisting}
+module VrInhibit(X, Y, Z);	// also known as 'BUT-NOT'
+	input X, Y;		// as in 'X but not Y'
+	output Z;		// (see [Klir, 1972])
+	
+	assign Z = X & ~Y;
+endmodule
+\end{lstlisting}
+\item Verilog defines many special character strings which are called reserved words or reserved keywords. The above example included a few - $\tt{module}$, $\tt{input}$, $\tt{output}$, $\tt{assign}$, and $\tt{endmodule}$. 
+\item User-defined identifiers begin with a letter or underscore and can be contain letters, digits, underscores, and dollar sign (note that identifiers with a dollar sign in the front refer to built-in system functions). Identifiers in the above example include $\tt{VrInhibit}$, $\tt{X}$, $\tt{Y}$, and $\tt{Z}$. Verilog is case-sensitive for both keywords (lowercase only) and identifiers ($\tt{XY}$, $\tt{Xy}$, and $\tt{xy}$ are all different). 
+\item The basic syntax for a Verilog module declaration is shown below. It begins with the keyword $\tt{module}$, followed by an identifier for the module's name and a list of identifiers for the module's input and output ports. These input and output ports are signals that the modules use to communicate with other modules. 
+\begin{lstlisting}
+module module-name (port-name, port-name, ..., port-name);
+	input declarations
+	output declarations
+	inout declarations
+	net declarations
+	variable declarations
+	parameter declarations
+	function declarations
+	task declarations
+	
+	concurrent statements
+endmodule
+\end{lstlisting}
+\item Next comes a set of optional declarations that we describe in this and later sections. These declarations can be made in any order. Besides the declarations shown above, there are a few more not used in this book and therefore are omitted. Concurrent statements follow these declarations and the module ends with the $\tt{endmodule}$ keyword.
+\pagebreak 
+\item Each port that is named at the beginning of the module in the input/output list must have a corresponding input, output, or inout declaration. The simplest form of these declarations is shown in the first three lines below. 
+\begin{lstlisting}
+input	identifier, identifier, ..., identifier;
+output	identifier, identifier, ..., identifier;
+inout	identifier, identifier, ..., identifier;
+
+input	[msb:lsb]	identifier, identifier, ..., identifier;
+output	[msb:lsb]	identifier, identifier, ..., identifier;
+inout	[msb:lsb]	identifier, identifier, ..., identifier;
+\end{lstlisting}
+\item The keyword $\tt{input}$, $\tt{output}$, and $\tt{inout}$ is followed by a comma-separated list of the identifiers for signals (or ports) of the corresponding type. The keyword specifies the signal direction as follows:
+\begin{itemize}
+\item $\tt{input}$: The signal is an input to the module.
+\item $\tt{output}$: The signal is an output the module. Note that such a value cannot be ``read'' inside the module architecture, only by other modules that use it. A ``reg'' declaration is needed to make it readable.
+\item $\tt{inout}$: The signal can be used as a module input or output. This mode is typically used for three-state input/output pins.
+\end{itemize}
+\item An input/output signal declared as described above is one bit wide. Multi-bit or ``vector'' signals can be declared by including a range specification $\tt{[msb:lsb]}$, as shown in the last three lines of the above example. Here, msb and lsb are integers indicating the starting and ending indexes of the individual bits within a vector of signals. The signals are ordered from left to right, with msb giving the index of the leftmost signal. A range can be ascending or descending. 
+\end{itemize}
+\pagebreak
+\section{3/29/2020}
+\subsection{MSI}
+\begin{itemize}
+\item Recall what combinational logic is and what it means. Combinational logic is any system that is purely about its inputs, with no feedback or memory. Previously, we have explored this with systems that have multiple inputs and outputs.
+\item In combinational logic, the Level of Integration can vary.
+\begin{itemize}
+\item SSI is Small Scale Integration, and is limited by the pins on the IC. SSI is normally around 10 gates.
+\item MSI is Medium Scale Integration, and is normally under 1,000 gates.
+\item LSI is Large Scale Integration and can be thousands of gates.
+\item VLSI is Very Large Scale Integration and is composed of millions of transistors.
+\item ULSI is Ultra Large Scale Integration is anything over one million transistors. ULSI is normally grouped with VLSI unless the number of transistors is truly ridiculous.
+\end{itemize}
+\item We will primarily focus on MSI (Medium Scale Integration). MSI is about 20 to 200 gates. Note that an AND gate, as an example, only has four gates, so it is SSI.
+\end{itemize}
+\subsection{Shifting}
+\begin{itemize}
+\item Shifting is this idea where we shift values from one position to the next. When we exceed the available positions, the extra values fall off and become zero.
+\item The most common implementation of this is the barrel shifter. The barrel shifter takes $n$ data in and $n$ data out. There is a single control set that controls how far the shift will occur.
+\end{itemize}
+\subsection{Rotating}
+\begin{itemize}
+\item Rotating is very similar to shifting in that the contents are moving from one location to another. However, instead of values being replaced by zeroes when the exceed the locations available, we follow the idea of ``circular shifting'' and have values that go to the other side.
+\end{itemize}
+\subsection{Mux Intro}
+\begin{itemize}
+\item Multiplexors (also known as a muxes) are the ``grand selectors of logic.'' Multiplexors are given a set of inputs and the outcome is selected through an additional set of inputs. The second set of inputs looks a lot like a set of switches.
+\item At the gate level, this is an MSI element. You must focus on the logic of how an outcome is selected, which comes from logic gates and equations. 
+\item A mux circuit is made up of a few specific elements. Its inputs are composed of enables, selectors, and the data the designer wishes to choose from. Its output is a function. Finally, mux circuits are \textit{only} composed of AND, OR, and NOT gates.
+\item A demultiplexor is really just a decorder, however you can design a multiplexor using a decoder.
+\end{itemize}
+\pagebreak
+\section{4/05/2020}
+\subsection{Decoders}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Decoders are a key MSI device and are critical to computer functionality from processing instructions to memory storage. This is seen a lot with RAM and addressing.
+\item Decoders, as their name implies, decode encoded information. A decoder has $n$ data inputs, an enable input, and typically $2^n$ outputs, only one of which is active at a time. 
+\item Sometimes, it is not optimal to design something that is perpetually operating. This is where the idea of an enable is. An enable acts like a master on/off switch for a component (a collection of gates; MSI or larger). An enable being on is \textit{not} necessarily the same thing as providing power to a chip. 
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item Decoders are designed such that no more than one output is asserted at any given moment. Furthermore, these outputs are asserted only if the corresponding port-select value appears on the input. 
+\item A decoder's input code-word bits are usually called address bits. 
+\item Recall the codes defined in section 5.2, such as 1-out-of-10 code and gray code. This idea of ``codes'' can be used to define what a decoder is. A decoder is any multiple-input, multiple-output combinational logic circuit that converts or ``maps'' an input code word with an output code word, where the input and output codes are different.\\~\\
+\begin{minipage}{.45\textwidth}
+\item With this definition, the general structure of a decoder can be shown, pictured to the right. The enable inputs, if present, must be asserted for the decoder to perform its normal mapping function. Otherwise, the decoder maps all input code words into a single ``disabled'' output word.
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG11}
+\end{minipage}
+\item The most commonly used input code is an $n$-bit binary code, where an $n$-bit word represents one of $2^n$ different coded values. Sometimes, an $n$-bit binary code is truncated to represent fewer than $2^n$ values. 
+\item The most commonly used output code is a 1-out-of-$n$ code, which has $n$ bits, one of which is asserted at any time. Note that $n$ need not be a power of 2, but usually is. 
+\item The most common decoder circuit is an $n$-to-$2^n$ binary decoder, which has an $n$-bit binary input code and a 1-out-of-$2^n$ output code. Such a decoder is used when you need to activate exactly one of the $2^n$ outputs based on an $n$-bit input value.
+\item The binary decoder's truth table introduces the idea of a ``don't-care'' notation for input combinations. If one or more input values do not affect the output values for some combination of the remaining inputs, they are marked with an ``x'' for that input combination. The ``x'' is used to denote ``don't care.''
+\item The more inputs you have, the wider the AND gate will be necessary to complete a decoder. Typically, wide AND gates cannot be realized in a single ``level'' of transistors. Larger decoders can be designed by cascading multiple smaller decoders. For example, multiple 3-to-8 decoders can be cascaded to create a 5-to-32 decoder.
+\item In ASICs and custom VLSI, it is often necessary to build decoders with an even larger number of inputs and outputs. These applications use a method called predecoding to accomplish this. Predecoding structures are designed to minimize circuit delays, which can not only be affected by the number of gates in a signal path but by the number of gate inputs connected to each output.
+\item Decoders can be customized numerous different manners. In HDL-based design, such customization is normally done in the context of a larger module design where decoding functionality is included among other things. Customizations are easy to do and include things such as having a different number of input and data outputs, using active-low inputs (especially enables) or outputs, accessing an output for two or more address-input combinations, or accessing multiple outputs for a single input combination.
+\item A seven-segment display is a type of display that uses LED or LCD elements to display decimal data. A seven-segment decoder has 4-bit BCD as its input code and the ``seven segment code'' as its output code. This is the best example of a decoder that is not a binary decoder. 
+\item Previously, we defined a decoder to be any multiple-input, multiple-output combinational logic circuit that converts an input code word into an output code word in a different code. By this definition, a circuit that does the opposite would also be a binary decoder, but these are usually just called binary encoders. A standard binary encoder's output is meaningful if and only if exactly one input is asserted.  
+\end{itemize}
+\subsection{Encoders}
+\begin{itemize}
+\item Encoders are an MSI device that allows you to input a lot of information and store it into less bits. Typically, these are in a $2^n$ to $n$ design. 
+\end{itemize}
+\subsection{Continuous Assignment}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item With the Continuous/Dataflow-style of Verilog, outputs are updated as the inputs change. The signifier of this is the ``$\tt{assign}$'' statement.
+\item The operators used in Continuous Assignment are shown below.
+\begin{itemize}
+\item Bitwise symbols treat each bit separately. 
+\begin{itemize}
+\item NOT: \textasciitilde
+\item AND: $\&$
+\item OR: $|$
+\item XOR: \textasciicircum
+\item XNOR: \textasciitilde\textasciicircum or \textasciicircum\textasciitilde
+\end{itemize}
+\item Logical symbols are evaluated from left to right and stop as soon as the result is known.
+\begin{itemize}
+\item NOT: !
+\item AND: \&\&
+\item OR: $\|$
+\end{itemize}
+\end{itemize}
+\item Ultimately, the decision to use bitwise or logical depends on what you are doing. When working with 1-bit wide data, however, the choice doesn't really matter.
+\item When using parentheses, remember that precedence matters. When in doubt, add parentheses.
+\item Cononciation is where you place the variables in the order you wish the bits to map in and where the overflow will go.  
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item If Verilog exclusively had instance statements, it wouldn't be much more than a hierarchical net-list description language. ``Continuous-assignment statements'' allow Verilog to model a combination circuit in terms of the flow of data and operations in the circuit. This style is called a dataflow model or description.
+\item Dataflow models use continuous-assignment statements, with the basic syntax being shown below. The keyword $\tt{assign}$ is followed by the name of a net, then an = sign, and finally an expression giving the value of the assigned. The left-hand side of the statement can also specify a bit or part of a net vector, or even a concatenation using the standard concatenation syntax.
+\begin{lstlisting}
+assign net-name = expression;
+assign net-name[bit-index] = expression;
+assign net-name[msb:lsb] = expression;
+assign net-concatenation = expression;
+\end{lstlisting}
+\item A continuous-assignment statement continuously evaluates the value of its right-hand side and assigns it to the left-hand side. In simulation, this assignment occurs in zero simulated time unless a delay is specified.
+\item As with instance statements, the order of continuous assignment statements doesn't matter. If the last statement changes a net value used by the first statement, then the simulator will go back to the first statement and update its results according to the net that was just changed. It is therefore possible for a module to perpetually loop until it times out if it has multiple contradicting assignment statements.
+\item Below is code for a prime-number detector circuit in dataflow style. 
+\begin{lstlisting}
+module Vrprimed (N, F);
+input [3:0] N;
+output F;
+
+assign F = (~N[3] & N[0]) | (~N[3] & ~N[2] & N[1]) | (~N[2] & N[1] & N[0]) | (N[2] & ~N[1] & N[0]);
+endmodule
+\end{lstlisting}
+\item Verilog's continuous-assignment statements are unconditional, but different values can be assigned if the righthand operator uses the conditional operator (?:). The below code approaches the same prime-number detection circuit in a completely different manner with this method.
+\begin{lstlisting}
+module Vrprimec (N, F);
+input [3:0] N;
+output F;
+
+assign F = N[3] ? (N[0] & (N[1]^N[2])) : (N[0] | (~N[2]&N[1]));
+endmodule
+\end{lstlisting}
+\item A dataflow-style example with a more natural and intuitive use of this conditional operator is shown below. This module transfers one of three input bytes to its output depending on which of three corresponding select inputs are asserted. The order of the nested conditional operations determines which byte is transferred if multiple selected inputs are asserted, with A having the highest priority and C having the lowest. If no select input is asserted, the output is 0.
+\begin{lstlisting}
+module Vrbytesel (A, B, C, selA, selB, selC, Z);
+input [7:0] A, B, C;
+input selA, selB, selC;
+output [7:0] Z;
+
+assign Z = selA ? A : (
+	selB ? B : (
+		selC ? C : 8'b0));
+endmodule
+\end{lstlisting}
+\end{itemize}
+\subsection{Behavioral Verilog}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Behavioral Verilog is also known as ``Procedural Style.'' On top of guaranteeing sequential execution, Behavioral Verilog also allows for the use of conditionals. 
+\item Behavioral Verilog is denoted by the $\tt{always}$ operator, followed by either the sequentially executed code or a sensitivity block. The ``procedural statements'' or stuff inside this always block is written in a style similar to C. ``begin'' and ``end'' are used to replace ``\{'' and ''\}.''
+\item An example of a behavioral Verilog block is shown below.
+\begin{lstlisting}
+begin
+	procedural-statement
+	...
+	procedural-statement
+end
+
+begin: block-name
+	variable declarations
+	parameter declarations
+	procedural-statement
+	...
+	procedural-statement
+end
+\end{lstlisting}
+\item There are many styles of behavioral style syntax, some of which are shown below.
+\begin{lstlisting}
+always @ (signal-name or signal-name or ... or signal-name)
+	procedural statement
+always @ (signal-name, signal-name, ..., signal-name)
+	procedural-statement
+always @ (*) procedural-statement
+
+always @ (posedge signal-name) procedural-statement
+always @ (negedge signal-name) procedural-statement
+
+always procedural-statement
+\end{lstlisting}
+\item Information provided in the parentheses are the circumstances under which the code will execute. These work similarly to if-statements. These conditions are called sensitivities. 
+\item Variables need to be declared before use. They need to be declared as a $\tt{reg}$ since they hold the same value until they are explicitly changed. Afterwards, you can use an assignment statement, either blocking or non-blocking. 
+\item Let's go over the reg data-type next. A reg is non-volatile, holding the value contained inside until explicitly changed. These are exclusively used in behavioral Verilog, and are used in a similar way to how we used wires for declaring.
+\item In behavioral Verilog, we have two main styles of execution - blocking and non-blocking.
+\begin{itemize}
+\item Blocking is the traditional manner of execution, updating the values as you go. For example, the code $\tt{x=5;}$ is an example of a blocking style of execution.
+\item Non-blocking, on the other hand, does all of the calculations immediately for the variable but does not make the assignment to the variable until the very end of the block. $\tt{x<=15;}$ is an example of this non-blocking style.
+\end{itemize}	
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item The key element of Verilog behavioral modeling is the $\tt{always}$ statement, with the syntax options shown below. This $\tt{always}$ statement is followed by one or more procedural statements, which will be explained shortly. While this syntax table only shows a singular procedural statement, one type of procedural statement is the $\tt{begin-end}$ block that encloses a list of other procedural statements.
+\begin{lstlisting}
+always @ (signal-name or signal-name or ... or signal-name)
+	procedural statement
+always @ (signal-name, signal-name, ..., signal-name)
+	procedural-statement
+always @ (*) procedural-statement
+
+always @ (posedge signal-name) procedural-statement
+always @ (negedge signal-name) procedural-statement
+
+always procedural-statement
+\end{lstlisting}
+\item Procedural statements in an $\tt{always}$ block execute code sequentially, similarly to software programming languages. However, the $\tt{always}$ block itself executes concurrently with other concurrent statements in the same module (instance, continuous-assignment, and $\tt{always}$). 
+\item In the first three forms shown above, the $\tt{@}$ sign is followed by a parenthesized list of signal names, which is called a sensitivity list. This specifies all of the signals whose values may affect results in an $\tt{always}$ block. The first two forms function identically. The third form of sensitivity list $\tt{(*)}$ is shorthand for ``every signal that might change a result'' and puts the burden on the compiler to determine which signals should be in the list. The fourth and fifth forms are used in sequential circuits. Finally, the last form doesn't specify a sensitivity list. Such an $\tt{always}$ begins running at time zero and indefinitely loops. 
+\item An instance or continuous-assignment statement also has a sensitivity list, albeit an implicit one. All of the input signals in an instantiated component or module are on the instance statement's implicit sensitivity list. Similarly, all of the signals on the right-hand side of a continuous-assignment statement are on its implicit sensitivity list.
+\item In simulation, a Verilog concurrent statement such as an $\tt{always}$ block is always either executing or suspended. A concurrent statement is initially suspended. Whenever any signal in its sensitivity list changes value, it resumes execution. A resumed $\tt{always}$ block starts with the first procedural statement and continues executing them sequentially until reaching its end. If any signal in the sensitivity list changes value as a result of executing the concurrent statement, it re-executes. This loop continues until the statement executes without any signals changing value.
+\item Verilog has several different kinds of procedural statements used within an $\tt{always}$ block. They are: assignment, $\tt{begin-end}$ blocks, $\tt{if}$, $\tt{case}$, $\tt{while}$, and $\tt{repeat}$. 
+\item Procedural statements are written in a style similar to programming languages like C. Every value assigned to a variable is preserved until it is changed in the current or subsequent execution of an $\tt{always}$ block. 
+\item The first two procedural statements we will go over are blocking and nonblocking assignment, with the syntax shown below.
+\begin{lstlisting}
+variable-name = expression;		// blocking assignment
+
+variable-name <= expression;	// nonblocking assignment
+\end{lstlisting}
+The lefthand side of either procedural assignment statement must be a variable, but the righthand side can be any expression that produces a compatible v alue and can include both nets and variables.
+\item A blocking statement looks and acts like an assignment statement in any other procedural language, like C. A nonblocking assignment looks and acts a little differently. It evaluates its left side immediately but doesn't assign the resulting value to the lefthand side until an infinitesimal delay after the entire $\tt{always}$ block has executed. Thus, the ``old'' value of the lefthand side continues to be available for the remainder of the $\tt{always}$ block. You can read a nonblocking assignment as ``\textit{variable-name} eventually gets \textit{expression}.''
+\item So when should you use one over the other? Always use blocking assignments in an $\tt{always}$ block intended to create combinational logic. Always use nonblocking assignments in $\tt{always}$ blocks intended to create sequential logic. Do not mix the two assignments in the same $\tt{always}$ block, and do not make assignments to the same variable in two different $\tt{always}$ blocks.
+\item Below is the basic syntax for a $\tt{begin-end}$ block, which is simply a list of one or more procedural statements enclosed by the keywords $\tt{begin}$ and $\tt{end}$. 
+\begin{lstlisting}
+begin
+	procedural-statement
+	...
+	procedural-statement
+end
+
+begin: block-name
+	variable declarations
+	parameter declarations
+	procedural-statement
+	...
+	procedural-statement
+end
+\end{lstlisting}
+A $\tt{begin-end}$ block can have its own local parameters or variables. If it does, the block \textit{must} be named to track these items during simulation or synthesis. A $\tt{begin-end}$ block can be named even if it doesn't have any local parameters or variables. 
+\item Note that the procedural statements contained within a $\tt{begin-end}$ block execute sequentially, not concurrently like the previously covered instance, continuous-assignment, and $\tt{always}$ statements. 
+\item Other procedural statements beyond simple assignment and $\tt{begin-end}$ blocks give designers much more powerful ways to model the behavior of a circuit. The most familiar of these is probably the $\tt{if}$ statement. In the first and simplest form of this statement, a condition is tested. If this condition is true, a procedural statement is executed.
+\item In the $\tt{if-else}$ form, we add the ``else'' clause with another procedural statement if the above condition evaluates to anything not true. Although an $\tt{if-else}$ statement can contain two semicolons, it is still just a single statement, an important fact to note. Thus, an $\tt{if-else}$ statement can be used anywhere that a single statement can be used. The syntax for an $\tt{if}$ and an $\tt{if-else}$ statement is shown below.
+\begin{lstlisting}
+if (condition) procedural-statement
+
+if (condition) procedural-statement
+else procedural-statement
+\end{lstlisting}
+As in other languages, an $\tt{if}$ or an $\tt{if-else}$ statement can be nested. 
+\item When two or more variables must be tested to determine different outcomes, a nested series of $\tt{if}$ statements is generally the correct approach. However, if all of the $\tt{if}$ statements would be testing the same variable, it is often more clear to use a $\tt{case}$ statement, which we will cover next.
+\item Below is the syntax for a $\tt{case}$ statement. It begins with the $\tt{case}$ keyword and a parenthesized ``selection expression,'' usually one that evaluates to a bit-vector value of a certain width. Next is a series of case items, each of which has a comma-separated list of ``choices'' and a procedural statement. If there is only one choice, the comma is omitted. A single ``default'' case item may be included. The statement ends with the $\tt{endcase}$ keyword. 
+\begin{lstlisting}
+case (selection-expression)
+	choice, ..., choice: procedural-statement
+	...
+	choice, ..., choice: procedural-statement
+	default: procedural-statement
+endcase
+\end{lstlisting}
+\item The operation of a $\tt{case}$ statement is simple. It evaluates the selection expression, finds the first one of the choices that matches the expression's value, and then executes the corresponding procedural statement. Once again, the $\tt{case}$ statement executes just one procedural statement, corresponding to the first match.
+\item Choices in a $\tt{case}$ statement are usually just constant values compatible with the selection expression, but they can be more complex expressions. If some of the choices overlap, it is important to understand that only the \textit{first} matching choice is executed. When the choices do not overlap, they are said to be ``mutually exclusive.'' Standard Verilog coding practice is to avoid overlapping choices.
+\item Often, the listed choices in a $\tt{case}$ statement are not ``all-inclusive,'' or don't include all of the possible values of the selection expression. In these scenarios, the $\tt{default}$ keyword can be used in the last case item to denote all selection values that have not been covered. Even if you believe your listed choices are all-inclusive, it is standard practice to still include a $\tt{default}$ case. A $\tt{case}$ statement that is all-inclusive is called a full case. Standard Verilog practice avoids using nonfull cases.
+\item Another important class of procedural statements are looping statements. The most commonly used of these is the $\tt{for}$ statement or the $\tt{for}$ loop, with the syntax shown below. Here, the loop-index is a register variable, typically an integer or a bit vector. first-expr is an expression giving a value that is assigned to loop-index when the $\tt{for}$ loop begins execution.
+\begin{lstlisting}
+for (loop-index = first-expr; logical-expression; loop-index = next-expr)
+	procedural-statement
+
+for (loop-index = first; loop-index <= last; loop-index = loop-index + 1;)
+	procedural-statement
+\end{lstlisting}
+After loop-index is initialized, the $\tt{for}$ loop begins executing the enclosed procedural-statement for a certain number of iterations. At the beginning of each iteration, it evaluates logical-expression. If the value is false, the $\tt{for}$ loop stops execution. If it is true, it executes procedural-statement and at the end of the iteration it assigns next-expr to loop-index. Iterations continue until logical-expression is false.
+\item The remaining Verilog looping statements are $\tt{repeat}$, $\tt{while}$, and $\tt{forever}$, with syntax shown below.
+\begin{lstlisting}
+repeat (integer-expression)
+	procedural-statement
+
+while (logical-expression)
+	procedural-statement
+
+forever
+	procedural-statement
+\end{lstlisting}
+A $\tt{repeat}$ statement repeats a procedural-statement a number of times given by integer-expression. A $\tt{while}$ statement repeats a procedural-statement until logical-expression is false. Lastly, a $\tt{forever}$ statement repeats ``forever.''
+\end{itemize}
+\subsection{Test Benches}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Test benches are the Verilog equivalent to test statements or j-unit tests. These allow us to consider timing impacts and monitor behaviors, on top of the ability to see if the program runs. 
+\item A test bench is composed of multiple key components, listed below.
+\begin{itemize}
+\item Compiler directive to declare the time unit (optional)
+\item Variable declarations
+\item Function call
+\item Variable initializations
+\item Evaluation pattern
+\item Analysis tools: waveform file, log display, file output
+\item Complete runtime
+\end{itemize}
+\item There are many different compiler directives, distinguished by the ``\`{}'' mark. $\tt{timescale}$ allows for declaration of the specific units of time and the observed precision.
+\item When naming a test bench module, you take the module being tested and add ``$\tt{\_tb}$.'' For example, a test bench for $\tt{fav1}$ would be called $\tt{fav1\_tb}$. Test bench modules do not contain a port list. The variables used as inputs are declared as $\tt{reg}$ values and the values being tested are declared as wires.
+\item Calling the tested module is just the instantiation. We can use the $\tt{.\_(\_)}$ form to get away from knowing the portlist order so long as we know the variable names, which should be in the documentation anyways.
+\item When testing, we need a starting point, because we need values to start or nothing exists and nothing can be executed. We use the $\tt{initial}$ keyword to denote procedural-statements that only need to be run once. 
+\item When testing, run through the cases you want to test. \_\# is the number of time units you want to pass before executing a line. 
+\item Since we are not using an IDE, we need a file that can be read by a waveform reader. $\tt{\$dumpfile(\__)}$ designates a file for the destination. $\tt{\$dumpvars}$ then puts the data in. 
+\item We can also use the log/console to display information as to what is currently going on. $\tt{\$display}$ creates text that happens once. $\tt{\$monitor}$ creates outputs anytime something changes. The syntax here is exactly like C. 
+\item The difference between $\tt{\$write}$ and $\tt{\$display}$ is whether or not a new line is printed after the statement completes. 
+\item When determining how long the tests should run, run them as long as necessary. Use $\tt{\#\_\_}$ to tell the program how long you wish for a test to run. The always block will repeat until the amount of time units are reached. 
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item A test bench specifies a sequence of inputs that can be applied by the simulator to an HDL model, such as a Verilog module. The entity being tested is often called the unit under test, or the UUT. 
+\item Typically, Verilog test benches use the $\tt{initial}$ block, the syntax for which is shown below. Similarly to an $\tt{always}$ block, it contains one or more procedural statements but lacks a sensitivity list.
+\begin{lstlisting}
+initial
+	procedural-statement
+
+initial begin
+	procedural-statement
+	...
+	procedural-statement
+end
+\end{lstlisting}
+An $\tt{initial}$ block executes just once at the simulated time zero. Just like in an $\tt{always}$ block, the $\tt{begin-end}$ block can be named and have its own local variable and parameter declarations.
+\item Normally, it is worth expending a little more effort when writing test benches to make their output more user friendly. For example, $\tt{\$write}$ and $\tt{\$display}$ can be used to print a result to the system console. 
+\end{itemize}
+\pagebreak
+\section{4/12/2020}
+\subsection{What Is Sequential Logic?}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Some key terms:
+\begin{itemize}
+\item State Memory - These will have $n$ flip-flops or latches in these systems.
+\item Tick - A clock update.
+\item Next state logic - The inputs to the flip-flops or latches. These are also the function of the current state and the output.
+\item Output logic - The function output.
+\end{itemize}
+\item Present state is the information currently in memory. Next state is is the information we are going to update to. In this class, we denote next state as Q* and present state as Q. The main idea is to associate the memory input and output.
+\item We can't design these systems without understanding the hardware used to implement it. These are the basics of this theory, and are actually based on combinational logic. 
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item ``The state of a sequential circuit is a collection of state variables whose values at any one time contain all the information about the past necessary to account for the circuit's future behavior.''
+\item In a digital circuit, state variables are binary values corresponding to certain logic signals in the circuit. A circuit with $n$ binary state variables has $2^n$ possible states. While $2^n$ can indeed get rather large, it is important to understand that \textit{finite} value, never infinite. For this reason, sequential circuits are sometimes called finite-state machines (or FSMs) or more often simply state machines.
+\item State variables need not have any direct physical significance. Furthermore, there are an unlimited number of ways to choose them to describe a particular sequential circuit, each making sense in some particular context. 
+\item Why do state changes happen? In most sequential circuits, they can occur only at times specified by a free-running clock signal. By convention, a clock signal is active high if state changes occur at the clock's rising edge (transitioning from LOW to HIGH) and active low if they occur at the falling edge. The edge at which state changes occur can be called the active or triggering edge. 
+\item The clock period is the time between successive transitions in the same direction and the clock frequency is the reciprocal of the clock period. 
+\item The triggering edge is often called a clock tick.
+\item The duty cycle is the percentage of time that the clock signal is at its asserted level (i.e. HIGH for an active-high clock). State changes only occur at the triggering clock edge. Between the triggering states, the state is stable.
+\item Most sequential circuits (along with almost all state machines) use a particular type of element to store their state elements, specifically an edge-triggered D flip-flop. Below is the logic symbol for a positive-edge-triggered D flip-flop, along with its function table. The circuit's inputs are D and CLK and its outputs are Q and the optional QN, with QN being the complement of Q. The outputs may change only at the rising, or positive, edge of the controlling CLK signal. When the CLK signal transitions from LOW to HIGH, the circuit samples its D input and places the current value of D on the Q output, simultaneously placing the complement of that value on QN if present. Between LOW-to-HIGH clock transitions, the flip-flop maintains the value previously stored in Q (and QN).
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG12}
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG13}
+\end{minipage}
+\item There are other types of sequential circuits besides this D flip-flop. A feedback sequential circuit, for example, uses ordinary gates and feedback loops to obtain memory in a logic circuit resulting in the creation of sequential-circuit building blocks such as D flip-flops. 
+\end{itemize}
+\subsection{Latches}
+\begin{itemize}
+\item Every device has a table used to describe its behavior. These are often referred to as the Characteristic Table or the Next State Table since they describe the characteristics or the behavior of the device. If we have a table, we can form an equation, a fact that will be useful later.
+\item The first sequential logic element we will cover is the S-R Latch, with the name coming from the idea of set-reset. An S-R Latch is constructed from two NOR gates.
+\item In some cases, we may not have a ``last'' Q or QN. This is called a ``complication.'' In most cases, the bitstable idea of a random assignment that allows for some form of a default start. 
+\item Most sequential logic devices natively output its normal output and the output's complement (Q and QN, respectively). When designing with these devices, use QN over a NOT gate on the signal for efficiency. 
+\item Q and QN are common for present and next states, but there are many variations of these terms. One that we use is adding the * after the variable name. 
+\item The $\bar{S}$-$\bar{R}$ Latch uses NAND gates instead of NOR gates. This is also an active low system, so to \textit{set} we need to have a zero. Just know that this exists.
+\item Another sequential logic device is D. D is often considered as data. D only has one input. Notably, this is the first time we extend our sequential block by adding more gates to configure. 
+\item Depending on the material, ENABLE or CONTROL can also be referred to as G. When G is high with active high design, your latch is on. This is called open or transparent. When G switches off, it holds its value. 
+\end{itemize}
+\subsection{Flip-Flops}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item Latches and flip-flops are both core devices. The main difference between the two is that with a latch, the outputs change with the inputs, while flip-flops need to explicitly be triggered.
+\item To produce a D flip-flop, we use two D latches in a master-slave configuration, a method that exploits time to properly function.
+\item To know which side is posedge or negedge, look at the name or the schematic symbol.
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item Latches and flip-flops are the most basic building blocks for most sequential circuits. Latches and flip-flops in typical digital systems are functionally specified devices prepackaged in a standard integrated circuit. 
+\item All digital designers use the name flip-flop for a sequential device that normally samples its inputs and changes its outputs only when a clocking signal is changing. Conversely, most digital designers use the name latch for a sequential device that continuously watches its inputs and changes its outputs at any time.
+\item The simplest sequential circuit that has control inputs can be built from just two NOR gates, as shown to below. This is called an S-R (set reset) latch. The circuit has two inputs, S and R, and two outputs, Q and QN. As noted previously, QN is the complement of Q. QN is sometimes labeled as $\bar{\text{Q}}$ or Q\_L. These S-R latches are used to detect events using the S input to ``set'' the latch when the event occurs and using R to ``reset'' it later.\\
+\includegraphics[width=\textwidth]{IMG14}
+Observe the S-R latch's function table shown above. When S and R are both zero, the circuit behaves like a bi-stable element. A result of this is that we make a feedback loop retaining one of two logic states: $Q=0$ or $Q=1$. Either S or R can be asserted to force the feedback loop to the desired state. S \textit{sets} or \textit{presets} the Q output to 1 while R \textit{resets} or \textit{clears} it to 0. 
+\item The propagation delay is the time it takes for a transition on an input signal to produce a transition on an output signal. A given latch or flip-flop may have several different propagation-delay specifications, one for each pair of input and output signals. Additionally, the propagation delay may be different depending on whether the output makes a LOW-to-HIGH or HIGH-to-LOW transition. 
+\item An $\bar{S}$-$\bar{R}$ latch (read as ``S-bar-R-bar latch'') has active-low set and rest inputs built from NAND gates, as shown in the below figure. $\bar{S}$-$\bar{R}$ latches are used more often than S-R latches because NAND gates are preferred over NOR gates for reasons of size, speed, or maybe even both.\\
+\includegraphics[width=\textwidth]{IMG15}
+As shown by the function table, the operations of an $\bar{S}$-$\bar{R}$ latch are similar to an S-R latch, with only two key differences. First, $\bar{S}$ and $\bar{R}$ are active low, so the latch only remembers the previous state when $\bar{S}=\bar{R}=1$. Second, when both $\bar{S}$ and $\bar{R}$ are asserted simultaneously, both latch outputs got to 1, versus 0 like in an S-R latch. Besides these two differences, an $\bar{S}$-$\bar{R}$ latch performs identically to an S-R latch.
+\item While S-R latches are useful in control applications, we often need latches to simply store bits of information. In these cases, a D latch may be used. The figure for a D latch is shown below.\\
+\includegraphics[width=\textwidth]{IMG16}
+The right-hand side of the logic diagram is just an $\bar{S}$-$\bar{R}$ latch. Two additional NAND gates are inserted on the left-hand side to ensure that either $\bar{S}$ or $\bar{R}$ is asserted when the control input G is asserted, eliminating the scenario of a normal S-R latch when both S and R are asserted simultaneously. G is sometimes also called ENABLE, CLK, or C. Additionally note that G is sometimes active-low in some D latch designs. 
+\item Let's go over an example of D latch behavior. When the G input is asserted, the Q output follows the input. In this situation, the latch is said to be ``open'' and the resulting view from the Q output to the D input is ``transparent.'' As a result, this type of circuit is often called a transparent latch. When the G input is negated, the latch ``closes.'' When this happens, the Q output retains its last value and no longer changes in response to D as long as G remains negated. 
+\item Previously, we introduced the positive-edge-triggered D flip-flop as the most commonly used sequential element for storing state variables of a state machine. A D flip-flop doesn't necessarily need to be a part of a formal state machine - it can also be used to simply store data. It is distinguished from a D latch by its edge-triggered behavior. 
+\item Below is a figure showing how a positive-triggered D flip-flop can be built from a pair of D latches. The first latch is called the master, opening and following the inputs when CLK is 0. When CLK goes to 1, the master latch closes and its output is transferred to the second latch, called the slave. The slave latch is open all the while that CLK is 1 but changes only at the beginning of this interval.\\
+\includegraphics[width=\textwidth]{IMG17}
+The triangle on the D flip-flop's CLK input indicates edge-triggered behavior and is called a dynamic-input indicator. 
+\item A negative-edge-triggered D flip-flop simply inverts the clock input so that all of the action takes place on the falling edge of CLK\_L. By convention, a falling-edge trigger is considered to be active low. This flip-flop is shown below.\\
+\includegraphics[width=\textwidth]{IMG18}
+\item Some D flip-flops have asynchronous inputs that may be used to force the flip-flop to a particular state independent of D and CLK inputs. These inputs are typically labeled PR (preset) and CLR (clear) and behave like the set and reset inputs on an S-R latch. 
+\item A commonly desired function in D flip-flops is the ability to hold the last value stored rather than load a new value at the clock edge. This can be accomplished by adding an enable input, called EN or CE (clock enable). 
+\item A T (toggle) flip-flop changes state on every tick of the clock. These are most frequently used in counters and frequency dividers. In many applications of T flip-flops, the flip-flop need not be toggled on every clock tick. Such applications can use a T flip-flop with enable, in which the flip-flop changes state at the triggering edge of the click only if the enable signal is asserted. 
+\end{itemize}
+\subsection{Sequential MSI Devices}
+\subsubsection{Lecture Slides}
+\begin{itemize}
+\item A sequential logic device is a logic device made into an ASIC implementation. These must have memory and/or storage. 
+\item A register is ``a collection of two or more D flip-flops with a common clock input.'' Registers are essentially our barebones storage device. The amount of information a register can store is dependent on the number of D flip-flops it is composed of, with the register storing $n$ bits for $n$ total flip-flops.
+\item A shift register is a design that allows for conversion between serial and parallel inputs such that data can be worked with, such as with arithmetic or addressing. 
+\end{itemize}
+\subsubsection{Assigned Reading}
+\begin{itemize}
+\item A counter is generally any clocked sequential circuit whose state diagram contains a single cycle. The modulus of a counter is the number of states in the cycle. A counter with $m$ states is called a modulo-$m$ counter or sometimes a divide-by-$m$ counter. 
+\item The most commonly used counter type is an $n$-bit binary counter, with such a counter having $n$ flip-flops and $2^n$ states, visited in the sequence $0, 1, 2, ..., 2^n-1, 0, 1, ...$. Each of these states is encoded as the corresponding $n$-bit binary integer.
+\item An $n$-bit binary counter can be constructed with just $n$ flip-flops and no other components for any value $n$. Because T flip-flops only change state on every rising edge of their clock cycle, this counter toggles if and only if the immediately preceding bit changes from 1 to 0. This counter is called a ripple counter because the carry information ripples from the less significant bits to the more significant bits, one bit at a time. 
+\item Ripple counters require significantly fewer components than other types of binary counters, but at a cost, being significantly slower as well. Because of this, ripple counters are rarely used in actual practice, with the rare exception such as a digital watch. 
+\item A synchronous counter connects all of its flip-flop clock inputs to a common CLK signal allowing all flip-flop outputs to simultaneously change. This can be done using T flip-flops with enable inputs. 
+\item It is additionally possible to provide a master counter-enable signal called CNTEN. Each T flip-flop toggles if and only if CNTEN is asserted and all of the lower-order counter bits are 1. This is sometimes called a synchronous serial counter because the combinational enable signals propagate serially from the least significant to most significant bits. 
+\item The fastest binary counter structure is the synchronous parallel counter, created by driving each EN input from a synchronous serial counter with a dedicated AND gate.
+\item Although most counters are designed with enable inputs, counters are often used in a free-running mode in which they are enabled continuously. 
+\item A binary counter can be combined with a decoder to obtain a set of 1-out-of-$m$-coded signals, where one signal is asserted in each counter state. This is particularly useful when counters are used to control a set of devices where a different device is enabled in each counter state. Through this approach, each output of the decoder enables a different device.
+\item Occasionally, some decoder outputs can contain ``glitches'' on state transitions when two or more counter bits change despite the counter outputs being glitch free themselves and the decoder outputs not having any static hazards. This is because in synchronous counters, the outputs don't change at exactly the same time. More specifically, the different signal paths in a decoder can have different delays. Thus, even if a decoder input changes simultaneously in theory, in practice it may be a multi-step process. This is an example of a function hazard.
+\item In most applications, the decoder output signals would be used as function inputs in devices that would sample the inputs on a clock edge (devices such as a register or a counter). In these cases, the glitches aren't necessarily a problem if all devices use the same clock signal since the glitches occur after the clock edge. However, if these glitches were applied to an asynchronous control input, such as the inputs of an $\bar{S}$-$\bar{R}$ latch, they \textit{would} be a problem.\\~\\
+\begin{minipage}{.55\textwidth}
+\item A shift register is an $n$-bit structure register with a provision for shifting its stored date by one bit position at the end of every clock tick. To the right is the structure of a shift register. The serial input, SERIN, specifies a new bit to be shifted into one end at each clock tick. This bit will appear at the serial output, SEROUT, after $n$ clock ticks and is lost one tick later. Subsequently, an $n$-bit serial-in serial-out shift re gister can be used to delay a signal by $n$ clock ticks.
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG19}
+\end{minipage}
+\begin{minipage}{.55\textwidth}
+\item This idea of a shift register can be further expanded upon. A serial-in, parallel-out serial register, shown to the right, has outputs for all of its stored bits. This allows its outputs to be made available to all other circuits. Such a shift register can be used to perform serial-to-parallel conversion.
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG20}
+\end{minipage}
+\begin{minipage}{.55\textwidth}
+\item A parallel-in, serial-out shift register is shown to the right. Here, at each clock tick the register loads new data from its inputs or shifts its current contents, depending on the current value of the LOAD/SHIFT control input. This is achieved by internally utilizing a 2-input multiplexor on each flip-flop's D input. 
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG21}
+\end{minipage}
+\begin{minipage}{.55\textwidth}
+\item Lastly, there is the parallel-in, parallel-out serial register. This is an extremely general register applicable to any of the applications described with previous registers. These are formed by providing outputs for all of the stored bits in a parallel-in register.
+\end{minipage}
+\begin{minipage}{.45\textwidth}
+\includegraphics[width=\textwidth]{IMG22}
+\end{minipage}
+\item All of the shift registers described thus far have been unidirectional shift registers because they shift in only a single direction. A bidirectional shift register, as the name implies, has the capability to shift in either direction depending on the value of a control input. 
+\item While serial/parallel conversion is a ``data'' application, shift registers have ``non-data'' applications as well. A shift register can be combined with a combinational logic circuit to form a state machine whose state diagram is cyclic. Such a circuit is called a shift-register counter. In contrast to a normal binary counter, shift register counters do not count in an ascending or descending binary sequence. We will now go over different approaches to counting sequences with a shift-register counter.
+\item The most simple shift-register counter uses an $n$-bit shift register to obtain a counter with $n$ states and is called a ring counter. Ring counter's have a very major problem, however, in their lack of robustness. If a single 1 output is lost due to a temporary hardware problem, the counter goes to state 0000 indefinitely. Likewise, an extra 1 output will result in the counter producing an indefinite incorrect counter cycle. 
+\item The problems of a ring counter are resolved with a self-correcting counter, which is specifically designed such that all abnormal states have transitions leading into normal states. These are desirable for the same reasons minimal-risk approaches are recommended, in that if something unexpected happens a counter or state machine should go to a ``safe'' state.
+\item The major appeal of a ring counter for control applications is that its states appear in 1-out-of-$n$ decoded form directly from the flip-flop's outputs. In other words, one and only one flip-flop output is asserted per state. Furthermore, these outputs are effectively glitch-free.
+\item An $n$-bit shift register with the complement of the serial output fed back into the serial input is a counter with $2n$ states and is called multiple things, such as a twisted-ring, a Moebius, or a Johnson counter. The decoded outputs of a Johnson counter are glitch free. Because an $n$-bit Johnson counter has $2^n$-$2n$ abnormal states, these suffer from the same robustness problems as a ring counter. 
+\item Up until now, we have only seen shift registers with less than the maximum of $2^n$ normal states. An $n$-bit linear feedback shift-register  (LFSR) counter can have $2^n-1$ states, almost reaching the maximum. Such a counter is also sometimes called a maximum-length sequence generator. The design of these LFSR counters is based on the theory of finite fields. 
+\item Using the finite-field theory, it can be shown that for any value of $n$, there exists at least one feedback equation that makes the counter go through all $2^n-1$ nonzero states before repeating. This is called a maximum-length sequence. 
+\item The states of an LFSR counter are not visited in binary counting order. Typically, LFSR counters are used where this characteristic is an advantage, such as generating test inputs for logic circuits. Designers capitalize on the ``psuedo-randomness'' of LFSR circuits, which are more likely to detect errors than a normal binary counter. 
+\end{itemize}
+\pagebreak
+\section{4/19/2020}
+\subsection{What Is an FSM?}
+\begin{itemize}
+\item State machines are known as Finite State Machines in this course. These are additionally called Finite State Automata in computer science theory. These are called finite because we work with a finite number of states.
+\item FSMs represent a system of behaviors with states and paths. At any given state, all inputs must be considered. With a few exceptions, you describe these states with names representing a majority of the processes working.
+\item There are two types of FSM design styles: Mealy, where the output also depends on the input logic, and Moore (what we will focus), where the output logic depends solely on its present state.
+\end{itemize}
+\subsection{FSM Design Algorithm}
+\begin{itemize}
+\item An algorithm is just a recipe for a system. There are many steps of the process, listed below.
+\begin{itemize}
+\item Figuring out the problem
+\item State diagram
+\item State table
+\item State assignments
+\item Transition table
+\item Transition/Next state equations
+\item Output equations
+\item Logic diagrams
+\item Logic schematic
+\item Verilog
+\end{itemize}
+\item A state diagram is a visual representation of the relationships between the states, inputs, and outputs, with the location of the output being based on if it is Moore or Mealy and with states being represented with circles. Transitions are drawn with arrows between the states and labeled based on whether or not the input is to make that transition. Lastly, the output label is dependent on the FSM's type. If it is Moore, the output is labeled in the circle with the state name. If it is Mealy, it is labeled on the arrow with the transition.
+\item The state table represents the paths between the current state and the next state based on the input. This table has a section for the output as well. States are represented in assignment form (letters). The form (of two) being drawn in this class has three segments: present state, next state, and output. Next state and output have multiple columns to represent each input combination, with each column itself containing a column for the state variables and a column for the output variables. Present state simply has a number of columns corresponding to the number of state variables. 
+\item State assignment is when we take state letters and change them to numeric values (0 and 1) that we can use to develop equations. There are a few types that are common, including binary, gray code, and one hot. Gray code is most useful when simplifying a K-Map and One Hot is useful for determining functions by inspection (think decoder logic). This step is also known as encoding. 
+\item Excitation is the change that occurs when inputs are inserted into memory. Excitation logic is what is happening between the input and current states and is where you consider FF characteristics. An excitation equation is simply the equations for this excitation logic. 
+\item To get from the transition table to something that can actually be implemented, we need one of these excitation equations. These are the equations that represent the determination of the next state value as a function of the input values and additionally the values available from the flip-flops/latches. Excitation equations are usually developed through K-Maps. 
+\item The order of these steps doesn't necessarily matter, however you \textit{must} begin with understanding the problem, or your resulting work no matter the order will be a mess. 
+\item Sometimes, not all of the steps are done, such as creating the diagrams, schematics, and Verilog implementation.
+\end{itemize}
+\pagebreak
+\section{4/26/2020}
+\subsection{Implementation With DFF Review}
+\begin{itemize}
+\item One of the most frequent uses of FSMs is pattern matching, where the aim is to find three ``1's'' in a row using a Moore-type FSM. These FSMS accept a single variable $x$ as their input as either 0 or 1. Additionally, they output a single variable $z$, which is 0 at all points where the pattern \textit{hasn't} been found and 1 where the pattern has. 
+\end{itemize}
+\subsection{FSM Verilog Part 2}
+\begin{itemize}
+\item There are many ways to design FSMs in Verilog, such as the currently covered next-state equations or modified FFs and conditional Verilog.
+\item Conditionals in Verilog function similarly to other high-level programming languages, with Verilog utilizing if, else if, and else blocks. If the statement for one of these is more than one statement, you must have a begin and an end.
+\item A case statement looks at specific inputs, such as an expression. This expression is then sent to an alternative component of the case statement to complete execution. 
+\item A parameter is a modifier denoting something as a constant. We use this as a shortcut to state assignments. A parameter modifier combines variables, numbers, and constants.
+\end{itemize}
+\subsection{Implementation With TFF}
+\begin{itemize}
+\item Excitation is the change that occurs when inputs are applied to memory. Accordingly, the excitation logic is what is happening between the inputs and the current state. Excitation equations are the equations for excitation logic. 
+\end{itemize}
+\subsection{Memory Devices}
+\begin{itemize}
+\item Memory is ``something remembered from the past'' and is the process used to reproduce or recall something that has previously been learned. Memory follows sequential logic.
+\item ROM stands for Read Only Memory and is a type of flash memory that is exclusively read only. These are also examples of combinational logic because memory as a device doesn't need to be sequential. ROM is non-volatile because it's logic is fixed and won't change when power is removed. 
+\item ROM is configured with $2^n$ inputs and $b$ outputs. These inputs and outputs are configured as a 2D array, with each row corresponding to a $b$-bit output. The result of this is that the inputs select the row, forcing us to read only the table currently configured by the ROM. 
+\item We use ROM quite a bit, from decoders to representing the behavior of truth tables to predefined processes of a CPU.
+\item Programmable devices can, as implied by their name, be manufactured and configured (or programmed). The first programmable device was ROM, but this was a slow and expensive solution. We now have a logic system called Programmable Logic Array, or PLA. These are two-level AND-OR configurations, meaning they are quite good with hazards. Eventually, this logic system was reimagined into Programmable Array Logic, or PAL, which eventually became colloquially known as PLD, or Programmable Logic Devices.
+\item Let's expand upon this idea of PLAs. As previously mentioned, these are two level AND-OR configured devices and are represented in SOP form. These sound like decoders, but in reality aren't, as while the starting configuration is the same fuses are blown to program PLAs to a very specific configuration. These fuses are what make PLAs non-volatile. 
+\item PALs are similar to PLAs but in these the OR gate is fixed, meaning we can't program that part of the device. These rely on the inputs selecting a set of connections that rely quite heavily on inversion, and as a result aren't particularly popular. 
+\item PLDs evolved from PALs and are very popular, in contrast.
+\item Over time, we began scaling these devices further and further. PLDs were originally limited by their 2 level AND-OR configurations, so complex PLDs called CPLDs were developed through connecting many individual PLDs. Additionally, Field Programmable Gate Arrays, or FPGAs, took many CPLDs and smaller devices called Configurable Logic Blocks (CLBs) to create an architecture commonly used in phototyping.
+\item RAM is Random Access Memory and is memory that is simultaneously readable and writable. Technically, ROM is a type of RAM.
+\item Static RAM is by default asynchronous. When RAM is asynchronous, the control and data signals are not coordinated by an independent clock. This has its occasional use, but it can result in errors. 
+\item Dynamic RAM uses D-Latches with between four to six transistors. The values are precharged and then assigned as they get periodically refreshed. 
+\item We have so many different types of RAM because each type offers different capabilities in its speed, flexibility, stability, accuracy, power, and capacity. 
+\item DDR stands for double data rate and allows for the transmission of data on both edges of the clock. 
+\item FPGAs were made first available commercially in 1985 by Xilinx. Overall, these are a collection of configurable logic blocks (CLBs), local and global routing resources, I/O blocks (IOBs), programmable I/O buffers, and SRAM based configurable memory.
+\item Lookup tables (LUTs) are small units of ROM that a truth table is decomposed to. These share the same benefits as decoders. LUTs have a configuration of $2^n\times1$, with $n$ being between four and six in most cases. If this becomes to large, we can divide a LUT into numerous smaller LUTs and multiplex them.
+\item IOs are inputs and outputs to the FPGA. These have a buffering property and control the speed of transfer without modifying the overall device. 
+\item Xilinx Spartan is a class of FPGA architecture. The IOB is the I/O block that allows for peripheral connections.
+\item We configure FPGAs using an HDL language, such as the familiar Verilog. 
+\end{itemize}
 \end{document}
